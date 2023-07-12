@@ -25,6 +25,7 @@ export default {
         date: 'July 20, 2024',
         place: 'El Salvador',
       },
+      test:'var to commit - test',
       images: [
         'foto-1-web.jpg', 'foto-2-web.jpg', 'foto-3.jpg', 'foto-4.jpg'
       ]

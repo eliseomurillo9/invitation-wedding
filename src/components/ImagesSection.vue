@@ -1,12 +1,15 @@
 <template>
-  <div class="flex justify-center items-center w-full">
-    <div
+  <div class="flex overflow-hidden py-5">
+    <img
       v-for="(image, index) in coupleImages"
       :key="index"
-    >
-      <img :src="require(`@/assets/${image}`)" :alt="image" class="w-28 focus:scale-115 transition hover:scale-110 ease-in-out" tabindex="0" />
-    </div>
+      :src="require(`@/assets/${image}`)"
+      :alt="index"
+      class="w-28 focus:scale-115 transition hover:scale-110 ease-in-out -translate-x-12"
+      tabindex="0"
+    />
   </div>
+
 </template>
 
 <script>

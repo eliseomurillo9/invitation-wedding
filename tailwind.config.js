@@ -19,7 +19,8 @@ module.exports = {
     },
     fontFamily: {
       'candal': ['Candal', 'Montserrat'],
-      'nanum': ['"Nanum Pen Script"', 'Montserrat']
+      'montserrat': ['Montserrat'],
+      'nanum': ['"Nanum Pen Script"', 'Montserrat'],
     }
   },
   plugins: [],

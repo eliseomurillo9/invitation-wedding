@@ -1,7 +1,7 @@
 <template>
   <div class="text-center pt-6 flex flex-col gap-2">
-    <h2 class="text-green text-2xl font-candal">{{ titleMsg }}</h2>
-    <span class="text-blue-main text-2xl font-nanum"> {{ weddingDate }}</span>
+    <h1 class="text-green text-2xl font-candal">{{ titleMsg }}</h1>
+    <h2 class="text-blue-main text-2xl font-nanum"> {{ weddingDate }}</h2>
     <div class="flex gap-1 m-auto w-fit">
       <svg
         xmlns="http://www.w3.org/2000/svg"

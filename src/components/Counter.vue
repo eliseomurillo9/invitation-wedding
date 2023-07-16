@@ -3,23 +3,23 @@
     class="bg-pink-main rounded-full py-3 px-8 flex text-white text-center text-2xl text-shadow-xl justify-center gap-3 w-fit mx-auto"
   >
     <div class="flex flex-col">
-      <span>{{ countdownInfo.days }}</span>
-      <span class="text-sm -mt-2">Days</span>
+      <span class="md:text-4xl">{{ countdownInfo.days }}</span>
+      <span class="text-sm md:text-2xl -mt-2 md:-mt-1">Days</span>
     </div>
-    <span>:</span>
+    <span class="md:text-5xl">:</span>
     <div class="flex flex-col">
-      <span>{{ countdownInfo.hours }}</span>
-      <span class="text-sm -mt-2">hr</span>
+      <span class="md:text-4xl">{{ countdownInfo.hours }}</span>
+      <span class="text-sm md:text-2xl -mt-2 md:-mt-1">hr</span>
     </div>
-    <span>:</span>
+    <span class="md:text-5xl">:</span>
     <div class="flex flex-col">
-      <span>{{ countdownInfo.minutes }}</span>
-      <span class="text-sm -mt-2">min</span>
+      <span class="md:text-4xl">{{ countdownInfo.minutes }}</span>
+      <span class="text-sm md:text-2xl -mt-2 md:-mt-1">min</span>
     </div>
-    <span>:</span>
+    <span class="md:text-5xl">:</span>
     <div class="flex flex-col">
-      <span>{{ countdownInfo.seconds }}</span>
-      <span class="text-sm -mt-2">sec</span>
+      <span class="md:text-4xl">{{ countdownInfo.seconds }}</span>
+      <span class="text-sm md:text-2xl -mt-2 md:-mt-1">sec</span>
     </div>
   </div>
 </template>

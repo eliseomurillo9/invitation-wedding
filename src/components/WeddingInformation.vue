@@ -1,16 +1,15 @@
 <template>
-  <div class="text-center pt-6 flex flex-col gap-2">
-    <h1 class="text-green text-2xl font-candal">{{ titleMsg }}</h1>
-    <h2 class="text-blue-main text-2xl font-nanum"> {{ weddingDate }}</h2>
+  <div class="text-center pt-6 md:pt-0 flex flex-col gap-2">
+    <h1 class="text-green text-2xl md:text-6xl font-candal">{{ titleMsg }}</h1>
+    <h2 class="text-blue-main text-2xl md:text-5xl font-nanum"> {{ weddingDate }}</h2>
     <div class="flex gap-1 m-auto w-fit">
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="12"
-        height="16"
         viewBox="0 0 12 16"
         fill="none"
+        class="h-4 md:h-6"
       >
-        <rect width="12" height="16" fill="white" />
+        <rect ill="white" />
         <path
           d="M6 0C4.40923 0.00173375 2.88412 0.634432 1.75927 1.75927C0.634432 2.88412 0.00173375 4.40923 0 6C0 11.418 5.15625 15.6055 5.375 15.7812C5.55253 15.9229 5.7729 16 6 16C6.2271 16 6.44747 15.9229 6.625 15.7812C6.84375 15.6055 12 11.418 12 6C11.9983 4.40923 11.3656 2.88412 10.2407 1.75927C9.11588 0.634432 7.59077 0.00173375 6 0ZM6 13.6582C4.73633 12.4512 2 9.43945 2 6C2 4.93913 2.42143 3.92172 3.17157 3.17157C3.92172 2.42143 4.93913 2 6 2C7.06087 2 8.07828 2.42143 8.82843 3.17157C9.57857 3.92172 10 4.93913 10 6C10 9.43945 7.26367 12.4512 6 13.6582Z"
           fill="#E79F96"
@@ -24,7 +23,7 @@
           stroke="#E79F96"
         />
       </svg>
-      <span class="text-blue-main text-sm">{{ weddingPlace }}</span>
+      <span class="text-blue-main text-sm md:text-2xl">{{ weddingPlace }}</span>
     </div>
 
   </div>

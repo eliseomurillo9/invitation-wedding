@@ -1,10 +1,10 @@
 <template>
-<nav class="flex justify-between w-full py-4 px-5 text-blue-main font-bold text-sm">
+<nav class="flex justify-between w-full py-2 px-5 text-blue-main font-bold text-sm md:text-2xl">
   <select name="language" id="language" class="bg-inherit">
     <option class="text-blue-main" value="english">EN</option>
     <option value="spanish" selected="selected">ES</option>
   </select>
-<span class="text-sm">Home</span>
+<span>Home</span>
 </nav>
 </template>
 

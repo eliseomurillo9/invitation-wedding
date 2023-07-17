@@ -1,5 +1,5 @@
 const messages = {
-    'es-ES': {
+    'ES': {
         base: {
             pageTitle: 'Boda Georgi & Eli',
             weddingDate: {
@@ -13,7 +13,7 @@ const messages = {
             newsLetter: 'Notificame cuando este listo',
         }
     },
-    'en-EN': {
+    'EN': {
         base: {
             pageTitle: 'Georgi & Eli Wedding',
             weddingDate: {

@@ -37,6 +37,7 @@ import WeddingInformation from "./components/WeddingInformation.vue";
 import ImagesSection from "./components/ImagesSection.vue";
 import WorkInProgress from "./components/WorkInProgress.vue";
 import NewsletterForm from "./components/NewsletterForm.vue";
+import { useI18n } from "vue-i18n";
 export default {
   name: "App",
   components: {
@@ -56,6 +57,12 @@ export default {
       },
       test: "var to commit - test",
       images: ["foto-1-web.jpg", "foto-2-web.jpg", "foto-3.jpg", "foto-4.jpg"],
+    };
+  },
+  setup() {
+    const { t } = useI18n();
+    return {
+      t,
     };
   },
 };

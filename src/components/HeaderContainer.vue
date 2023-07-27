@@ -1,9 +1,9 @@
 <template>
-<nav class="flex justify-between w-full py-2 px-5 text-blue-main font-bold text-sm md:text-2xl">
-  <select name="language" id="language" class="bg-inherit" v-model="$i18n.locale">
-    <option class="text-blue-main" v-for="(lang,i) in languages" :key="`Lang${i}`" :value="lang">{{ lang }}</option>
+<nav class="flex justify-between w-full py-6 px-5 text-blue-main font-bold text-sm md:text-2xl">
+  <select name="language" id="language" class="bg-inherit rounded-lg" v-model="$i18n.locale">
+    <option class="text-blue-main rounded-lg" v-for="(lang,i) in languages" :key="`Lang${i}`" :value="lang">{{ lang }}</option>
   </select>
-<span>Home</span>
+<router-link to="/">Home</router-link>
 </nav>
 </template>
 
@@ -18,4 +18,3 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->

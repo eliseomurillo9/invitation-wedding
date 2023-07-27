@@ -1,25 +1,25 @@
 <template>
   <div
-    class="bg-pink-main rounded-full py-3 px-8 flex text-white text-center text-2xl text-shadow-xl justify-center gap-3 w-fit mx-auto"
+    class="bg-pink-main rounded-full py-3 px-8 flex text-white text-center text-2xl text-shadow-xl justify-center gap-5 md:gap-6 md:px-14 md:py-6 w-fit mx-auto"
   >
     <div class="flex flex-col">
       <span class="md:text-4xl">{{ countdownInfo.days }}</span>
-      <span class="text-sm md:text-2xl -mt-2 md:-mt-1">Days</span>
+      <span class="text-sm md:text-2xl -mt-2 md:-mt-1">{{ $t('base.counter.days') }}</span>
     </div>
     <span class="md:text-5xl">:</span>
     <div class="flex flex-col">
       <span class="md:text-4xl">{{ countdownInfo.hours }}</span>
-      <span class="text-sm md:text-2xl -mt-2 md:-mt-1">hr</span>
+      <span class="text-sm md:text-2xl -mt-2 md:-mt-1">{{ $t('base.counter.hours') }}</span>
     </div>
     <span class="md:text-5xl">:</span>
     <div class="flex flex-col">
       <span class="md:text-4xl">{{ countdownInfo.minutes }}</span>
-      <span class="text-sm md:text-2xl -mt-2 md:-mt-1">min</span>
+      <span class="text-sm md:text-2xl -mt-2 md:-mt-1">{{ $t('base.counter.minutes') }}</span>
     </div>
     <span class="md:text-5xl">:</span>
     <div class="flex flex-col">
       <span class="md:text-4xl">{{ countdownInfo.seconds }}</span>
-      <span class="text-sm md:text-2xl -mt-2 md:-mt-1">sec</span>
+      <span class="text-sm md:text-2xl -mt-2 md:-mt-1">{{ $t('base.counter.seconds') }}</span>
     </div>
   </div>
 </template>

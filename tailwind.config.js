@@ -16,11 +16,15 @@ module.exports = {
           clear: '#F6CCC7'
         }
       },
+      spacing: {
+        '82': '22rem',
+      }
     },
     fontFamily: {
-      'candal': ['Candal', 'Montserrat'],
-      'montserrat': ['Montserrat'],
-      'nanum': ['"Nanum Pen Script"', 'Montserrat'],
+      'candal': ['Candal', 'sans-serif'],
+      'montserrat': ['Montserrat', 'sans-serif'],
+      'nanum': ['"Nanum Pen Script"', 'cursive'],
+      'klee': ['"Klee One"', 'cursive']
     }
   },
   plugins: [],

@@ -124,10 +124,10 @@ export default {
       place: "El Salvador",
     });
     const images = reactive([
-      "foto-1-web.jpg",
-      "foto-2-web.jpg",
-      "foto-3.jpg",
-      "foto-4.jpg",
+      "foto-1-web.webp",
+      "foto-2-web.webp",
+      "foto-3-web.webp",
+      "foto-4-web.webp",
     ]);
     let errorMessage = ref(null);
 

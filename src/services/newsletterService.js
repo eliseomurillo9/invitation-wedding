@@ -1,6 +1,6 @@
 
-const url = process.env.SHEET_API_URL;
-const token = process.env.SHEET_API_KEY;
+const url = "https://sheetdb.io/api/v1/j4hph8bw86dni";
+const token = "Bearer smzk707gex7rfst8qm53jf42ethsrf2ry4d7xh5r";
 
 const getEmails = async () => {
   try {
@@ -10,7 +10,7 @@ const getEmails = async () => {
       },
     });
     if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
+      return undefined;
     }
     const data = await response.json();
     return data;
@@ -26,7 +26,6 @@ const registerEmail = async (arg) => {
     data.append("email", emailInput);
     
     const emailList = await getEmails();
-    console.log(emailList);
     const isTheMailInList = emailList.find(emailFromList => emailFromList.email === emailInput);
     if (!isTheMailInList) {
          try {
@@ -38,7 +37,7 @@ const registerEmail = async (arg) => {
              body: data,
            });
            if (!response.ok) {
-             throw new Error(`HTTP error! status: ${response.status}`);
+             return 'base.error.noAvailable'
            }
            const dataParsed = await response.json();
            return {
@@ -53,8 +52,10 @@ const registerEmail = async (arg) => {
            }
          }
     } else {
-        console.log("The email is alredy registed");
-        return 'The email is alredy registed'
+      return {
+             response: 'base.error.emailRegisted'
+           };
+        // return 'The email is alredy registed'
     }
  
 };

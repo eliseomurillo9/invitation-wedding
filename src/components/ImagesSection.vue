@@ -1,4 +1,4 @@
-<template>
+<template >
   <div
     class="flex justify-center overflow-x md:overflow-hidden py-5"
     data-aos="zoom-in"
@@ -6,7 +6,7 @@
     <div
       v-for="(image, index) in coupleImages"
       :key="index"
-      class="w-full max-w-28 h-full max-h-28 focus:scale-115 focus:z-10 transition hover:scale-110 ease-in-out md:max-w-full md:w-[29.5rem] md:max-h-full md:h-56"
+      class="w-max-28 w-full h-full h-max-28 focus:scale-115 focus:z-10 transition hover:scale-110 ease-in-out md:w-[29.5rem] md:h-56"
       tabindex="0"
     >
       <img

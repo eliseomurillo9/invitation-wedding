@@ -66,7 +66,10 @@
     </div>
     <ImagesSection :coupleImages="images" class="mt-8" />
     <WorkInProgress class="mt-8 md:hidden" />
-    <NewsletterForm class="mt-8" />
+    <NewsletterForm
+      class="mt-8"
+      @submit-error="(message) => (errorMessage = message)"
+    />
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="84"
@@ -82,11 +85,15 @@
       />
     </svg>
     <div
-      class="absolute p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400"
-      role="alert"
+      class="fixed left-2/4 -translate-x-2/4 pt-5 mt-5 md:pt-0 md:mt-0"
+      v-if="errorMessage"
     >
-      <span class="font-medium">Danger alert!</span> Change a few things up and
-      try submitting again.
+      <span
+        class="p-3 text-xs text-red-800 rounded-lg bg-red-50 dark:bg-gray-800/80 dark:text-red-400"
+        role="alert"
+      >
+        {{ $t(errorMessage) }}
+      </span>
     </div>
   </main>
 </template>
@@ -97,6 +104,9 @@ import WeddingInformation from "../components/WeddingInformation.vue";
 import ImagesSection from "../components/ImagesSection.vue";
 import WorkInProgress from "../components/WorkInProgress.vue";
 import NewsletterForm from "../components/NewsletterForm.vue";
+import { reactive, ref, watch, onMounted } from "vue";
+import { useI18n } from 'vue-i18n';
+
 export default {
   name: "TheHome",
   components: {
@@ -106,15 +116,42 @@ export default {
     WorkInProgress,
     NewsletterForm,
   },
-  data() {
+  setup() {
+    const { t: $t } = useI18n();
+    const information = reactive({
+      title: "Georgi & Eli Wedding",
+      date: "July 20, 2024",
+      place: "El Salvador",
+    });
+    const images = reactive([
+      "foto-1-web.jpg",
+      "foto-2-web.jpg",
+      "foto-3.jpg",
+      "foto-4.jpg",
+    ]);
+    let errorMessage = ref(null);
+
+    function removeAlert() {
+      errorMessage.value = null;
+    }
+    watch(errorMessage, (newValue) => {
+      if (newValue) {
+        setTimeout(removeAlert, 4000);
+      }
+    });
+
+    const updatePageTitle =  () => {
+      const pageTitle = $t('base.pageTitles.saveTheDate') || "Default Page Title";
+      document.title = pageTitle;
+    };
+    onMounted(() => {
+      updatePageTitle()
+    });
+
     return {
-      information: {
-        title: "Georgi & Eli Wedding",
-        date: "July 20, 2024",
-        place: "El Salvador",
-      },
-      test: "var to commit - test",
-      images: ["foto-1-web.jpg", "foto-2-web.jpg", "foto-3.jpg", "foto-4.jpg"],
+      information,
+      images,
+      errorMessage,
     };
   },
 };

@@ -8,18 +8,26 @@ const routes = [
     path: "/",
     name: "home",
     component: TheHome,
+    meta: {
+      title: "base.pageTitles.saveTheDate",
+      description: "This is the home page",
+    },
   },
   {
     path: "/confirmation",
     name: "confirmationPage",
-    component: () => ConfirmationPage
+    component: () => ConfirmationPage,
   },
 ];
 
 const router = createRouter({
-  base: '/',
   history: createWebHistory(),
   routes, 
 })
 
+
+router.beforeEach((to, from, next) => {
+  document.title = `${to.meta.title} - G&E` || "Default Page Title";
+  next();
+});
 export default router;

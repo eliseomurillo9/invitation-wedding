@@ -61,10 +61,11 @@ import { ref } from "vue";
 import { registerEmail } from "@/services/newsletterService";
 import router from "@/router";
 export default {
+  emits: ["inFocus", "submit"],
   name: "NewsletterForm",
   props: {},
 
-  setup() {
+  setup(props, { emit }) {
     let userEmail = ref("");
     let isLoading = ref(false);
 
@@ -78,10 +79,11 @@ export default {
           isLoading.value = false;
           router.push({ path: "/confirmation" });
         } else {
+          emit('submit-error', postMail.response);
           isLoading.value = false;
         }
       } else {
-        console.log("IT NOT A EMAIL");
+        emit('submit-error', 'base.error.notValidEmail');
       }
     };
 
@@ -99,7 +101,7 @@ input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
-  -webkit-box-shadow:  #F6CCC7 inset;
+  -webkit-box-shadow: #f6ccc7 inset;
   transition: background-color 5000s ease-in-out 0s;
 }
 </style>

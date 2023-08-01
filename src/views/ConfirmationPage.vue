@@ -82,7 +82,22 @@
 </template>
 
 <script>
+import { useI18n } from "vue-i18n";
+import { onMounted } from "vue";
+
 export default {
   name: "ConfirmationPage",
+  setup() {
+    const { t: $t } = useI18n();
+    const updatePageTitle = () => {
+      const pageTitle =
+        $t("base.pageTitles.saveTheDate") || "Default Page Title";
+      document.title = pageTitle;
+    };
+
+    onMounted(() => {
+      updatePageTitle();
+    });
+  },
 };
 </script>

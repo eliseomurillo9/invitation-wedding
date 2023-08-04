@@ -1,6 +1,7 @@
 <template>
   <div class="text-center pt-6 md:pt-0 flex flex-col gap-2">
-    <h1 class="text-green text-2xl md:text-6xl font-candal">{{ titleMsg }}</h1>
+    <h1 class="text-green text-2xl md:text-8xl font-nanum tracking-spacer">{{ titleMsg }}</h1>
+    <Counter class="mt-9" />
     <h2 class="text-blue-main text-2xl md:text-5xl font-nanum"> {{ weddingDate }}</h2>
     <div class="flex gap-1 m-auto w-fit">
       <svg
@@ -30,6 +31,7 @@
 </template>
 
 <script>
+import Counter from './Counter.vue';
 export default {
   name: "WeddingInformation",
   props: {
@@ -43,6 +45,7 @@ export default {
       Type: String,
     },
   },
+  components: {Counter}
 };
 </script>
 

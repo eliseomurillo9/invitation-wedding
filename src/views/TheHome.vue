@@ -1,5 +1,5 @@
 <template>
-  <main class="relative">
+  <main class="relative py-4">
     <WeddingInformation
       :titleMsg="$t('base.pageTitle')"
       :weddingDate="$t('base.weddingDate')"
@@ -19,7 +19,6 @@
         fill-opacity="0.4"
       />
     </svg>
-    <Counter class="mt-9" />
     <WorkInProgress class="mt-8 hidden md:block" />
     <div class="absolute right-0 bottom-82 hidden md:block">
       <div class="relative w-fit flex justify-center items-center">
@@ -99,7 +98,6 @@
 </template>
 
 <script>
-import Counter from "../components/Counter.vue";
 import WeddingInformation from "../components/WeddingInformation.vue";
 import ImagesSection from "../components/ImagesSection.vue";
 import WorkInProgress from "../components/WorkInProgress.vue";
@@ -111,7 +109,6 @@ export default {
   name: "TheHome",
   components: {
     WeddingInformation,
-    Counter,
     ImagesSection,
     WorkInProgress,
     NewsletterForm,

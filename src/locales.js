@@ -26,7 +26,7 @@ const messages = {
   EN: {
     base: {
       pageTitle: "Georgi & Eli Wedding",
-      weddingDate: "July 4th, 2024",
+      weddingDate: "July 21th, 2024",
       counter: {
         days: "Days",
         hours: "Hr",

@@ -10,7 +10,6 @@ const routes = [
     component: TheHome,
     meta: {
       title: "base.pageTitles.saveTheDate",
-      description: "This is the home page",
     },
   },
   {

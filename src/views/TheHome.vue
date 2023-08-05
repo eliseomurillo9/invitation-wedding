@@ -19,7 +19,7 @@
         fill-opacity="0.4"
       />
     </svg>
-    <WorkInProgress class="mt-16 hidden md:block" />
+    <WorkInProgress class="mt-16 hidden md:block" data-aos="zoom-in-up"/>
     <div class="absolute right-0 bottom-[26rem] hidden md:block">
       <div class="relative w-fit flex justify-center items-center">
         <svg
@@ -64,7 +64,7 @@
       </svg>
     </div>
     <ImagesSection :coupleImages="images" class="mt-8" />
-    <WorkInProgress class="mt-8 md:hidden" />
+    <WorkInProgress class="mt-8 md:hidden" data-aos="zoom-in-up"/>
     <NewsletterForm
       class="mt-24"
       @submit-error="(message) => (errorMessage = message)"
@@ -138,7 +138,7 @@ export default {
     });
 
     const updatePageTitle =  () => {
-      const pageTitle = $t('base.pageTitles.saveTheDate') || "Default Page Title";
+      const pageTitle = `${$t('base.pageTitles.saveTheDate')} - G&C`  || "Default Page Title";
       document.title = pageTitle;
     };
     onMounted(() => {

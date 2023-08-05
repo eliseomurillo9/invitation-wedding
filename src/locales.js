@@ -16,13 +16,20 @@ const messages = {
       newletterConfirmation: "Email registered successfully",
       error: {
         noAvailable: "El servicio no esta disponible.",
-        emailRegisted: "Tu correo ha esta registrado",
+        emailRegisted: "Tu correo ya ha sido registrado",
         notValidEmail: "E-mail no valido",
       },
       pageTitles: {
         saveTheDate: "Save the date",
         confirmation: "Confirmación",
       },
+    },
+    imagesAlt: {
+      logo: "Logo con un circulo y las letras G y C en el medio",
+      photoAlt: "Fotografia de Eliseo y Georgina",
+    },
+    alt: {
+      sendButton: "Boton para enviar el correo electronico",
     },
   },
   EN: {
@@ -49,6 +56,13 @@ const messages = {
         saveTheDate: "Save the date",
         confirmation: "Confirmation",
       },
+    },
+    imagesAlt: {
+      logo: "Logo with a circle and the letters G and C inside",
+      photoAlt: "Eliseo and Georgina photography",
+    },
+    alt: {
+      sendButton: "Submit email button",
     },
   },
 };

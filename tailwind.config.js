@@ -25,6 +25,9 @@ module.exports = {
       'montserrat': ['Montserrat', 'sans-serif'],
       'nanum': ['"Nanum Pen Script"', 'cursive'],
       'klee': ['"Klee One"', 'cursive']
+    },
+    letterSpacing: {
+      spacer: "0.36rem"
     }
   },
   plugins: [],

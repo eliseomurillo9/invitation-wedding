@@ -2,7 +2,7 @@
   <div
     class="text-left px-5 h-fit w-64 md:flex md:flex-row md:w-full md:justify-center md:items-center md:gap-2"
   >
-    <label for="" class="font-light text-xs md:text-2xl">
+    <label for="email" class="font-light text-xs md:text-2xl ps-2 font-klee">
       {{ $t("base.newsLetter") }}
     </label>
     <form class="flex bg-pink-clear w-fit rounded-lg">
@@ -10,7 +10,7 @@
         type="email"
         name="email"
         id="email"
-        class="bg-pink-clear rounded-lg font-montserrat text-xs px-2 h-7 focus:outline-none w-full md:text-2xl md:h-11"
+        class="bg-pink-clear rounded-lg font-klee text-xs px-2 h-7 focus:outline-none w-full max-w-xs md:text-2xl md:h-11"
         placeholder="Email"
         v-model="userEmail"
       />

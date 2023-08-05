@@ -1,10 +1,8 @@
-<template class="bg-white">
-  <main>
+<template class="bg-white min-h-screen">
     <header>
       <HeaderContainer />
-      <router-view />
     </header>
-  </main>
+    <router-view />
 </template>
 <script>
 import HeaderContainer from "./components/HeaderContainer.vue";

@@ -15,8 +15,8 @@ const routes = [
   },
   {
     path: "/confirmation",
-    name: "confirmationPage",
-    component: () => ConfirmationPage,
+    name: "ConfirmationPage",
+    component: ConfirmationPage,
   },
 ];
 

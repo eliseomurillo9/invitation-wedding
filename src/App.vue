@@ -24,6 +24,7 @@ export default {
     });
     onMounted(() => {
       AOS.init();
+      console.log('document', document.documentElement.header);
     });
   },
 };

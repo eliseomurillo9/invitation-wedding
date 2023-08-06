@@ -3,6 +3,7 @@ import TheHome from "../views/TheHome.vue";
 import { createRouter, createWebHistory } from "vue-router";
 
 
+
 const routes = [
   {
     path: "/",

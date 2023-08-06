@@ -3,11 +3,11 @@
     <i18n-t
       keypath="base.pageTitle"
       tag="h1"
-      class="text-green text-[2.5rem] md:text-8xl font-nanum tracking-spacer"
+      class="text-blue-light text-[2.5rem] md:text-8xl font-nanum tracking-spacer"
       data-aos="zoom-out"
     >
       <template #wedding>
-        <span class="block -my-4"> {{ $t("base.weddingTitle") }} </span>
+        <span class="block md:inline-block -my-4"> {{ $t("base.weddingTitle") }} </span>
       </template>
     </i18n-t>
     <Counter data-aos="fade-up" class="z-20"/>

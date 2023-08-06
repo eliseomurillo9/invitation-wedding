@@ -23,6 +23,7 @@ const messages = {
         saveTheDate: "Save the date",
         confirmation: "Confirmación",
       },
+      sendEmailBottom: "Suscribirse",
     },
     imagesAlt: {
       logo: "Logo con un circulo y las letras G y C en el medio",
@@ -30,6 +31,9 @@ const messages = {
     },
     alt: {
       sendButton: "Boton para enviar el correo electronico",
+    },
+    placeholders: {
+      emailField: "Introduce tu correo...",
     },
   },
   EN: {
@@ -56,6 +60,7 @@ const messages = {
         saveTheDate: "Save the date",
         confirmation: "Confirmation",
       },
+      sendEmailBottom: "Subscribe",
     },
     imagesAlt: {
       logo: "Logo with a circle and the letters G and C inside",
@@ -63,6 +68,9 @@ const messages = {
     },
     alt: {
       sendButton: "Submit email button",
+    },
+    placeholders: {
+      emailField: "Your e-mail here...",
     },
   },
 };

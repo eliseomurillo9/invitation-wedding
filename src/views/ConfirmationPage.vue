@@ -1,10 +1,10 @@
 <template>
   <div class="fixed top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4">
     <div
-      class="bg-blue-alt w-72 h-32 z-10 sticky rounded-2xl flex justify-center items-center text-center p-3 md:w-[739px] md:h-[261px]"
+      class="bg-pink-main md:bg-blue-alt w-72 h-32 z-10 sticky rounded-2xl flex justify-center items-center text-center p-3 md:w-[739px] md:h-[261px]"
       data-aos="zoom-in"
     >
-      <h2 class="text-pink-clear text-2xl font-klee md:text-5xl">
+      <h2 class="text-white md:text-pink-clear text-2xl font-klee md:text-5xl">
         {{ $t("base.newletterConfirmation") }}
       </h2>
     </div>

@@ -8,11 +8,12 @@ module.exports = {
         white: '#FFF',
         green: "#8D9F8A",
         blue: {
-          main: "#0C315F",
-          alt: '#0A2546'
+          main: '#0C315F',
+          alt: '#0A2546',
+          light: '#325177'
         },
         pink: {
-          main: '#E79F96',
+          main: '#E68C81',
           clear: '#F6CCC7'
         }
       },

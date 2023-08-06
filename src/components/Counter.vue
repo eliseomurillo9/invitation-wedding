@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-pink-main rounded-full pt-1 pb-0 px-8 flex text-white text-center text-2xl text-shadow-xl justify-center gap-2 md:gap-3 md:px-14 md:py-6 w-fit mx-auto"
+    class="bg-pink-main rounded-full pt-1 pb-0 px-8 flex text-white text-center text-2xl text-shadow-xl justify-center gap-2 md:gap-3 md:px-11 md:py-4 w-fit mx-auto"
   >
     <div class="flex flex-col items-center justify-center">
       <span class="text-[1.48031rem] md:text-4xl">{{ countdownInfo.days }}</span>

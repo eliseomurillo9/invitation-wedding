@@ -1,7 +1,7 @@
 <template>
   <div class="fixed top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4">
     <div
-      class="bg-blue-alt w-72 h-32 z-50 sticky rounded-2xl flex justify-center items-center text-center p-3 md:w-[739px] md:h-[261px]"
+      class="bg-blue-alt w-72 h-32 z-10 sticky rounded-2xl flex justify-center items-center text-center p-3 md:w-[739px] md:h-[261px]"
       data-aos="zoom-in"
     >
       <h2 class="text-pink-clear text-2xl font-klee md:text-5xl">
@@ -14,7 +14,7 @@
       height="113"
       viewBox="0 0 110 113"
       fill="none"
-      class="mx-auto z-0 md:z-10 md:absolute md:-bottom-[3.20rem] md:-left-[3.10rem]"
+      class="mx-auto hidden md:block z-0 md:z-20 md:absolute md:-bottom-[3.20rem] md:-left-[3.10rem]"
       data-aos="fade-down"
       data-aos-easing="linear"
       data-aos-duration="200"
@@ -34,7 +34,10 @@
       height="113"
       viewBox="0 0 110 113"
       fill="none"
-      class="hidden md:absolute md:-top-[3.20rem] md:-right-[3.10rem]"
+      class="mx-auto md:z-20 md:absolute md:-top-[3.20rem] md:-right-[3.10rem]"
+      data-aos="fade-down"
+      data-aos-easing="linear"
+      data-aos-duration="200"
     >
       <path
         d="M46.3411 52.6048C46.3411 52.6048 17.0584 28.443 15.9221 37.2313C14.7859 46.0196 45.9829 58.0417 45.9829 58.0417C45.9829 58.0417 19.3358 54.0918 21.0542 63.2604C22.7727 72.429 45.6313 60.7438 45.6313 60.7438C45.6313 60.7438 15.4616 70.019 23.7491 77.8053C32.0366 85.5916 49.2923 63.2477 49.2923 63.2477C49.2923 63.2477 35.2045 87.5897 41.9024 92.3955C48.6003 97.2013 53.9973 65.5185 53.9973 65.5185C53.9973 65.5185 50.7213 95.6324 60.5745 97.0461C70.4277 98.4597 57.4882 63.2993 57.4882 63.2993C57.4882 63.2993 68.1521 95.0751 76.1895 92.7174C84.2268 90.3597 59.6929 63.6622 59.6929 63.6622C59.6929 63.6622 87.5615 88.5549 90.0813 79.8428C92.601 71.1307 60.2237 60.237 60.2237 60.237C60.2237 60.237 93.4782 74.8056 95.1355 67.272C96.7927 59.7384 60.3254 57.6517 60.3254 57.6517C60.3254 57.6517 97.662 58.5556 94.2246 49.9232C90.7872 41.2907 57.6871 54.4767 57.6871 54.4767C57.6871 54.4767 93.0819 38.4351 83.4456 30.8971C73.8093 23.3591 55.4022 52.6525 55.4022 52.6525C55.4022 52.6525 72.0697 21.0727 64.5738 17.1417C57.0779 13.2108 51.7977 52.6228 51.7977 52.6228C51.7977 52.6228 56.5872 18.1543 48.8217 14.6994C41.0562 11.2444 50.2375 51.6086 50.2375 51.6086C50.2375 51.6086 38.2266 18.284 30.2246 21.6275C22.2227 24.9709 46.3411 52.6048 46.3411 52.6048Z"
@@ -91,7 +94,7 @@ export default {
     const { t: $t } = useI18n();
     const updatePageTitle = () => {
       const pageTitle =
-        $t("base.pageTitles.saveTheDate") || "Default Page Title";
+        `${$t("base.pageTitles.saveTheDate")} - G&C`  || "Default Page Title";
       document.title = pageTitle;
     };
 

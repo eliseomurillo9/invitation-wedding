@@ -3,6 +3,7 @@ import TheHome from "../views/TheHome.vue";
 import { createRouter, createWebHistory } from "vue-router";
 
 
+
 const routes = [
   {
     path: "/",
@@ -10,7 +11,6 @@ const routes = [
     component: TheHome,
     meta: {
       title: "base.pageTitles.saveTheDate",
-      description: "This is the home page",
     },
   },
   {

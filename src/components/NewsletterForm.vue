@@ -17,6 +17,7 @@
       <button
         type="submit"
         class="bg-pink-main rounded h-7 w-9 md:h-11 md:w-12"
+        :aria-label="$t('alt.sendButton')"
         @click="registerMail"
       >
         <svg

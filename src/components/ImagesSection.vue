@@ -11,7 +11,7 @@
     >
       <img
         :src="require(`@/assets/${image}`)"
-        :alt="index"
+        :alt="$t('imagesAlt.photoAlt')"
         class="w-full h-full object-cover"
       />
     </div>

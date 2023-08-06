@@ -1,16 +1,17 @@
 <template>
   <div class="text-center pt-6 md:pt-0 flex flex-col gap-[2.12rem]">
-      <i18n-t
-        keypath="base.pageTitle"
-        tag="h1"
-        class="text-green text-[2.5rem] md:text-8xl font-nanum tracking-spacer"
-      >
-        <template #wedding>
-          <span class="block -my-4"> {{ $t('base.weddingTitle') }} </span>
-        </template>
-      </i18n-t>
-    <Counter />
-    <div class="flex flex-col gap-1">
+    <i18n-t
+      keypath="base.pageTitle"
+      tag="h1"
+      class="text-green text-[2.5rem] md:text-8xl font-nanum tracking-spacer"
+      data-aos="zoom-out"
+    >
+      <template #wedding>
+        <span class="block -my-4"> {{ $t("base.weddingTitle") }} </span>
+      </template>
+    </i18n-t>
+    <Counter data-aos="fade-up" class="z-20"/>
+    <div class="flex flex-col gap-1 z-0" data-aos="fade-down">
       <h2 class="text-blue-main text-2xl md:text-5xl font-nanum">
         {{ weddingDate }}
       </h2>

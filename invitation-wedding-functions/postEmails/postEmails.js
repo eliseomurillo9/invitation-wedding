@@ -4,7 +4,7 @@ require("dotenv").config();
 const url = process.env.SHEET_API_URL;
 const token = process.env.SHEET_API_KEY;
 
-const registerEmail = async (arg) => {
+const handler = async (arg) => {
   const email = arg;
   const data = new URLSearchParams();
   data.append("email", email);
@@ -29,5 +29,5 @@ const registerEmail = async (arg) => {
     }
   }
 };
-module.exports = { registerEmail };
+module.exports = { handler };
 

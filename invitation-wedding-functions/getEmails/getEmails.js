@@ -1,10 +1,8 @@
 // Docs on event and context https://docs.netlify.com/functions/build/#code-your-function-2
-require("dotenv").config();
-
 const url = process.env.SHEET_API_URL;
 const token = process.env.SHEET_API_KEY;
 
-const getEmails = async () => {
+const handler = async () => {
   try {
     const response = await fetch(url, {
       headers: {
@@ -20,4 +18,6 @@ const getEmails = async () => {
     throw new Error(error);
   }
 };
-module.exports = { getEmails };
+
+
+module.exports = { handler };

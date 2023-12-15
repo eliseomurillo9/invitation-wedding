@@ -7,14 +7,16 @@ module.exports = {
         black: '#061930',
         white: '#FFF',
         green: "#8D9F8A",
+        red: '#9C4238',
         blue: {
-          main: '#0C315F',
+          main: '#295EA7',
           alt: '#0A2546',
           light: '#325177'
         },
         pink: {
-          main: '#E68C81',
-          clear: '#F6CCC7'
+          main: '#FFB4AA',
+          clear: '#FFDAD5',
+          alt: '#FFB4AA'
         }
       },
       spacing: {

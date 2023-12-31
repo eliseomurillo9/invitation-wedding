@@ -24,6 +24,9 @@ module.exports = {
       spacing: {
         82: "22rem",
       },
+      columns: {
+        '2xs': '9rem',
+      },
     },
     fontFamily: {
       candal: ["Candal", "sans-serif"],

@@ -21,14 +21,14 @@
       :reverseDiv="true"
     />
     <ScheduleSection title="Schedule" />
-    <ImagesContainer title="Some photos of us" />
+    <ImagesContainer title="Some photos of us" :images="photos"/>
   </main>
 </template>
 
 <script setup>
 import WeddingInformation from "@/components/WeddingInformation.vue";
 import HistoryContainer from "@/components/HistoryContainer.vue";
-import { onMounted } from "vue";
+import { onMounted, ref } from "vue";
 import { useI18n } from "vue-i18n";
 import ScheduleSection from "@/components/ScheduleSection.vue";
 import ImagesContainer from "@/components/ImagesContainer.vue";
@@ -40,6 +40,14 @@ const updatePageTitle = () => {
     `${$t("base.pageTitles.saveTheDate")} - G&C` || "Default Page Title";
   document.title = pageTitle;
 };
+
+const photos = ref([
+  { img: "foto-1-web.webp", alt: "img1" },
+  { img: "foto-2-web.webp", alt: "img2" },
+  { img: "foto-3-web.webp", alt: "img3" },
+  { img: "foto-4-web.webp", alt: "img2" },
+  { img: "foto-1-web.webp", alt: "img2" },
+]);
 onMounted(() => {
   updatePageTitle();
 });

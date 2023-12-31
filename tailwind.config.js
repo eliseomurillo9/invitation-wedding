@@ -4,34 +4,36 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        black: '#061930',
-        white: '#FFF',
+        black: "#061930",
+        white: "#FFF",
         green: "#8D9F8A",
-        red: '#9C4238',
+        red: "#9C4238",
         blue: {
-          main: '#295EA7',
-          alt: '#0A2546',
-          light: '#325177'
+          main: "#295EA7",
+          alt: "#0A2546",
+          light: "#325177",
         },
         pink: {
-          main: '#FFB4AA',
-          clear: '#FFDAD5',
-          alt: '#FFB4AA'
-        }
+          main: "#FFB4AA",
+          clear: "#FFDAD5",
+          alt: "#FFB4AA",
+          white: "#FEF1EF",
+          3: "#FFF8F7",
+        },
       },
       spacing: {
-        '82': '22rem',
-      }
+        82: "22rem",
+      },
     },
     fontFamily: {
-      'candal': ['Candal', 'sans-serif'],
-      'montserrat': ['Montserrat', 'sans-serif'],
-      'nanum': ['"Nanum Pen Script"', 'cursive'],
-      'klee': ['"Klee One"', 'cursive']
+      candal: ["Candal", "sans-serif"],
+      montserrat: ["Montserrat", "sans-serif"],
+      nanum: ['"Nanum Pen Script"', "cursive"],
+      klee: ['"Klee One"', "cursive"],
     },
     letterSpacing: {
-      spacer: "0.36rem"
-    }
+      spacer: "0.36rem",
+    },
   },
   plugins: [],
 };

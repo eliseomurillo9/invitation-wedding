@@ -1,11 +1,17 @@
 <template>
-  <div class=" mt-12">
-  <button class="py-2.5 px-5 border-4 border-pink-main rounded-full text-red">{{ label }}</button>
-  </div>
+    <router-link to="/confirmation" custom v-slot="{ navigate }">
+      <button
+        class="font-klee py-2 px-3.5 border-4 border-pink-main rounded-full text-red"
+        @click="navigate"
+        role="link"
+      >
+        {{ label }}
+      </button>
+    </router-link>
 </template>
 
 <script setup>
-import defineProps from "vue";
+import { defineProps } from "vue";
 
 defineProps({
   label: String,

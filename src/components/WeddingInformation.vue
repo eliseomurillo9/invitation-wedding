@@ -1,66 +1,44 @@
 <template>
-  <div class="text-center pt-6 md:pt-0 flex flex-col gap-[2.12rem]">
-    <i18n-t
-      keypath="base.pageTitle"
-      tag="h1"
-      class="text-blue-light text-[2.5rem] md:text-8xl font-nanum tracking-spacer"
-      data-aos="zoom-out"
-    >
-      <template #wedding>
-        <span class="block md:inline-block -my-4"> {{ $t("base.weddingTitle") }} </span>
-      </template>
-    </i18n-t>
-    <Counter data-aos="fade-up" class="z-20"/>
-    <div class="flex flex-col gap-1 z-0" data-aos="fade-down">
-      <h2 class="text-blue-main text-2xl md:text-5xl font-nanum">
-        {{ weddingDate }}
-      </h2>
-      <div class="flex gap-1 m-auto w-fit">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 12 16"
-          fill="none"
-          class="h-4 md:h-6"
-        >
-          <rect ill="white" />
-          <path
-            d="M6 0C4.40923 0.00173375 2.88412 0.634432 1.75927 1.75927C0.634432 2.88412 0.00173375 4.40923 0 6C0 11.418 5.15625 15.6055 5.375 15.7812C5.55253 15.9229 5.7729 16 6 16C6.2271 16 6.44747 15.9229 6.625 15.7812C6.84375 15.6055 12 11.418 12 6C11.9983 4.40923 11.3656 2.88412 10.2407 1.75927C9.11588 0.634432 7.59077 0.00173375 6 0ZM6 13.6582C4.73633 12.4512 2 9.43945 2 6C2 4.93913 2.42143 3.92172 3.17157 3.17157C3.92172 2.42143 4.93913 2 6 2C7.06087 2 8.07828 2.42143 8.82843 3.17157C9.57857 3.92172 10 4.93913 10 6C10 9.43945 7.26367 12.4512 6 13.6582Z"
-            fill="#E79F96"
-          />
-          <path
-            d="M6 4C5.60444 4 5.21776 4.1173 4.88886 4.33706C4.55996 4.55682 4.30362 4.86918 4.15224 5.23463C4.00087 5.60009 3.96126 6.00222 4.03843 6.39018C4.1156 6.77814 4.30608 7.13451 4.58579 7.41421C4.86549 7.69392 5.22186 7.8844 5.60982 7.96157C5.99778 8.03874 6.39992 7.99913 6.76537 7.84776C7.13082 7.69638 7.44318 7.44004 7.66294 7.11114C7.8827 6.78224 8 6.39556 8 6C7.99931 5.46978 7.78837 4.96147 7.41345 4.58655C7.03853 4.21163 6.53022 4.00069 6 4Z"
-            fill="#E79F96"
-          />
-          <path
-            d="M6 4C5.60444 4 5.21776 4.1173 4.88886 4.33706C4.55996 4.55682 4.30362 4.86918 4.15224 5.23463C4.00087 5.60009 3.96126 6.00222 4.03843 6.39018C4.1156 6.77814 4.30608 7.13451 4.58579 7.41421C4.86549 7.69392 5.22186 7.8844 5.60982 7.96157C5.99778 8.03874 6.39992 7.99913 6.76537 7.84776C7.13082 7.69638 7.44318 7.44004 7.66294 7.11114C7.8827 6.78224 8 6.39556 8 6C7.99931 5.46978 7.78837 4.96147 7.41345 4.58655C7.03853 4.21163 6.53022 4.00069 6 4Z"
-            stroke="#E79F96"
-          />
-        </svg>
-        <span class="text-blue-main text-sm md:text-2xl font-klee">{{
-          weddingPlace
-        }}</span>
-      </div>
+  <section class="flex flex-col justify-center items-center gap-4 text-blue-main py-9">
+    <h1>{{ $t(titleMsg) }}</h1>
+    <Counter data-aos="fade-up" class="z-20" />
+    <img
+      src="../assets/foto-5.png"
+      alt="Foto Elise y Georgina abrazados"
+      class="w-60"
+    />
+    <div class="flex gap-2 font-nanum">
+      <img src="../assets/icons/location.svg" alt="" srcset="" />
+      <h2>{{ weddingPlace }}</h2>
+      <img src="../assets/icons/calendar.svg" alt="" srcset="" class="w-7" />
+      <h2>{{ weddingDate }}</h2>
     </div>
-  </div>
+    <p class="w-2/4 text-center font-klee">{{ description }}</p>
+  <ConfirmationContainerVue :title="$t('base.assistanceConfirmation')" />
+  </section>
 </template>
 
-<script>
-import Counter from "./Counter.vue";
-export default {
-  name: "WeddingInformation",
-  props: {
-    titleMsg: {
-      type: String,
-    },
-    weddingDate: {
-      type: String,
-    },
-    weddingPlace: {
-      Type: String,
-    },
+<script setup>
+import Counter from "@/components/Counter.vue";
+import { defineProps } from "vue";
+import ConfirmationContainerVue from "./ConfirmationContainer.vue";
+
+const props = defineProps({
+  titleMsg: {
+    type: String,
   },
-  components: { Counter },
-};
+  weddingDate: {
+    type: String,
+  },
+  weddingPlace: {
+    Type: String,
+  },
+  description: {
+    Type: String
+  }
+});
+
+console.log(props.weddingPlace);
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

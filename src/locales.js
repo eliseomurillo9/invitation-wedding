@@ -27,7 +27,8 @@ const messages = {
       description:
         "Bienvenido a nuestro sitio web dedicado a nuestra boda, estamos felices de compartir este momento especial contigo",
       assistanceConfirmation: "Confirmar mi asistencia: ",
-
+      here:"aqui",
+      photosAction: "Las fotos de la boda estaran disponibles",
     },
     imagesAlt: {
       logo: "Logo con un circulo y las letras G y C en el medio",
@@ -86,6 +87,8 @@ const messages = {
       description:
         "Welcome to our website dedicated to our wedding, we are happy to share this special moment with you",
       assistanceConfirmation: "Confirm my assistance: ",
+      here: "here",
+      photosAction: "The wedding photos will be available",
     },
     imagesAlt: {
       logo: "Logo with a circle and the letters G and C inside",

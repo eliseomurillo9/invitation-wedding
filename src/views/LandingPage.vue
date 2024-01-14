@@ -21,7 +21,9 @@
       :reverseDiv="true"
     />
     <ScheduleSection title="Schedule" />
-    <ImagesContainer title="Some photos of us" :images="photos"/>
+    <ImagesContainer title="Some photos of our story" :images="photos" sectionFooter="Photos from the wedding will be available HERE"/>
+    <EntourageSection title="Entourage" :entouragePeople="bridesGrooms" />
+    <WishesSection title="Your Wishes" />
   </main>
 </template>
 
@@ -32,6 +34,8 @@ import { onMounted, ref } from "vue";
 import { useI18n } from "vue-i18n";
 import ScheduleSection from "@/components/ScheduleSection.vue";
 import ImagesContainer from "@/components/ImagesContainer.vue";
+import EntourageSection from "@/components/EntourageSection.vue";
+import WishesSection from "@/components/WishesSection.vue";
 
 const { t: $t } = useI18n();
 
@@ -47,7 +51,55 @@ const photos = ref([
   { img: "foto-3-web.webp", alt: "img3" },
   { img: "foto-4-web.webp", alt: "img2" },
   { img: "foto-1-web.webp", alt: "img2" },
+  { img: "foto-3-web.webp", alt: "img2" },
+  { img: "foto-1-web.webp", alt: "img2" },
+  { img: "foto-1-web.webp", alt: "img2" },
+  { img: "foto-3-web.webp", alt: "img2" },
+  { img: "foto-1-web.webp", alt: "img2" },
 ]);
+
+const bridesGrooms = [
+  {
+    title: 'Bridesmaids',
+    people: [
+      {
+        name:'Luci',
+        image: 'https://storage.cloud.google.com/wedding-inv-bucket/luci.svg',
+        alt: 'imagesAlt.luci'
+      },
+      {
+        name:'Ale',
+        image: 'https://storage.cloud.google.com/wedding-inv-bucket/ale.svg',
+        alt: 'imagesAlt.ale'
+      },
+      {
+        name:'Keren',
+        image: 'https://storage.cloud.google.com/wedding-inv-bucket/keren.svg',
+        alt: 'imagesAlt.keren'
+      },
+    ]
+  },
+  {
+    title: 'Groomsman',
+    people: [
+    {
+        name:'Alex',
+        image: 'https://storage.cloud.google.com/wedding-inv-bucket/ale.svg',
+        alt: 'imagesAlt.luci'
+      },
+      {
+        name:'Kevin',
+        image: 'https://storage.cloud.google.com/wedding-inv-bucket/luci.svg',
+        alt: 'imagesAlt.ale'
+      },
+      {
+        name:'William',
+        image: 'https://storage.cloud.google.com/wedding-inv-bucket/keren.svg',
+        alt: 'imagesAlt.keren'
+      },
+    ]
+  }
+]
 onMounted(() => {
   updatePageTitle();
 });

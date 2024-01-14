@@ -27,6 +27,9 @@ module.exports = {
       columns: {
         '2xs': '9rem',
       },
+      height: {
+        85: '21rem',
+      }
     },
     fontFamily: {
       candal: ["Candal", "sans-serif"],

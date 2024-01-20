@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-pink-white py-9">
+  <section class="bg-pink-white py-9 px-7">
     <h1 class="text-blue-main font-nanum text-4xl text-center py-6">{{ title }}</h1>
     <div class="flex justify-center items-center gap-6" :class="{'flex-row-reverse': reverseDiv}">
       <article class="w-2/4">

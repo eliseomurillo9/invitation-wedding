@@ -23,7 +23,7 @@ import Counter from "@/components/Counter.vue";
 import { defineProps } from "vue";
 import ConfirmationContainerVue from "./ConfirmationContainer.vue";
 
-const props = defineProps({
+defineProps({
   titleMsg: {
     type: String,
   },
@@ -38,7 +38,6 @@ const props = defineProps({
   }
 });
 
-console.log(props.weddingPlace);
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

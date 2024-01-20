@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-pink-3 p-10 flex flex-col gap-12">
+  <section class="bg-pink-3 p-7 flex flex-col gap-12">
     <h1 class="font-nanum text-4xl text-blue-main text-center">Schedule</h1>
     <InformationCard title="Presencial">
       <table>

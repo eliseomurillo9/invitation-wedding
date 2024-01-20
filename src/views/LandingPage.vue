@@ -1,5 +1,5 @@
 <template>
-  <main class="relative py-5 md:py-8">
+  <main class="relative pt-5 md:py-8">
     <WeddingInformation
       titleMsg="Georgi & Eli"
       :weddingDate="$t('base.weddingDate')"
@@ -21,9 +21,14 @@
       :reverseDiv="true"
     />
     <ScheduleSection title="Schedule" />
-    <ImagesContainer title="Some photos of our story" :images="photos" sectionFooter="Photos from the wedding will be available HERE"/>
+    <ImagesContainer
+      title="Some photos of our story"
+      :images="photos"
+      sectionFooter="Photos from the wedding will be available HERE"
+    />
     <EntourageSection title="Entourage" :entouragePeople="bridesGrooms" />
     <WishesSection title="Your Wishes" />
+    <GiftSection title="Your presence is a gift" />
   </main>
 </template>
 
@@ -36,6 +41,7 @@ import ScheduleSection from "@/components/ScheduleSection.vue";
 import ImagesContainer from "@/components/ImagesContainer.vue";
 import EntourageSection from "@/components/EntourageSection.vue";
 import WishesSection from "@/components/WishesSection.vue";
+import GiftSection from "@/components/GiftSection.vue";
 
 const { t: $t } = useI18n();
 
@@ -60,46 +66,46 @@ const photos = ref([
 
 const bridesGrooms = [
   {
-    title: 'Bridesmaids',
+    title: "Bridesmaids",
     people: [
       {
-        name:'Luci',
-        image: 'https://storage.cloud.google.com/wedding-inv-bucket/luci.svg',
-        alt: 'imagesAlt.luci'
+        name: "Luci",
+        image: "https://storage.cloud.google.com/wedding-inv-bucket/luci.svg",
+        alt: "imagesAlt.luci",
       },
       {
-        name:'Ale',
-        image: 'https://storage.cloud.google.com/wedding-inv-bucket/ale.svg',
-        alt: 'imagesAlt.ale'
+        name: "Ale",
+        image: "https://storage.cloud.google.com/wedding-inv-bucket/ale.svg",
+        alt: "imagesAlt.ale",
       },
       {
-        name:'Keren',
-        image: 'https://storage.cloud.google.com/wedding-inv-bucket/keren.svg',
-        alt: 'imagesAlt.keren'
+        name: "Keren",
+        image: "https://storage.cloud.google.com/wedding-inv-bucket/keren.svg",
+        alt: "imagesAlt.keren",
       },
-    ]
+    ],
   },
   {
-    title: 'Groomsman',
+    title: "Groomsman",
     people: [
-    {
-        name:'Alex',
-        image: 'https://storage.cloud.google.com/wedding-inv-bucket/ale.svg',
-        alt: 'imagesAlt.luci'
+      {
+        name: "Alex",
+        image: "https://storage.cloud.google.com/wedding-inv-bucket/ale.svg",
+        alt: "imagesAlt.luci",
       },
       {
-        name:'Kevin',
-        image: 'https://storage.cloud.google.com/wedding-inv-bucket/luci.svg',
-        alt: 'imagesAlt.ale'
+        name: "Kevin",
+        image: "https://storage.cloud.google.com/wedding-inv-bucket/luci.svg",
+        alt: "imagesAlt.ale",
       },
       {
-        name:'William',
-        image: 'https://storage.cloud.google.com/wedding-inv-bucket/keren.svg',
-        alt: 'imagesAlt.keren'
+        name: "William",
+        image: "https://storage.cloud.google.com/wedding-inv-bucket/keren.svg",
+        alt: "imagesAlt.keren",
       },
-    ]
-  }
-]
+    ],
+  },
+];
 onMounted(() => {
   updatePageTitle();
 });

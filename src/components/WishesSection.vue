@@ -19,11 +19,16 @@
         <span class="text-red mt-2 font-bold"> -{{ message.author }}</span>
       </figure>
     </div>
+    <div class="flex flex-col justify-center items-center mt-8 gap-5">
+      <span>{{ $t("wishesSection.thanks") }}</span>
+      <buttonOutlined label="Leave a message" />
+    </div>
   </section>
 </template>
 
 <script setup>
 import { defineProps, ref } from "vue";
+import buttonOutlined from "./shared/buttons/buttonOutlined.vue";
 
 defineProps({
   title: {

@@ -3,17 +3,21 @@
       <HeaderContainer />
     </header>
     <router-view />
+    <FooterSection title="We are looking foward to see you" icon="heart.svg" />
 </template>
 <script>
 import HeaderContainer from "./components/HeaderContainer.vue";
 import { onMounted, watch } from "vue";
 import { useI18n } from "vue-i18n";
 import AOS from "aos";
+import FooterSection from "@/components/shared/FooterSection.vue";
+
 
 export default {
   name: "App",
   components: {
     HeaderContainer,
+    FooterSection
   },
   setup() {
      const { locale } = useI18n();
@@ -24,7 +28,6 @@ export default {
     });
     onMounted(() => {
       AOS.init();
-      console.log('document', document.documentElement.header);
     });
   },
 };

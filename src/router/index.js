@@ -1,14 +1,14 @@
 import ConfirmationPage from "../views/ConfirmationPage.vue";
-import LandingPage from '../views/LandingPage.vue'
+import LandingPage from "../views/LandingPage.vue";
 import { createRouter, createWebHistory } from "vue-router";
-
-
+import GiftSection from "@/components/GiftSection.vue";
 
 const routes = [
   {
     path: "/",
     name: "home",
     component: LandingPage,
+    children: [{ path: "/giftSection", component: GiftSection }],
     meta: {
       title: "base.pageTitles.saveTheDate",
     },
@@ -21,10 +21,9 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHistory('/'),
-  routes, 
-})
-
+  history: createWebHistory("/"),
+  routes,
+});
 
 router.beforeEach((to, from, next) => {
   document.title = `${to.meta.title} - G&E` || "Default Page Title";

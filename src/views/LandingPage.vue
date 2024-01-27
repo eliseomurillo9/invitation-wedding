@@ -1,12 +1,14 @@
 <template>
-  <main class="relative pt-5 md:py-8">
+  <main class="relative pt-24 md:py-8">
     <WeddingInformation
+    id="wedding-info"
       titleMsg="Georgi & Eli"
       :weddingDate="$t('base.weddingDate')"
       weddingPlace="El Salvador"
       :description="$t('base.description')"
     />
     <HistoryContainer
+    id="our-history"
       :title="$t('history.title')"
       :subTitle="$t('history.subtitle')"
       :historyText="$t('history.paragraph')"
@@ -20,15 +22,17 @@
       :altImg="$t('history.imageAlt')"
       :reverseDiv="true"
     />
-    <ScheduleSection title="Schedule" />
+    <ScheduleSection id="schedule" title="Schedule" />
     <ImagesContainer
+    id="gallery"
       title="Some photos of our story"
       :images="photos"
       sectionFooter="Photos from the wedding will be available HERE"
     />
-    <EntourageSection title="Entourage" :entouragePeople="bridesGrooms" />
-    <WishesSection title="Your Wishes" />
-    <GiftSection title="Your presence is a gift" />
+    <EntourageSection id="entourage" title="Entourage" :entouragePeople="bridesGrooms" />
+    <WishesSection id="wished" title="Your Wishes" />
+    <GiftSection id="gifts" title="Your presence is a gift" />
+    <RouterView></RouterView>
   </main>
 </template>
 

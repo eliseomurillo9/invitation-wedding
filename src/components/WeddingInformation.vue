@@ -1,6 +1,6 @@
 <template>
   <section class="flex flex-col justify-center items-center gap-4 text-blue-main py-9">
-    <h1>{{ $t(titleMsg) }}</h1>
+    <h1 class="text-red text-2xl font-nanum uppercase">{{ $t(titleMsg) }}</h1>
     <Counter data-aos="fade-up" class="z-20" />
     <img
       src="../assets/foto-5.png"

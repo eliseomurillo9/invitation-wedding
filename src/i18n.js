@@ -4,8 +4,8 @@ const i18n = createI18n({
   seo: true,
   legacy: false,
   globalInjection: true,
-  locale: "ES", // set locale
-  fallbackLocale: "EN",
+  locale: "EN", // set locale
+  fallbackLocale: "ES",
   messages: messages,
 });
 

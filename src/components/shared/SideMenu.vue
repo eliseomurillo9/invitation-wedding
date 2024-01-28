@@ -16,7 +16,7 @@
           v-for="(menu, i) in menuOptions"
           :key="i"
         >
-          <a :href="menu.id" v-smooth-scroll @click="emit('closeMenu')" :class="[{'bg-pink-white text-red rounded-xl p-1.5 pl-1.5': router.hash === menu.id || (menu.id === '#' && router.hash === '')}]">{{ menu.name }}</a>
+          <a :href="menu.id" v-smooth-scroll @click="emit('closeMenu')" class="pl-2" :class="[{'bg-pink-white text-red rounded-xl pr-24 py-1': router.hash === menu.id || (menu.id === '#' && router.hash === '')}]">{{ menu.name }}</a>
         </li>
       </ul>
       <ul>

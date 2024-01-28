@@ -29,6 +29,9 @@ module.exports = {
       },
       height: {
         85: '21rem',
+      },
+      borderWidth: {
+        3: '3px',
       }
     },
     fontFamily: {

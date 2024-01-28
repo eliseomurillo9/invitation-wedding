@@ -1,9 +1,9 @@
-<template class="bg-white min-h-screen">
+<template class="bg-white min-h-screen flex flex-col">
     <header>
       <HeaderContainer />
     </header>
-    <router-view />
-    <FooterSection title="We are looking foward to see you" icon="heart.svg" />
+    <router-view  />
+    <FooterSection title="We are looking foward to see you" icon="heart.svg" class="mt-auto"/>
 </template>
 <script>
 import HeaderContainer from "./components/HeaderContainer.vue";

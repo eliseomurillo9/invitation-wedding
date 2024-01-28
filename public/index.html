@@ -10,7 +10,7 @@
     <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
-  <body>
+  <body >
     <noscript>
       <strong
         >We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work
@@ -23,7 +23,7 @@
         continue.</strong
       >
     </noscript>
-    <div id="app"></div>
+    <div id="app" style="height: 100vh; display: flex; flex-direction: column; "></div>
     <!-- built files will be auto injected -->
   </body>
 </html>

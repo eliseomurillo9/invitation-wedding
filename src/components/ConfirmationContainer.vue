@@ -2,8 +2,12 @@
   <div class="flex flex-col justify-center items-center gap-4">
     <h3 class="font-nanum text-2xl text-red">{{ title }}</h3>
     <div class="flex gap-3">
-      <buttonMain :label="$t('buttons.presential')" />
-      <ButtonOutlined :label="$t('buttons.online')" />
+      <router-link  to="/confirmation/presential">
+        <buttonMain :label="$t('buttons.presential')" type="button"/>
+      </router-link>
+      <router-link  to="/confirmation/online">
+        <ButtonOutlined :label="$t('buttons.online')" type="button"/>
+      </router-link>
     </div>
   </div>
 </template>

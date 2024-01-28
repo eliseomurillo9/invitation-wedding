@@ -1,22 +1,21 @@
-import ConfirmationPage from "../views/ConfirmationPage.vue";
+// import ConfirmationPage from "../views/ConfirmationPage.vue";
 import LandingPage from "../views/LandingPage.vue";
 import { createRouter, createWebHistory } from "vue-router";
-import GiftSection from "@/components/GiftSection.vue";
+import ConfirmationForm from "@/views/ConfirmationForm.vue";
 
 const routes = [
   {
     path: "/",
     name: "home",
     component: LandingPage,
-    children: [{ path: "/giftSection", component: GiftSection }],
     meta: {
       title: "base.pageTitles.saveTheDate",
     },
   },
   {
-    path: "/confirmation",
-    name: "ConfirmationPage",
-    component: ConfirmationPage,
+    path: "/confirmation/:modality",
+    name: "ConfirmationForm",
+    component: ConfirmationForm,
   },
 ];
 

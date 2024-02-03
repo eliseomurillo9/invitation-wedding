@@ -53,7 +53,7 @@ const messages = {
       title: "Nuestra historia",
       subtitle: "Como nos conocimos:",
       paragraph:
-        "Hola yo no se que poner Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur ma Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed",
+        "En 2021 San Salvador, empieza la historia, nuestro primer encuentro nada más y nada menos que en el trabajo, sin planearlo, el amor llegó. A finales de ese año empezamos nuestra relación a distancia uno en El Salvador y otro en Francia, con citas por video llamadas y pelis en línea…las diferencias horarias no son nuestras amigas En 2022 los dos seguimos nuestra relación a distancia pero ahora en un mismo continente y mismos horarios, pequeñas escapadas a Madrid y Lille para vernos fueron parte de nuestra rutina",
       altImg: "Foto de Eliseo y Georgina",
       theProposalTitle: 'La propuesta',
       proposalParaagraph: 'voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur maNemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur ma aut odit aut fugit,',

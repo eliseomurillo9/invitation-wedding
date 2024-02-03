@@ -1,6 +1,6 @@
 <template>
-  <figure class="p-5 bg-white min-w-80 font-klee shadow-lg rounded-md md:w-96" >
-    <h2 class="font-nanum text-xl pb-8 text-red text-center">{{ title }}</h2>
+  <figure class="p-5 bg-white min-w-80 font-klee shadow rounded-md md:w-96 py-7" >
+    <h2 class="font-nanum text-xl pb-8 text-red text-center md:text-2xl">{{ title }}</h2>
     <slot ></slot>
   </figure>
 </template>

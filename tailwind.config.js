@@ -26,6 +26,7 @@ module.exports = {
       },
       columns: {
         '2xs': '9rem',
+        '4xs': '15rem'
       },
       height: {
         85: '21rem',

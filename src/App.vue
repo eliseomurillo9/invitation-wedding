@@ -1,6 +1,7 @@
 <template class="bg-white min-h-screen flex flex-col">
     <header>
       <HeaderContainer />
+      
     </header>
     <router-view  />
     <FooterSection title="We are looking foward to see you" icon="heart.svg" class="mt-auto"/>
@@ -9,15 +10,15 @@
 import HeaderContainer from "./components/HeaderContainer.vue";
 import { watch } from "vue";
 import { useI18n } from "vue-i18n";
-import FooterSection from "@/components/shared/FooterSection.vue";
+import FooterSection from "@/components/shared/FooterSection.vue"; 
 
 
 export default {
   name: "App",
   components: {
     HeaderContainer,
-    FooterSection
-  },
+    FooterSection,
+},
   setup() {
      const { locale } = useI18n();
 

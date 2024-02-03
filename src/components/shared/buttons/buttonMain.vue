@@ -1,5 +1,13 @@
 <template>
+  <a
+    v-if="!!buttonhref"
+    class="font-klee py-2 px-3.5 bg-pink-main rounded-full text-red text-center"
+    :href="buttonhref"
+    target="_blank"
+    rel="noopener noreferrer"
+  > {{ label }}</a>
   <button
+    v-else
     :type="type"
     class="font-klee py-2 px-3.5 bg-pink-main rounded-full text-red text-center"
   >
@@ -17,6 +25,9 @@ defineProps({
   type: {
     type: String,
     default: "button",
+  },
+  buttonhref: {
+    type: String,
   },
 });
 </script>

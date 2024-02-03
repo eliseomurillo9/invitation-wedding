@@ -44,18 +44,18 @@
           </tr>
         </table>
         <div class="flex gap-6 justify-center items-center">
-          <ButtonMain :label="$t('buttons.map')" :isLink="true" />
-          <ButtonMain :label="$t('buttons.addCalendar')" :isLink="true" />
+          <ButtonOutlined :label="$t('buttons.map')" buttonhref="https://maps.app.goo.gl/X5az7FwnsPVxs45VA" />
+          <ButtonMain :label="$t('buttons.addCalendar')" />
         </div>
       </InformationCard>
-      <InformationCard title="Online meeting" >
+      <InformationCard title="Online meeting" class="flex flex-col items-center" >
         <p class="pb-9">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit
           dignissimos molestias totam? Eaque dolor ipsum eveniet cum provident
           error nobis adipisci, praesentium voluptatum, nostrum aliquam quaerat,
           quibusdam voluptatibus molestias ex.
         </p>
-        <ButtonMain :label="$t('buttons.addCalendar')" :isLink="true" />
+        <ButtonMain :label="$t('buttons.addCalendar')" :isLink="true" class="mt-auto" />
       </InformationCard>
     </div>
   </section>
@@ -64,4 +64,5 @@
 <script setup>
 import InformationCard from "../components/shared/InformationCard.vue";
 import ButtonMain from "./shared/buttons/buttonMain.vue";
+import ButtonOutlined from "./shared/buttons/buttonOutlined.vue";
 </script>

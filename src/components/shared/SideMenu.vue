@@ -16,7 +16,7 @@
           v-for="(menu, i) in menuOptions"
           :key="i"
         >
-          <a :href="menu.id" v-smooth-scroll @click="emit('closeMenu')" class="pl-2" :class="[{'bg-pink-white text-red rounded-xl pr-24 py-1': router.hash === menu.id || (menu.id === '#' && router.hash === '')}]">{{ menu.name }}</a>
+          <a :href="menu.id" @click="emit('closeMenu')" class="pl-2" :class="[{'bg-pink-white text-red rounded-xl pr-24 py-1': router.hash === menu.id || (menu.id === '#' && router.hash === '')}]">{{ menu.name }}</a>
         </li>
       </ul>
       <ul>
@@ -30,7 +30,7 @@
       <ul class="flex flex-col gap-3">
         <li class="text-blue-main font-bold">Theme</li>
         <li v-for="(theme, i) in appThemes" :key="i">
-          <a href="#gifts">{{ theme }}</a>
+          <ul>{{ theme }}</ul>
         </li>
       </ul>
     </nav>

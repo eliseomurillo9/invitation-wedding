@@ -1,7 +1,7 @@
 <!-- Parent Component -->
 <template>
   <div class="pt-24">
-    <main class="flex-grow flex justify-center px-10">
+    <main class="flex-grow flex justify-center px-10 md:px-48">
       <ConfirmationFormContainer
       @submit.prevent="onSubmit"
         title="Confirm my assistance"
@@ -19,7 +19,7 @@
             />
           </div>
           <template v-else>
-            <div>
+            <div class="flex flex-col">
               <label class="text-blue-main font-nanum text-xl">Firstname</label>
               <input
                 type="text"
@@ -29,7 +29,7 @@
                 placeholder="enter your name"
               />
             </div>
-            <div>
+            <div class="flex flex-col">
               <label class="text-blue-main font-nanum text-xl">Lastname</label>
               <input
                 type="text"
@@ -55,8 +55,4 @@ const router = useRoute();
 const isOnline = computed(() => {
   return router.params.modality === "online";
 });
-
-const onSubmit = (() => {
-    console.log('Ill handle the submit');
-})
 </script>

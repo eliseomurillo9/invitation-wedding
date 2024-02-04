@@ -1,8 +1,8 @@
 <template>
   <section class="flex flex-col gap-9">
-    <h1 class="text-red text-2xl font-nanum text-center">{{ title }}</h1>
+    <h1 class="text-red text-2xl font-nanum text-center md:text-4xl">{{ title }}</h1>
     <p>{{ message }}</p>
-    <form class="flex flex-col justify-center items-center gap-9">
+    <form class="flex flex-col justify-center items-center gap-9 md:pt-5">
       <slot name="form"></slot>
       <buttonMain type="submit" label="Confirm"/>
     </form>

@@ -1,18 +1,19 @@
+
+
 <template>
   <section>
     <h1 class="text-red uppercase font-nanum text-4xl text-center py-9 px-12" >
       {{ title }}
     </h1>
-    <div class="columns-2xs px-7">
+    <div class="columns-2 md:columns-4 gap-6 px-9">
       <figure
         v-for="(photo, i) in images"
         :key="i"
-        class="mb-3 odd:h-56 even:h-32"
       >
         <img
           :src="require(`../assets/${photo.img}`)"
           alt="Image 1"
-          class="w-full h-full object-cover rounded-xl"
+          class="rounded-xl w-full h-full pt-4"
         />
       </figure>
     </div>
@@ -20,9 +21,9 @@
   </section>
 </template>
 
+
 <script setup>
 import { defineProps } from "vue";
-
 defineProps({
   title: {
     Type: String,
@@ -30,9 +31,8 @@ defineProps({
   images: {
     Type: Array,
   },
-  sectionFooter:{
+  sectionFooter: {
     Type: String,
-  }
+  },
 });
 </script>
-

@@ -57,14 +57,14 @@ const updatePageTitle = () => {
 };
 
 const photos = ref([
-  { img: "foto-1-web.webp", alt: "img1" },
-  { img: "foto-2-web.webp", alt: "img2" },
-  { img: "foto-3-web.webp", alt: "img3" },
-  { img: "foto-4-web.webp", alt: "img2" },
-  { img: "foto-1-web.webp", alt: "img2" },
-  { img: "foto-3-web.webp", alt: "img2" },
-  { img: "foto-1-web.webp", alt: "img2" },
-  { img: "foto-1-web.webp", alt: "img2" },
+  { img: "dunkerke.svg", alt: "img2" },
+  { img: "bruges.svg", alt: "img1" },
+  { img: "paris.svg", alt: "img2" },
+  { img: "noel-maison.svg", alt: "img2" },
+  { img: "valence.svg", alt: "img2" },
+  { img: "madrid.svg", alt: "img3" },
+  { img: "tolede.svg", alt: "img2" },
+  { img: "noel.svg", alt: "img2" },
 ]);
 
 const bridesGrooms = [

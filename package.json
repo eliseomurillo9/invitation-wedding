@@ -10,6 +10,7 @@
   "dependencies": {
     "aos": "^2.3.4",
     "core-js": "^3.32.0",
+    "dotenv": "^16.4.1",
     "vue": "^3.3.4",
     "vue-i18n": "^9.2.2",
     "vue-meta": "3.0.0-alpha.2",

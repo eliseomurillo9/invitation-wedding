@@ -1,16 +1,18 @@
 <template>
-  <section class="flex flex-col items-center gap-5 bg-pink-white py-7">
-    <h1 class="uppercase text-red text-center font-nanum text-4xl">
+  <section class="flex flex-col items-center gap-5 bg-pink-white py-7 dark:bg-dark-alt">
+    <h1 class="uppercase text-red text-center font-nanum text-4xl dark:text-pink-clear px-10">
       {{ title }}
     </h1>
     <div v-for="(contain, i) in pageContain" :key="i" class="text-container">
-      <header class="flex gap-2 items-center">
-        <h2 class="text-blue-main">{{ $t(contain.subtitle) }}</h2>
+      <header class="flex gap-2 items-center ">
+        <h2 class="text-blue-main dark:text-pink-main">{{ $t(contain.subtitle) }}</h2>
         <figure>
-          <img :src="require(`@/assets/icons/${contain.icon}`)" alt="" />
+          <span class="material-symbols-outlined text-blue-main dark:text-pink-main">
+            {{ contain.icon }}
+          </span>
         </figure>
       </header>
-      <p class="font-klee">{{ $t(contain.text) }}</p>
+      <p class="font-klee dark:text-pink-clear">{{ $t(contain.text) }}</p>
     </div>
     <buttonMain label="See account details" />
   </section>
@@ -29,12 +31,12 @@ defineProps({
 const pageContain = ref([
   {
     subtitle: "giftSection.subtitleEnvelope",
-    icon: "envelope.svg",
+    icon: "mail",
     text: "gifSection.textEnvelope",
   },
   {
     subtitle: "giftSection.subtitleBank",
-    icon: "share.svg",
+    icon: "ios_share",
     text: "giftSection.textBank",
   },
 ]);

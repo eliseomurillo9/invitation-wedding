@@ -8,7 +8,7 @@
   > {{ label }}</a>
   <button
   v-else
-    class="font-klee py-1.5 px-3 border-3 border-pink-main rounded-full text-red"
+    class="font-klee py-1.5 px-3 border-3 border-pink-main rounded-full text-red-main dark:text-pink-main"
   >
     {{ label }}
   </button>

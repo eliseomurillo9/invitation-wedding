@@ -1,20 +1,30 @@
 <template>
-  <section class="flex flex-col justify-center items-center gap-4 text-blue-main py-9">
-    <h1 class="text-red text-2xl font-nanum uppercase md:text-8xl">{{ $t(titleMsg) }}</h1>
+  <section
+    class="flex flex-col justify-center items-center gap-4 text-blue-main py-9 dark:bg-dark-main dark:text-pink-alt">
+    <i18n-t
+      keypath="WelcomeSection.pageTitle"
+      tag="h1"
+      class="text-red text-2xl text-center font-nanum uppercase md:text-8xl dark:text-white"
+      data-aos="zoom-out"
+    >
+      <template #wedding>
+        <span class="block md:inline-block -my-4"> {{ $t("WelcomeSection.weddingTitle") }} </span>
+      </template>
+    </i18n-t>
     <Counter data-aos="fade-up" class="z-20" />
-    <img
-      src="../assets/foto-5.png"
-      alt="Foto Elise y Georgina abrazados"
-      class="w-60"
-    />
-    <div class="flex gap-2 font-nanum">
-      <img src="../assets/icons/location.svg" alt="" srcset="" />
+    <img src="../assets/foto-5.png" alt="Foto Elise y Georgina abrazados" class="w-60" />
+    <div class="flex gap-2 font-nanum dark:text-pink-main">
+      <span class="material-symbols-outlined">
+        location_on
+      </span>
       <h2>{{ weddingPlace }}</h2>
-      <img src="../assets/icons/calendar.svg" alt="" srcset="" class="w-7" />
+      <span class="material-symbols-outlined">
+        event
+      </span>
       <h2>{{ weddingDate }}</h2>
     </div>
-    <p class="w-2/4 text-center font-klee">{{ description }}</p>
-  <ConfirmationContainerVue :title="$t('base.assistanceConfirmation')" />
+    <p class="w-2/4 text-center font-klee dark:text-white">{{ description }}</p>
+    <ConfirmationContainerVue :title="$t('WelcomeSection.Subtitle')" />
   </section>
 </template>
 

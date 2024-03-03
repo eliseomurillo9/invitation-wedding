@@ -14,7 +14,7 @@
             <div class="flex flex-col">
               <label class="text-blue-main font-nanum text-xl">Firstname</label>
               <input type="text" name="firstname" id="firstname" class="bg-pink-white w-80 h-12 p-2 rounded-lg"
-                v-model="attendeeInfo.presential.firstname"  placeholder="enter your name" />
+                v-model="attendeeInfo.presential.firstname" placeholder="enter your name" />
             </div>
             <div class="flex flex-col">
               <label class="text-blue-main font-nanum text-xl">Lastname</label>
@@ -30,9 +30,9 @@
 
 <script setup>
 import ConfirmationFormContainer from "@/components/ConfirmationFormContainer.vue";
-import { computed, reactive } from "vue";
+import { computed, reactive, ref, emit } from "vue";
 import attendeeConfirmation from "@/services/confirmationService.js"
-import { useRoute } from "vue-router";
+import { useRouter } from "vue-router";
 
 const attendeeInfo = reactive({
   presential: {
@@ -45,13 +45,31 @@ const attendeeInfo = reactive({
   }
 
 });
-const router = useRoute();
-const modality = router.params.modality;
+
+const router = useRouter();
+const modality = router.currentRoute.value.params.modality;
 const isOnline = computed(() => {
   return modality === "online";
 });
+const isLoading = ref(false)
 
 const onSubmit = () => {
-  attendeeConfirmation({modality: modality, email: attendeeInfo.online.email, firstname:attendeeInfo.presential.firstname, lastname: attendeeInfo.presential.lastname})
+  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  const nameRegex = /^[a-zA-ZÀ-ÖØ-öø-ÿ\s]+$/
+
+  if (attendeeInfo.online.email.match(emailRegex) || (attendeeInfo.presential.firstname.match(nameRegex) && attendeeInfo.presential.lastname.match(nameRegex))) {
+    isLoading.value = true;
+    attendeeConfirmation({ modality: modality, email: attendeeInfo.online.email, firstname: attendeeInfo.presential.firstname, lastname: attendeeInfo.presential.lastname }).then((response) => {
+      if (response.status === 201) {
+        isLoading.value = false;
+        router.push({ path: "/confirmation" });
+      } else {
+        emit('submit-error', response.statusText);
+        isLoading.value = false;
+      }
+    })
+  }else {
+        emit('submit-error', 'base.error.entryNotValid');
+      }
 }
 </script>

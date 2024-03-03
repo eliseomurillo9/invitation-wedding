@@ -1,4 +1,5 @@
 require('dotenv').config()
+import { parse } from 'querystring'
 
 const url = process.env.URL_SHEET
 const token = process.env.SHEETSDB_KEY
@@ -8,23 +9,28 @@ const attendanceMethodes = {
 }
 
 const getAttendeesList = async (method) => {
-  const attendees = (
-    await fetch(`${url}?sheet=${method}`, {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    })
-  ).json()
+  try {
+    const attendees = (
+      await fetch(`${url}?sheet=${method}`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
+    ).json()
 
-  return attendees
+    return attendees
+  } catch (e) {
+    console.log('EEEEROOOOR------', e)
+    throw new Error(e)
+  }
 }
 
 export async function handler(event, context) {
-  const attendanceMethod = event.queryStringParameters.method
+  const decodeBody = parse(event.body)
+  const attendanceMethod = decodeBody.modality
   const attendeeInformation =
-    event.queryStringParameters?.email ||
-    `${event.queryStringParameters?.name} ${event.queryStringParameters?.lastName}`
-  console.log(attendanceMethod)
+  decodeBody?.email ||
+    `${decodeBody.name} ${decodeBody.lastname}`
 
   const data = new URLSearchParams()
   if (attendanceMethod === attendanceMethodes.ONLINE) {
@@ -32,10 +38,8 @@ export async function handler(event, context) {
   } else {
     data.append('name', attendeeInformation)
   }
-
-  const getInvitationList = await getAttendeesList(attendanceMethod)
-
-  const isTheMailInList = getInvitationList.find(
+  const attendeesList = await getAttendeesList(attendanceMethod)
+  const isTheMailInList = attendeesList.find(
     (emailFromList) => emailFromList.email === attendeeInformation,
   )
 
@@ -55,8 +59,7 @@ export async function handler(event, context) {
       }
     }
 
-    const response = await addToList.json();
-    console.log(response);
+    const response = await addToList.json()
 
     return {
       statusCode: addToList.status,
@@ -67,7 +70,7 @@ export async function handler(event, context) {
     // }
   } else {
     return {
-      statusCode: 200,
+      statusCode: 500,
       body: JSON.stringify('base.error.emailRegisted'),
     }
   }

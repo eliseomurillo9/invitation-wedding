@@ -1,6 +1,6 @@
 <template>
-  <section class="bg-pink-white py-7">
-    <h1 class="text-red font-nanum text-4xl text-center pb-4 uppercase 4xl">
+  <section class="bg-pink-white py-7 dark:bg-dark-main">
+    <h1 class="text-red font-nanum text-4xl text-center pb-4 uppercase 4xl dark:text-pink-main">
       {{ title }}
     </h1>
     <div class="flex justify-center gap-10 md:flex-col px-11">
@@ -10,7 +10,7 @@
         :key="index"
       >
         <h2
-          class="text-blue-main font-nanum text-xl text-center md:text-start pb-2 md:text-2xl"
+          class="text-blue-main font-nanum text-xl text-center md:text-start pb-2 md:text-2xl dark:text-dark-blue"
         >
           {{ section.title }}
         </h2>
@@ -19,7 +19,7 @@
         >
           <figure v-for="(person, i) in section.people" :key="i" class="mb-2.5">
             <img :src="person.image" :alt="person.alt" class="md:h-36"/>
-            <figcaption class="text-center font-klee mt-1">
+            <figcaption class="text-center font-klee mt-1 dark:text-pink-clear">
               {{ person.name }}
             </figcaption>
           </figure>

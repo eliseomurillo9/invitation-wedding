@@ -1,5 +1,5 @@
 <template>
-  <main class="relative py-5 md:py-8">
+  <main class="relative pt-5 md:py-8">
     <WeddingInformation
       titleMsg="base.pageTitle"
       :weddingDate="$t('base.weddingDate')"

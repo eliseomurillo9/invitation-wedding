@@ -1,10 +1,10 @@
 <template>
   <div
-    class="bg-pink-clear rounded-full py-2.5 px-5 flex text-red text-center justify-center gap-2 md:gap-3 md:px-11 md:py-4 w-fit mx-auto"
+    class="bg-pink-clear rounded-full py-2.5 px-5 flex text-red text-center justify-center gap-2 md:gap-3 md:px-11 md:py-4 w-fit mx-auto dark:text-red-alt"
   >
     <div class="flex flex-col">
       <span class="md:text-4xl font-nanum"
-        >{{ countdownInfo.days }} {{ $t("base.counter.days") }} : {{ countdownInfo.hours }}  {{ $t("base.counter.hours") }} : {{ countdownInfo.minutes }}  {{ $t("base.counter.minutes") }} : {{ countdownInfo.seconds }} {{ $t("base.counter.seconds") }}
+        >{{ countdownInfo.days }} {{ $t("WelcomeSection.counter.days") }} : {{ countdownInfo.hours }}  {{ $t("WelcomeSection.counter.hours") }} : {{ countdownInfo.minutes }}  {{ $t("WelcomeSection.counter.minutes") }} : {{ countdownInfo.seconds }} {{ $t("WelcomeSection.counter.seconds") }}
         </span>
     </div>
   </div>

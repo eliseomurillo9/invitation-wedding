@@ -1,23 +1,23 @@
 <template>
-  <main class="relative pt-24 md:py-8">
+  <main class="relative pt-24 md:pt-8">
     <WeddingInformation
     id="wedding-info"
       titleMsg="Georgi & Eli"
-      :weddingDate="$t('base.weddingDate')"
-      weddingPlace="El Salvador"
-      :description="$t('base.description')"
+      :weddingDate="$t('WelcomeSection.weddingDate')"
+      :weddingPlace="$t('WelcomeSection.weddingLocation')"
+      :description="$t('WelcomeSection.WelcomeMessage')"
     />
     <HistoryContainer
     id="our-history"
-      :title="$t('history.title')"
-      :subTitle="$t('history.subtitle')"
-      :historyText="$t('history.paragraph')"
+      :title="$t('historySection.title')"
+      :subTitle="$t('historySection.subtitleHowWeMet')"
+      :historyText="howWeMet"
       image="foto-elipse-1.svg"
-      :altImg="$t('history.imageAlt')"
+      :altImg="$t('historySection.imageAlt')"
     />
     <HistoryContainer
       :subTitle="$t('history.theProposalTitle')"
-      :historyText="$t('history.proposalParaagraph')"
+      :historyText="howWeMet"
       image="foto-elipse-2.svg"
       :altImg="$t('history.imageAlt')"
       :reverseDiv="true"
@@ -119,6 +119,10 @@ const bridesGrooms = [
     ],
   },
 ];
+
+const howWeMet = ref([
+  'historySection.paragraph1', 'historySection.paragraph2',  'historySection.paragraph3'
+])
 onMounted(() => {
   updatePageTitle();
 });

@@ -1,36 +1,33 @@
 <template>
-  <section
-    v-if="toggleMenu"
-    class="bg-white w-screen fixed top-0 left-0 z-50 shadow-md fade-out"
-
-  >
+  <section v-if="toggleMenu" class="bg-white w-screen fixed top-0 left-0 z-50 shadow-md fade-out dark:bg-black">
     <header class="bg-pink-clear flex justify-center py-2">
       <figure>
         <img src="../../assets/logo-dark.svg" alt="Logo con iniciales G y E" />
       </figure>
     </header>
-    <nav class="font-klee flex flex-col gap-5 p-7">
+    <nav class="font-klee flex flex-col gap-5 p-7 dark:text-pink-clear">
       <ul class="flex flex-col gap-3 w-2/4">
+      <h1 class="text-black dark:text-slate-400">{{ isDark }}</h1>
         <li class="text-blue-main font-bold w-2/4 pl-2">Menu</li>
-        <li
-          v-for="(menu, i) in menuOptions"
-          :key="i"
-        >
-          <a :href="menu.id" @click="emit('closeMenu')" class="pl-2" :class="[{'bg-pink-white text-red rounded-xl pr-24 py-1': router.hash === menu.id || (menu.id === '#' && router.hash === '')}]">{{ menu.name }}</a>
+        <li v-for="(menu, i) in menuOptions" :key="i">
+          <a :href="menu.id" @click="emit('closeMenu')" class="pl-2"
+            :class="[{ 'bg-pink-white text-red rounded-xl pr-24 py-1': router.hash === menu.id || (menu.id === '#' && router.hash === '') }]">{{
+              menu.name }}</a>
         </li>
       </ul>
       <ul>
         <li class="text-blue-main font-bold">Language</li>
-        <template class="flex items-center gap-3 mt-2" >
-          <li  v-for="lang in i18n.availableLocales" :key="`locale-${lang}`" @click="changeLang(lang)" :class="[{'bg-pink-white text-red rounded-xl p-1.5 pl-1.5 transition ease-in-out duration-150': i18n.locale.value === lang}]">
-           {{ lang }} 
+        <template class="flex items-center gap-3 mt-2">
+          <li v-for="lang in i18n.availableLocales" :key="`locale-${lang}`" @click="changeLang(lang)"
+            :class="[{ 'bg-pink-white text-red rounded-xl p-1.5 pl-1.5 transition ease-in-out duration-150': i18n.locale.value === lang }]">
+            {{ lang }}
           </li>
         </template>
       </ul>
       <ul class="flex flex-col gap-3">
         <li class="text-blue-main font-bold">Theme</li>
-        <li v-for="(theme, i) in appThemes" :key="i">
-          <ul>{{ theme }}</ul>
+        <li >
+          <ul  v-for="(theme, i) in appThemes" :key="i" @click="toggleDark()" >{{ theme }}</ul>
         </li>
       </ul>
     </nav>
@@ -41,12 +38,20 @@
 </template>
 
 <script setup>
-import { defineProps, defineEmits } from "vue";
+import { defineProps, defineEmits, onMounted } from "vue";
 import { useI18n } from "vue-i18n";
 import { useRoute } from "vue-router";
+import { useDark, useToggle } from '@vueuse/core'
+
+const isDark = useDark()
+const toggleDark = useToggle(isDark);
+
+onMounted(() => {
+  console.log(isDark);
+})
 const i18n = useI18n();
 const router = useRoute();
-const emit= defineEmits(['closeMenu']);
+const emit = defineEmits(['closeMenu']);
 
 const changeLang = (lang) => {
   i18n.locale.value = lang;

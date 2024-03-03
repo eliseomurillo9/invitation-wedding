@@ -1,7 +1,7 @@
 <template>
   <a
     v-if="!!buttonhref"
-    class="font-klee py-2 px-3.5 bg-pink-main rounded-full text-red text-center"
+    class="font-klee py-2 px-3.5 bg-pink-main rounded-full text-red text-center  dark:text-red-alt"
     :href="buttonhref"
     target="_blank"
     rel="noopener noreferrer"
@@ -9,7 +9,7 @@
   <button
     v-else
     :type="type"
-    class="font-klee py-2 px-3.5 bg-pink-main rounded-full text-red text-center"
+    class="font-klee py-2 px-3.5 bg-pink-main rounded-full text-red text-center dark:text-red-alt"
   >
     {{ label }}
   </button>

@@ -10,7 +10,7 @@
     v-else
     :disabled="isLoading"
     :type="type"
-    class="font-klee py-2 px-3.5 bg-pink-main rounded-full text-red text-center dark:text-red-alt"
+    class="font-klee py-2 px-3.5 bg-pink-main rounded-full text-red-main text-center dark:text-red-alt"
   >
     {{ label }}
     <div

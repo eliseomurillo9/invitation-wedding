@@ -1,6 +1,6 @@
 <template>
   <section class="bg-pink-white py-10 px-7 dark:bg-dark-alt">
-    <h1 class="text-blue-main font-nanum text-4xl text-center pb-6 dark:text-pink-clear">{{ title }}</h1>
+    <h1 class="text-red-main font-nanum text-4xl text-center pb-6 dark:text-pink-clear">{{ title }}</h1>
     <div class="flex justify-center items-center gap-6 md:flex-row-reverse" :class="{ 'flex-row-reverse': reverseDiv }">
       <article class="w-2/4 ">
         <h2 class="font-nanum text-blue-main text-xl md:text-2xl dark:text-dark-blue align-middle">{{ subTitle }} <span

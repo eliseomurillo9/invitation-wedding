@@ -1,6 +1,6 @@
 <template>
   <section class="bg-pink-white py-7 dark:bg-dark-main">
-    <h1 class="text-red font-nanum text-4xl text-center pb-4 uppercase 4xl dark:text-white">
+    <h1 class="text-red font-nanum text-4xl text-center pb-4 4xl text-red-main dark:text-white">
       {{ title }}
     </h1>
     <div class="flex justify-center gap-10 md:flex-col px-11">

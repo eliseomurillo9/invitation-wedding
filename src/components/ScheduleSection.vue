@@ -1,6 +1,6 @@
 <template>
   <section class="bg-pink-3 p-7 dark:bg-dark-main">
-    <h1 class="font-nanum text-4xl text-blue-main text-center dark:text-pink-clear">{{ title }}</h1>
+    <h1 class="font-nanum text-4xl text-center dark:text-pink-clear text-red-main">{{ title }}</h1>
     <div class="flex flex-col gap-12 pt-12 md:flex-row md:justify-center">
       <InformationCard :title="$t('ScheduleSection.subtitlePresential')">
         <table>

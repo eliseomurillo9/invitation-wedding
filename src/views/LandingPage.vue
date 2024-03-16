@@ -13,13 +13,13 @@
       :subTitle="$t('historySection.subtitleHowWeMet')"
       :historyText="howWeMet"
       image="foto-elipse-1.svg"
-      :altImg="$t('historySection.imageAlt')"
+      :altImg="$t('imagesAlt.PhotoOurStory')"
     />
     <HistoryContainer
       :subTitle="$t('historySection.subtitleTheProposal')"
       :historyText="proposal"
       image="foto-elipse-2.svg"
-      :altImg="$t('history.imageAlt')"
+      :altImg="$t('imagesAlt.PhotoTheProposal')"
       :reverseDiv="true"
     />
     <ScheduleSection id="schedule" :title="$t('ScheduleSection.title')" />
@@ -30,7 +30,7 @@
     />
     <EntourageSection id="entourage" :title="$t('EntourageSection.title')" :entouragePeople="bridesGrooms" />
     <!-- <WishesSection id="wished" title="Your Wishes" /> -->
-    <GiftSection id="gifts" :title="$t('WhishesSection.title')" />
+    <GiftSection id="gifts" :title="$t('GiftSection.title')" />
     <RouterView></RouterView>
   </main>
 </template>
@@ -50,7 +50,7 @@ const { t: $t } = useI18n();
 
 const updatePageTitle = () => {
   const pageTitle =
-    `${$t("base.pageTitles.saveTheDate")} - G&C` || "Default Page Title";
+    `${$t("Common.pageTitle.landing")} - G&C` || "Default Page Title";
   document.title = pageTitle;
 };
 

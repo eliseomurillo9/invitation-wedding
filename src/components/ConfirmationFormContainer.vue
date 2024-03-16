@@ -4,7 +4,7 @@
     <p v-for="(message, i) in messages" :key="i" class="dark:text-pink-white">{{ $t(message) }}</p>
     <form class="flex flex-col justify-center items-center gap-9 md:pt-5">
       <slot name="form"></slot>
-      <buttonMain type="submit" :label="$t('Buttons.ConfirmButton')" />
+      <buttonMain type="submit" :label="$t('Buttons.ConfirmButton')" :isLoading="isLoading" />
       
     </form>
   </section>

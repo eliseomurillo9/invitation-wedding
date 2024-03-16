@@ -124,7 +124,7 @@ export default {
     });
 
     const updatePageTitle =  () => {
-      const pageTitle = `${$t('base.pageTitles.saveTheDate')} - G&C`  || "Default Page Title";
+      const pageTitle = `${$t('Common.pageTitle.landing')} - G&C`  || "Default Page Title";
       document.title = pageTitle;
     };
     onMounted(() => {

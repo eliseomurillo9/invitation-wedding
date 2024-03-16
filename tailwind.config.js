@@ -45,8 +45,8 @@ module.exports = {
     fontFamily: {
       candal: ["Candal", "sans-serif"],
       montserrat: ["Montserrat", "sans-serif"],
-      nanum: ['"Nanum Pen Script"', "cursive"],
-      klee: ['"Klee One"', "cursive"],
+      nanum: ['Caveat Brush', "cursive"],
+      klee: ['Klee One', "cursive"],
     },
     letterSpacing: {
       spacer: "0.36rem",

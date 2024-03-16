@@ -3,7 +3,7 @@
     class="bg-pink-clear rounded-full py-2.5 px-5 flex text-red text-center justify-center gap-2 md:gap-3 md:px-11 md:py-4 w-fit mx-auto dark:text-red-alt"
   >
     <div class="flex flex-col">
-      <span class="md:text-4xl font-nanum text-red-main"
+      <span class="md:text-2xl font-nanum text-red-main"
         >{{ countdownInfo.days }} {{ $t("WelcomeSection.counter.days") }} : {{ countdownInfo.hours }}  {{ $t("WelcomeSection.counter.hours") }} : {{ countdownInfo.minutes }}  {{ $t("WelcomeSection.counter.minutes") }} : {{ countdownInfo.seconds }} {{ $t("WelcomeSection.counter.seconds") }}
         </span>
     </div>

@@ -3,24 +3,28 @@ const messages = {
     Common: {
       Languages: 'Idiomas',
       Theme: 'Tema',
-      Mode1:'Modo claro',
-      Mode2:'Modo oscuro',
+      Mode1: 'Modo claro',
+      Mode2: 'Modo oscuro',
       Footer: 'Esperamos verte pronto',
       Form: {
         Email: 'Correo',
-        Placeholderemail:'Ingresa tu correo',
+        Placeholderemail: 'Ingresa tu correo',
         Name: 'Correo',
-        PlaceholderName:'Ingresa tu nombre',
+        PlaceholderName: 'Ingresa tu nombre',
         LastName: 'Correo',
-        PlaceholderLastname:'Ingresa tu apellido',
+        PlaceholderLastname: 'Ingresa tu apellido',
       },
-      ConfirmationMessage:'Estamos felices que te nos uniras, nos vemos el 20 de julio 2024. Gracias por tu confirmación',
+      ConfirmationMessage:
+        'Estamos felices que te nos uniras, nos vemos el 20 de julio 2024. Gracias por tu confirmación',
+      pageTitle: {
+        landing: 'Invitacion | Boda Georgi & Eli',
+      },
     },
     Navbar: {
-      Title: 'Menu',
+      Title: 'Inicio',
       OurStory: 'Nuestra historia',
-      Schedule:'Agenda',
-      Photos:'Fotos',
+      Schedule: 'Agenda',
+      Photos: 'Fotos',
       Entourage: 'Séquito',
       YourWishes: 'Buenos Deseos',
       Gifts: 'Regalos',
@@ -94,16 +98,20 @@ const messages = {
       subtitle2: 'Transferencia bancaria',
       paragraph4:
         'Si es más fácil para ti, puede hacer la transferencia bancaria a una de las siguientes cuentas.',
+      france: 'Francia',
     },
     FormSection: {
       title: 'Confirmar mi asistencia',
-      Message1:{
-        paragraph1:'Estamos alegres de saber que estarás presente y celebrarás junto a nosotros. Recuerda respetar el número de invitados que te indicamos por mensaje privado. Si tienes algún cambio en tu agenda, por motivos de coordinación, porfavor informarnos con la mayor anticipación posible',
-        paragraph2:'Porfavor confirma tu nombre y apellido para nuestros registros.',
+      Message1: {
+        paragraph1:
+          'Estamos alegres de saber que estarás presente y celebrarás junto a nosotros. Recuerda respetar el número de invitados que te indicamos por mensaje privado. Si tienes algún cambio en tu agenda, por motivos de coordinación, porfavor informarnos con la mayor anticipación posible',
+        paragraph2:
+          'Porfavor confirma tu nombre y apellido para nuestros registros.',
       },
-      Message2:{
-        paragraph3:'Aún en la distancia, estamos felices de saber que estaras presente.Puedes confirmar tu asistencia y conectarte a la transmisión en línea el día de la boda, te mandaremos el link por medio de tu correo electrónico.',
-      }, 
+      Message2: {
+        paragraph3:
+          'Aún en la distancia, estamos felices de saber que estaras presente.Puedes confirmar tu asistencia y conectarte a la transmisión en línea el día de la boda, te mandaremos el link por medio de tu correo electrónico.',
+      },
     },
     imagesAlt: {
       logo: 'Logo con un circulo y las letras G y C en el medio',
@@ -144,31 +152,35 @@ const messages = {
       CalendarButton: 'Agregar al calendario',
       MessageButton: 'Deja tu mensaje',
       AccountButton: 'Mirar cuentas',
-      ConfirmButton:'Confirmar'
+      ConfirmButton: 'Confirmar',
     },
   },
   EN: {
     Common: {
       Languages: 'Languages',
       Theme: 'Theme',
-      Mode1:'Light mode',
-      Mode2:'Dark mode',
+      Mode1: 'Light mode',
+      Mode2: 'Dark mode',
       Footer: 'We hope to see you soon',
       Form: {
         Email: 'Email',
-        Placeholderemail:'Enter your email',
+        Placeholderemail: 'Enter your email',
         Name: 'Name',
-        PlaceholderName:'Enter your name',
+        PlaceholderName: 'Enter your name',
         LastName: 'Last Name',
-        PlaceholderLastname:'Enter your last name',
+        PlaceholderLastname: 'Enter your last name',
       },
-      ConfirmationMessage:'We are happy that you will join us, see you on July 20, 2024. Thank you for your confirmation',
+      ConfirmationMessage:
+        'We are happy that you will join us, see you on July 20, 2024. Thank you for your confirmation',
+      pageTitle: {
+        landing: 'Invitation | Wedding Georgi & Eli',
+      },
     },
     Navbar: {
-      Title: 'Menu',
+      Title: 'Home',
       OurStory: 'Our story',
-      Schedule:'Schedule',
-      Photos:'Photos',
+      Schedule: 'Schedule',
+      Photos: 'Photos',
       Entourage: 'Entourage',
       YourWishes: 'Your wishes',
       Gifts: 'Gifts',
@@ -208,14 +220,15 @@ const messages = {
       Hours: '6:00 pm to 10:30 pm',
       Direction: 'Address',
       Adresse:
-      '"Casa La Novena" 9na Calle Poniente #4919 Colonia Escalón, San Salvador. El Salvador',
+        '"Casa La Novena" 9na Calle Poniente #4919 Colonia Escalón, San Salvador. El Salvador',
       subtitleOnline: 'Online',
       Text:
         'If you cannot be present in person, you can join to our meeting, where we will broadcast the ceremony and part of our celebration.',
     },
     PhotosSection: {
       title: 'Some photos of our story',
-      Text: 'Wedding photos will be available here',
+      Text: 'Wedding photos will be available',
+      Here: 'here',
     },
     EntourageSection: {
       title: 'Entourage',
@@ -241,16 +254,19 @@ const messages = {
       subtitle2: 'Bank transfer',
       paragraph4:
         'If it is easier for you, you can make the bank transfer to one of the following accounts.',
+      france: 'France',
     },
     FormSection: {
       title: 'Confirm my attendance',
-      Message1:{
-        paragraph1:'We are happy to know that you will be present and will celebrate with us. Remember to respect the number of guests indicated by private message. If you have any changes in your schedule, for coordination reasons, please inform us as soon as possible',
-        paragraph2:'Please confirm your first and last name for our records.',
+      Message1: {
+        paragraph1:
+          'We are happy to know that you will be present and will celebrate with us. Remember to respect the number of guests indicated by private message. If you have any changes in your schedule, for coordination reasons, please inform us as soon as possible',
+        paragraph2: 'Please confirm your first and last name for our records.',
       },
-      Message2:{
-        paragraph3:'Even from afar, we are happy to know that you will be present. You can confirm your attendance and connect to the online meeting on the wedding day, we will send you the link through your email.',
-      }, 
+      Message2: {
+        paragraph3:
+          'Even from afar, we are happy to know that you will be present. You can confirm your attendance and connect to the online meeting on the wedding day, we will send you the link through your email.',
+      },
     },
     imagesAlt: {
       logo: 'Logo with a circle and the letters G and C in the middle',
@@ -291,156 +307,165 @@ const messages = {
       CalendarButton: 'Add to calendar',
       MessageButton: 'Leave your message',
       AccountButton: 'View accounts',
-      ConfirmButton:'Confirm'
-    }, 
-},
-FR: {
-  Common: {
-    Languages: 'Langues',
-    Theme: 'Thème',
-    Mode1:'Mode clair',
-    Mode2:'Mode sombre',
-    Footer: 'Nous espérons vous voir bientôt',
-    Form: {
-      Email: 'Email',
-      Placeholderemail:'Entrez votre email',
-      Name: 'Nom',
-      PlaceholderName:'Entrez votre prénom',
-      LastName: 'Nom de famille',
-      PlaceholderLastname:'Entrez votre nom de famille',
+      ConfirmButton: 'Confirm',
     },
-    ConfirmationMessage:'Nous sommes heureux que vous vous joigniez à nous, rendez-vous le 20 juillet 2024. Merci pour votre confirmation',
   },
-  Navbar: {
-    Title: 'Menu',
-    OurStory: 'Notre histoire',
-    Schedule:'Programme',
-    Photos:'Photos',
-    Entourage: 'Entourage',
-    YourWishes: 'Vos vœux',
-    Gifts: 'Cadeaux',
-  },
-  WelcomeSection: {
-    weddingTitle: 'Mariage',
-    pageTitle: '{wedding} Georgi & Eli',
-    counter: {
-      days: 'Jours',
-      hours: 'Hr',
-      minutes: 'Min',
-      seconds: 'Sec',
+  FR: {
+    Common: {
+      Languages: 'Langues',
+      Theme: 'Thème',
+      Mode1: 'Mode clair',
+      Mode2: 'Mode sombre',
+      Footer: 'Nous espérons vous voir bientôt',
+      Form: {
+        Email: 'Email',
+        Placeholderemail: 'Entrez votre email',
+        Name: 'Nom',
+        PlaceholderName: 'Entrez votre prénom',
+        LastName: 'Nom de famille',
+        PlaceholderLastname: 'Entrez votre nom de famille',
+      },
+      ConfirmationMessage:
+        'Nous sommes heureux que vous vous joigniez à nous, rendez-vous le 20 juillet 2024. Merci pour votre confirmation',
+      pageTitle: {
+        landing: 'Invitation | Wedding Georgi & Eli',
+      },
     },
-    weddingLocation: 'El Salvador',
-    weddingDate: '20 juillet 2024',
-    WelcomeMessage:
-      'Bienvenue sur notre site web dédié à notre mariage, nous sommes heureux de partager ce moment spécial avec vous.',
-    Subtitle: 'Confirmer ma présence',
-  },
-  historySection: {
-    title: 'Notre histoire',
-    subtitleHowWeMet: 'Comment nous nous sommes rencontrés:',
-    paragraph1:
-      'En 2021 à San Salvador,l\'histoire commence, notre première rencontre était rien de moins qu\'au travail, non planifiée, l\'amour est arrivé.',
-    paragraph2:
-      'À la fin de cette année-là, nous avons commencé notre relation à distance, l\'un au Salvador et l\'autre en France, avec des rendez-vous vidéo et des films en ligne... les différences horaires ne sont pas nos amies',
-    paragraph3:
-      'En 2022, nous avons continué notre relation à distance mais maintenant sur le même continent et dans les mêmes fuseaux horaires, de petites escapades à Madrid et à Lille pour nous voir faisaient partie de notre routine.',
-    subtitleTheProposal: 'La proposition',
-    paragraph4:
-      'En mars 2023, dans une ville appelée Tolède, un week-end inoubliable, où la question à un million a été posée sur une terrasse avec une vue spectaculaire, nous avons tous les deux dit oui à un avenir ensemble.',
-  },
-  ScheduleSection: {
-    title: 'Programme',
-    subtitlePresential: 'En personne',
-    Time: 'Heure',
-    Hours: '18h00 à 22h30',
-    Direction: 'Adresse',
-    Adresse:
-    '"Casa La Novena" 9na Calle Poniente #4919 Colonia Escalón, San Salvador. El Salvador',
-    subtitleOnline: 'En ligne',
-    Text:
-      'Si vous ne pouvez pas être présent en personne, vous pouvez vous connecter à notre réunion, où nous diffuserons la cérémonie et une partie de notre célébration.',
-  },
-  PhotosSection: {
-    title: 'Quelques photos de notre histoire',
-    Text: 'Les photos de mariage seront disponibles ici',
-  },
-  EntourageSection: {
-    title: 'Entourage',
-    subtitle1: 'Demoiselles d\'honneur',
-    subtitle2: 'Témoins',
-  },
-  WhishesSection: {
-    title: 'Vos bons vœux',
-    paragraph:
-      'Vous pouvez nous laisser un message ici. Nous le lirons avec beaucoup d\'amour et apprécierons vos pensées et votre affection.',
-    Text2: 'Vous pouvez voir tous les bons vœux ici',
-    Text3: 'Merci pour vos bons vœux',
-  },
-  GiftSection: {
-    title: 'Votre présence est un cadeau',
-    paragraph1:
-      'Votre présence est déjà un cadeau pour nous et nous serons heureux de vous voir soit en personne, soit connecté en ligne.',
-    paragraph2:
-      'Cependant, si vous voulez nous montrer votre affection, vous pouvez le faire de la manière suivante :',
-    subtitle1: 'Cadeau d\'enveloppe',
-    paragraph3:
-      'Le jour du mariage, nous aurons une boîte aux lettres où vous pourrez laisser votre enveloppe.',
-    subtitle2: 'Virement bancaire',
-    paragraph4:
-      'Si c\'est plus facile pour vous, vous pouvez effectuer le virement bancaire sur l\'un des comptes suivants.',
-  },
-  FormSection: {
-    title: 'Confirmer ma présence',
-    Message1:{
-      paragraph1:'Nous sommes heureux de savoir que vous serez présent et que vous célébrerez avec nous. N\'oubliez pas de respecter le nombre d\'invités indiqué par message privé. Si vous avez des changements dans votre emploi du temps, pour des raisons de coordination, veuillez nous en informer dès que possible',
-      paragraph2:'Nous vous demandons de bien vouloir confirmer votre nom et prénom pour nos registres.',
+    Navbar: {
+      Title: 'Accueil',
+      OurStory: 'Notre histoire',
+      Schedule: 'Programme',
+      Photos: 'Photos',
+      Entourage: 'Entourage',
+      YourWishes: 'Vos vœux',
+      Gifts: 'Cadeaux',
     },
-    Message2:{
-      paragraph3:'Même de loin, nous sommes heureux de savoir que vous serez présent. Vous pouvez confirmer votre présence et vous connecter à la diffusion en ligne le jour du mariage, nous vous enverrons le lien par e-mail.',
-    }, 
+    WelcomeSection: {
+      weddingTitle: 'Mariage',
+      pageTitle: '{wedding} Georgi & Eli',
+      counter: {
+        days: 'Jours',
+        hours: 'Hr',
+        minutes: 'Min',
+        seconds: 'Sec',
+      },
+      weddingLocation: 'El Salvador',
+      weddingDate: '20 juillet 2024',
+      WelcomeMessage:
+        'Bienvenue sur notre site web dédié à notre mariage, nous sommes heureux de partager ce moment spécial avec vous.',
+      Subtitle: 'Confirmer ma présence',
+    },
+    historySection: {
+      title: 'Notre histoire',
+      subtitleHowWeMet: 'Comment nous nous sommes rencontrés:',
+      paragraph1:
+        "En 2021 à San Salvador,l'histoire commence, notre première rencontre était rien de moins qu'au travail, non planifiée, l'amour est arrivé.",
+      paragraph2:
+        "À la fin de cette année-là, nous avons commencé notre relation à distance, l'un au Salvador et l'autre en France, avec des rendez-vous vidéo et des films en ligne... les différences horaires ne sont pas nos amies",
+      paragraph3:
+        'En 2022, nous avons continué notre relation à distance mais maintenant sur le même continent et dans les mêmes fuseaux horaires, de petites escapades à Madrid et à Lille pour nous voir faisaient partie de notre routine.',
+      subtitleTheProposal: 'La proposition',
+      paragraph4:
+        'En mars 2023, dans une ville appelée Tolède, un week-end inoubliable, où la question à un million a été posée sur une9terrasse avec une vue spectaculaire, nous avons tous les deux dit oui à un avenir ensemble.',
+    },
+    ScheduleSection: {
+      title: 'Programme',
+      subtitlePresential: 'En personne',
+      Time: 'Heure',
+      Hours: '18h00 à 22h30',
+      Direction: 'Adresse',
+      Adresse:
+        '"Casa La Novena" 9na Calle Poniente #4919 Colonia Escalón, San Salvador. El Salvador',
+      subtitleOnline: 'En ligne',
+      Text:
+        'Si vous ne pouvez pas être présent en personne, vous pouvez vous connecter à notre réunion, où nous diffuserons la cérémonie et une partie de notre célébration.',
+    },
+    PhotosSection: {
+      title: 'Quelques photos de notre histoire',
+      Text: 'Les photos de mariage seront disponibles',
+      Here: 'ici',
+    },
+    EntourageSection: {
+      title: 'Entourage',
+      subtitle1: "Demoiselles d'honneur",
+      subtitle2: 'Témoins',
+    },
+    WhishesSection: {
+      title: 'Vos bons vœux',
+      paragraph:
+        "Vous pouvez nous laisser un message ici. Nous le lirons avec beaucoup d'amour et apprécierons vos pensées et votre affection.",
+      Text2: 'Vous pouvez voir tous les bons vœux ici',
+      Text3: 'Merci pour vos bons vœux',
+    },
+    GiftSection: {
+      title: 'Votre présence est un cadeau',
+      paragraph1:
+        'Votre présence est déjà un cadeau pour nous et nous serons heureux de vous voir soit en personne, soit connecté en ligne.',
+      paragraph2:
+        'Cependant, si vous voulez nous montrer votre affection, vous pouvez le faire de la manière suivante :',
+      subtitle1: "Cadeau d'enveloppe",
+      paragraph3:
+        'Le jour du mariage, nous aurons une boîte aux lettres où vous pourrez laisser votre enveloppe.',
+      subtitle2: 'Virement bancaire',
+      paragraph4:
+        "Si c'est plus facile pour vous, vous pouvez effectuer le virement bancaire sur l'un des comptes suivants.",
+      france: 'France',
+    },
+    FormSection: {
+      title: 'Confirmer ma présence',
+      Message1: {
+        paragraph1:
+          "Nous sommes heureux de savoir que vous serez présent et que vous célébrerez avec nous. N'oubliez pas de respecter le nombre d'invités indiqué par message privé. Si vous avez des changements dans votre emploi du temps, pour des raisons de coordination, veuillez nous en informer dès que possible",
+        paragraph2:
+          'Nous vous demandons de bien vouloir confirmer votre nom et prénom pour nos registres.',
+      },
+      Message2: {
+        paragraph3:
+          'Même de loin, nous sommes heureux de savoir que vous serez présent. Vous pouvez confirmer votre présence et vous connecter à la diffusion en ligne le jour du mariage, nous vous enverrons le lien par e-mail.',
+      },
+    },
+    imagesAlt: {
+      logo: 'Logo avec un cercle et les lettres G et C au milieu',
+      PhotoLandingPage: "Photographie d'Eliseo et Georgina",
+      PhotoOurStory: 'Photographie de notre histoire',
+      PhotoTheProposal: 'Photographie de la proposition Eliseo et Georgina',
+      PhotosNotreVie1: 'Photographie à Tolède',
+      PhotosNotreVie2: 'Photographie avec de la peinture à Madrid',
+      PhotosNotreVie3: 'Photographie à Paris',
+      PhotosNotreVie4: 'Photographie à Dunkerque',
+      PhotosNotreVie5: 'Photographie de Noël à Lille',
+      PhotosNotreVie6: 'Photographie de Noël à Madrid',
+      PhotosNotreVie7: 'Photographie à Valence',
+      PhotosNotreVie8: 'Photographie à Salamanque',
+      PhotoBridesmaid1: 'Photographie de Lucía',
+      PhotoBridesmaid2: 'Photographie de Alexia',
+      PhotoBridesmaid3: 'Photographie de Keren',
+      PhotoBridesmaid4: 'Photographie de Geral',
+      PhotoGroomsmen1: 'Photographie de Alex',
+      PhotoGroomsmen2: 'Photographie de Kevin',
+      PhotoGroomsmen3: 'Photographie de William',
+      PhotoGroomsmen4: 'Photographie de Chele',
+    },
+    IconsAlt: {
+      iconBurguer: 'Icône de menu',
+      iconLocation: 'Icône de localisation',
+      iconCalendar: 'Icône de calendrier',
+      iconHeart: 'Icône de cœur',
+      iconClock: "Icône d'horloge",
+      iconRing: 'Icône de bague',
+      iconEnvelope: "Icône d'enveloppe",
+      iconTransfer: 'Icône de transfert',
+    },
+    Buttons: {
+      PresentialButton: 'En personne',
+      OnlineButton: 'En ligne',
+      MapButton: 'Carte',
+      CalendarButton: 'Ajouter au calendrier',
+      MessageButton: 'Laissez votre message',
+      AccountButton: 'Voir les comptes',
+      ConfirmButton: 'Confirmer',
+    },
   },
-  imagesAlt: {
-    logo: 'Logo avec un cercle et les lettres G et C au milieu',
-    PhotoLandingPage: 'Photographie d\'Eliseo et Georgina',
-    PhotoOurStory: 'Photographie de notre histoire',
-    PhotoTheProposal: 'Photographie de la proposition Eliseo et Georgina',
-    PhotosNotreVie1: 'Photographie à Tolède',
-    PhotosNotreVie2: 'Photographie avec de la peinture à Madrid',
-    PhotosNotreVie3: 'Photographie à Paris',
-    PhotosNotreVie4: 'Photographie à Dunkerque',
-    PhotosNotreVie5: 'Photographie de Noël à Lille',
-    PhotosNotreVie6: 'Photographie de Noël à Madrid',
-    PhotosNotreVie7: 'Photographie à Valence',
-    PhotosNotreVie8: 'Photographie à Salamanque',
-    PhotoBridesmaid1: 'Photographie de Lucía',
-    PhotoBridesmaid2: 'Photographie de Alexia',
-    PhotoBridesmaid3: 'Photographie de Keren',
-    PhotoBridesmaid4: 'Photographie de Geral',
-    PhotoGroomsmen1: 'Photographie de Alex',
-    PhotoGroomsmen2: 'Photographie de Kevin',
-    PhotoGroomsmen3: 'Photographie de William',
-    PhotoGroomsmen4: 'Photographie de Chele',
-  },
-  IconsAlt: {
-    iconBurguer: 'Icône de menu',
-    iconLocation: 'Icône de localisation',
-    iconCalendar: 'Icône de calendrier',
-    iconHeart: 'Icône de cœur',
-    iconClock: 'Icône d\'horloge',
-    iconRing: 'Icône de bague',
-    iconEnvelope: 'Icône d\'enveloppe',
-    iconTransfer: 'Icône de transfert',
-  },
-  Buttons: {
-    PresentialButton: 'En personne',
-    OnlineButton: 'En ligne',
-    MapButton: 'Carte',
-    CalendarButton: 'Ajouter au calendrier',
-    MessageButton: 'Laissez votre message',
-    AccountButton: 'Voir les comptes',
-    ConfirmButton:'Confirmer'
-  },
-}
 }
 
-export default messages;
+export default messages

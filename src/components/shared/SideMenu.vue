@@ -10,8 +10,8 @@
         <li class="text-blue-main dark:text-dark-blue font-bold w-2/4 pl-2">Menu</li>
         <li v-for="(menu, i) in menuOptions" :key="i">
           <a :href="menu.id" @click="emit('closeMenu')" class="pl-2"
-            :class="[{ 'bg-pink-clear dark:text-red-alt text-red rounded-xl pr-24 py-1': router.hash === menu.id || (menu.id === '#' && router.hash === '') }]">{{
-    menu.name }}</a>
+            :class="[{ 'bg-pink-main dark:text-red-alt text-red rounded-xl pr-24 py-1': `/${router.hash}` === menu.id || (menu.id === '#' && router.hash === '') }]">{{
+    $t(menu.name) }}</a>
         </li>
       </ul>
       <ul>
@@ -50,7 +50,7 @@ import { useToggle } from '@vueuse/core'
 import { UseDarkMode } from "@/composable/useDarkMode";
 
 
-const {isDark, themeMode} = UseDarkMode()
+const { isDark, themeMode } = UseDarkMode()
 
 const toggleDark = useToggle(isDark);
 const i18n = useI18n();

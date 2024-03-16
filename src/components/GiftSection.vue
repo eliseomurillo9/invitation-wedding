@@ -1,20 +1,27 @@
 <template>
-  <section class="flex flex-col items-center gap-5 bg-pink-white py-7 dark:bg-dark-alt">
-    <h1 class="uppercase text-red text-center font-nanum text-4xl dark:text-white px-10">
+  <section class="flex flex-col items-center gap-5 py-7 dark:bg-dark-alt font-nanum bg-pink-3">
+    <h1 class="text-red text-center text-4xl text-red-main dark:text-white px-10">
       {{ title }}
     </h1>
-    <div v-for="(contain, i) in pageContain" :key="i" class="text-container">
-      <header class="flex gap-2 items-center ">
+    <div class="flex flex-col justify-center items-center font-klee">
+      <p>{{ $t('GiftSection.paragraph1') }}</p>
+      <p>{{ $t('GiftSection.paragraph2') }}</p>
+    </div>
+    <div v-for="(contain, i) in pageContain" :key="i" class="text-container ">
+      <header class="flex gap-1 items-center justify-center">
         <h2 class="text-blue-main dark:text-pink-main">{{ $t(contain.subtitle) }}</h2>
+
         <figure>
           <span class="material-symbols-outlined text-blue-main dark:text-pink-main">
             {{ contain.icon }}
           </span>
         </figure>
       </header>
-      <p class="font-klee dark:text-pink-clear">{{ $t(contain.text) }}</p>
+
     </div>
+    <RouterLink to="/giftDetails">
     <buttonMain label="See account details" />
+    </RouterLink>
   </section>
 </template>
 
@@ -35,7 +42,7 @@ const pageContain = ref([
     text: "GiftSection.paragraph1",
   },
   {
-    subtitle: "giftSection.subtitleBank",
+    subtitle: "GiftSection.subtitle2",
     icon: "ios_share",
     text: "giftSection.textBank",
   },

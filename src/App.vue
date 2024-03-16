@@ -3,7 +3,7 @@
     <header>
       <HeaderContainer />
     </header>
-    <main class="flex-grow flex items-center dark:bg-dark-main">
+    <main class="flex-grow flex justify-center bg-white dark:bg-dark-main">
       <router-view />
     </main>
     <footer class="bottom-0 w-full">

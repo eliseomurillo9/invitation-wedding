@@ -1,8 +1,8 @@
 
 
 <template>
-  <section class="dark:bg-dark-alt dark:text-pink-clear py-9">
-    <h1 class="text-red uppercase font-nanum text-4xl text-center pb-9 px-12 " >
+  <section class="dark:bg-dark-alt  py-9">
+    <h1 class="text-red uppercase font-nanum text-4xl text-center pb-9 px-12 dark:text-pink-clear " >
       {{ title }}
     </h1>
     <div class="columns-2 md:columns-4 gap-6 px-9">
@@ -17,7 +17,7 @@
         />
       </figure>
     </div>
-    <p class="font-klee px-12 text-center mt-5">{{ $t("base.photosAction") }} <a href="#" class="text-blue-800 dark:text-pink-clear uppercase">{{ $t("base.here") }}</a></p>
+    <p class="font-klee px-12 text-center mt-5 dark:text-white">{{ $t("PhotosSection.Text") }} <a href="#" class="text-blue-800 dark:text-pink-clear uppercase font-bold">{{ $t("PhotosSection.Here") }}</a></p>
   </section>
 </template>
 
@@ -30,9 +30,6 @@ defineProps({
   },
   images: {
     Type: Array,
-  },
-  sectionFooter: {
-    Type: String,
   },
 });
 </script>

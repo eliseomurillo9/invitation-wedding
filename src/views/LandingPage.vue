@@ -1,5 +1,5 @@
 <template>
-  <main class="relative pt-24 md:pt-8">
+  <main class="relative">
     <WeddingInformation
     id="wedding-info"
       titleMsg="Georgi & Eli"
@@ -16,23 +16,21 @@
       :altImg="$t('historySection.imageAlt')"
     />
     <HistoryContainer
-      :subTitle="$t('history.theProposalTitle')"
-      :historyText="howWeMet"
+      :subTitle="$t('historySection.subtitleTheProposal')"
+      :historyText="proposal"
       image="foto-elipse-2.svg"
       :altImg="$t('history.imageAlt')"
       :reverseDiv="true"
-      class="pt-0"
     />
-    <ScheduleSection id="schedule" title="Schedule" />
+    <ScheduleSection id="schedule" :title="$t('ScheduleSection.title')" />
     <ImagesContainer
     id="gallery"
-      title="Some photos of our story"
+      :title="$t('PhotosSection.title')"
       :images="photos"
-      sectionFooter="Photos from the wedding will be available HERE"
     />
-    <EntourageSection id="entourage" title="Entourage" :entouragePeople="bridesGrooms" />
+    <EntourageSection id="entourage" :title="$t('EntourageSection.title')" :entouragePeople="bridesGrooms" />
     <!-- <WishesSection id="wished" title="Your Wishes" /> -->
-    <GiftSection id="gifts" title="Your presence is a gift" />
+    <GiftSection id="gifts" :title="$t('WhishesSection.title')" />
     <RouterView></RouterView>
   </main>
 </template>
@@ -69,52 +67,52 @@ const photos = ref([
 
 const bridesGrooms = [
   {
-    title: "Bridesmaids",
+    title: "EntourageSection.subtitle1",
     people: [
       {
         name: "Luci",
         image: "https://storage.cloud.google.com/wedding-inv-bucket/luci.svg",
-        alt: "imagesAlt.luci",
+        alt: "imagesAlt.PhotoBridesmaid1",
       },
       {
         name: "Ale",
         image: "https://storage.cloud.google.com/wedding-inv-bucket/ale.svg",
-        alt: "imagesAlt.ale",
+        alt: "imagesAlt.PhotoBridesmaid2",
       },
       {
         name: "Keren",
         image: "https://storage.cloud.google.com/wedding-inv-bucket/keren.svg",
-        alt: "imagesAlt.keren",
+        alt: "imagesAlt.PhotoBridesmaid3",
       },
       {
         name: "Gerald",
         image: "https://storage.cloud.google.com/wedding-inv-bucket/gerald.svg",
-        alt: "imagesAlt.keren",
+        alt: "imagesAlt.PhotoBridesmaid4",
       },
     ],
   },
   {
-    title: "Groomsman",
+    title: "EntourageSection.subtitle2",
     people: [
       {
         name: "Alex",
         image: "https://storage.cloud.google.com/wedding-inv-bucket/alex.svg",
-        alt: "imagesAlt.luci",
+        alt: "imagesAlt.PhotoGroomsmen1",
       },
       {
         name: "Kevin",
         image: "https://storage.cloud.google.com/wedding-inv-bucket/kevin.svg",
-        alt: "imagesAlt.ale",
+        alt: "imagesAlt.PhotoGroomsmen2",
       },
       {
         name: "Chele",
         image: "https://storage.cloud.google.com/wedding-inv-bucket/chele.svg",
-        alt: "imagesAlt.keren",
+        alt: "imagesAlt.PhotoGroomsmen3",
       },
       {
         name: "William",
         image: "https://storage.cloud.google.com/wedding-inv-bucket/william.svg",
-        alt: "imagesAlt.keren",
+        alt: "imagesAlt.PhotoGroomsmen4",
       },
     ],
   },
@@ -122,6 +120,10 @@ const bridesGrooms = [
 
 const howWeMet = ref([
   'historySection.paragraph1', 'historySection.paragraph2',  'historySection.paragraph3'
+])
+
+const proposal = ref([
+  'historySection.paragraph4'
 ])
 onMounted(() => {
   updatePageTitle();

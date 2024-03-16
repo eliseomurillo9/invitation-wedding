@@ -1,30 +1,30 @@
 <!-- Parent Component -->
 <template>
   <div class="pt-24">
-    <main class="flex-grow flex justify-center px-10 md:px-48">
-      <ConfirmationFormContainer @submit.prevent="onSubmit" title="Confirm my assistance"
-        message="Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur ma Nemo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur ma Nemo.">
+    <section class="flex-grow flex justify-center px-10 md:px-96">
+      <ConfirmationFormContainer @submit.prevent="onSubmit" :title="$t('FormSection.title')" :messages="isOnline ? messagesOnline : messagesPresential" :isLoading="isLoading">
         <template #form>
           <div class="flex flex-col" v-if="isOnline">
-            <label class="text-blue-main font-nanum text-xl">E-mail</label>
+            <label class="text-blue-main font-nanum text-xl dark:text-dark-blue">E-mail</label>
             <input type="email" name="email" id="email" class="bg-pink-white w-80 h-12 p-2 rounded-lg"
-              v-model="attendeeInfo.online.email" placeholder="enter your email" />
+              v-model="attendeeInfo.online.email" :placeholder="$t('Common.Form.Placeholderemail')" />
           </div>
           <template v-else>
             <div class="flex flex-col">
-              <label class="text-blue-main font-nanum text-xl">Firstname</label>
-              <input type="text" name="firstname" id="firstname" class="bg-pink-white w-80 h-12 p-2 rounded-lg"
-                v-model="attendeeInfo.presential.firstname" placeholder="enter your name" />
+              <label class="text-blue-main font-nanum text-xl dark:text-dark-blue">{{ $t('Common.Form.Name') }}</label>
+              <input type="text" name="firstname" id="firstname" class="bg-pink-white w-96 h-12 p-2 rounded-lg"
+                v-model="attendeeInfo.presential.firstname" :placeholder="$t('Common.Form.PlaceholderName')" />
             </div>
             <div class="flex flex-col">
-              <label class="text-blue-main font-nanum text-xl">Lastname</label>
-              <input type="text" name="lastname" id="lastname" class="bg-pink-white w-80 h-12 p-2 rounded-lg"
-                v-model="attendeeInfo.presential.lastname" placeholder="enter your lastname" />
+              <label class="text-blue-main font-nanum text-xl dark:text-dark-blue">{{ $t('Common.Form.LastName')
+                }}</label>
+              <input type="text" name="lastname" id="lastname" class="bg-pink-white w-96 h-12 p-2 rounded-lg"
+                v-model="attendeeInfo.presential.lastname" :placeholder="$t('Common.Form.PlaceholderLastname')" />
             </div>
           </template>
         </template>
       </ConfirmationFormContainer>
-    </main>
+    </section>
   </div>
 </template>
 
@@ -46,6 +46,15 @@ const attendeeInfo = reactive({
 
 });
 
+const messagesPresential = ref([
+  'FormSection.Message1.paragraph1',
+  'FormSection.Message1.paragraph2'
+])
+
+const messagesOnline = ref([
+  'FormSection.Message2.paragraph3'
+])
+
 const router = useRouter();
 const modality = router.currentRoute.value.params.modality;
 const isOnline = computed(() => {
@@ -60,16 +69,17 @@ const onSubmit = () => {
   if (attendeeInfo.online.email.match(emailRegex) || (attendeeInfo.presential.firstname.match(nameRegex) && attendeeInfo.presential.lastname.match(nameRegex))) {
     isLoading.value = true;
     attendeeConfirmation({ modality: modality, email: attendeeInfo.online.email, firstname: attendeeInfo.presential.firstname, lastname: attendeeInfo.presential.lastname }).then((response) => {
-      if (response.status === 201) {
+      console.log(response);
+      if (response?.status === 201) {
         isLoading.value = false;
         router.push({ path: "/confirmation" });
       } else {
-        emit('submit-error', response.statusText);
+        emit('submit-error', response?.statusText || response);
         isLoading.value = false;
       }
     })
-  }else {
-        emit('submit-error', 'base.error.entryNotValid');
-      }
+  } else {
+    emit('submit-error', 'base.error.entryNotValid');
+  }
 }
 </script>

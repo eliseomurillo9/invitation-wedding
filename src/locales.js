@@ -67,7 +67,8 @@ const messages = {
     },
     PhotosSection: {
       title: 'Algunas fotos de nuestra historia',
-      Text: 'Fotos de la boda estarán disponibles aquí',
+      Text: 'Fotos de la boda estarán disponibles',
+      Here: 'aqui',
     },
     EntourageSection: {
       title: 'Séquito',
@@ -138,7 +139,7 @@ const messages = {
     },
     Buttons: {
       PresentialButton: 'Presencial',
-      OnlineButton: 'EN línea',
+      OnlineButton: 'En línea',
       MapButton: 'Mapa',
       CalendarButton: 'Agregar al calendario',
       MessageButton: 'Deja tu mensaje',

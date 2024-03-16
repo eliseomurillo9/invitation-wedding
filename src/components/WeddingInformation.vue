@@ -1,10 +1,10 @@
 <template>
   <section
-    class="flex flex-col justify-center items-center gap-4 text-blue-main py-9 dark:bg-dark-main dark:text-pink-alt">
+    class="flex flex-col justify-center items-center gap-4 pt-24  py-9 dark:bg-dark-main dark:text-pink-alt">
     <i18n-t
       keypath="WelcomeSection.pageTitle"
       tag="h1"
-      class="text-red text-2xl text-center font-nanum uppercase md:text-8xl dark:text-white"
+      class="text-red text-2xl text-center font-nanum uppercase md:text-8xl text-red-main dark:text-white"
       data-aos="zoom-out"
     >
       <template #wedding>
@@ -13,7 +13,7 @@
     </i18n-t>
     <Counter data-aos="fade-up" class="z-20" />
     <img src="../assets/foto-5.png" alt="Foto Elise y Georgina abrazados" class="w-60" />
-    <div class="flex gap-2 font-nanum dark:text-pink-main">
+    <div class="flex gap-2 font-nanum text-blue-main  dark:text-pink-main">
       <span class="material-symbols-outlined">
         location_on
       </span>

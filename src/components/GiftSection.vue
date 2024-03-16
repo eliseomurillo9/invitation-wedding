@@ -1,6 +1,6 @@
 <template>
   <section class="flex flex-col items-center gap-5 bg-pink-white py-7 dark:bg-dark-alt">
-    <h1 class="uppercase text-red text-center font-nanum text-4xl dark:text-pink-clear px-10">
+    <h1 class="uppercase text-red text-center font-nanum text-4xl dark:text-white px-10">
       {{ title }}
     </h1>
     <div v-for="(contain, i) in pageContain" :key="i" class="text-container">
@@ -30,9 +30,9 @@ defineProps({
 });
 const pageContain = ref([
   {
-    subtitle: "giftSection.subtitleEnvelope",
+    subtitle: "GiftSection.subtitle1",
     icon: "mail",
-    text: "gifSection.textEnvelope",
+    text: "GiftSection.paragraph1",
   },
   {
     subtitle: "giftSection.subtitleBank",

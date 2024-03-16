@@ -1,31 +1,29 @@
-<template class="bg-white min-h-screen flex flex-col">
+<template>
+  <div class="h-screen flex flex-col">
     <header>
       <HeaderContainer />
-      
     </header>
-    <router-view  />
-    <FooterSection title="We are looking foward to see you" icon="heart.svg" class="mt-auto"/>
+    <main class="flex-grow flex items-center dark:bg-dark-main">
+      <router-view />
+    </main>
+    <footer class="bottom-0 w-full">
+      <FooterSection :title="$t('Common.Footer')" icon="heart.svg" />
+    </footer>
+  </div>
 </template>
+
 <script>
 import HeaderContainer from "./components/HeaderContainer.vue";
-import { watch } from "vue";
-import { useI18n } from "vue-i18n";
-import FooterSection from "@/components/shared/FooterSection.vue"; 
-
+import FooterSection from "@/components/shared/FooterSection.vue";
 
 export default {
   name: "App",
   components: {
     HeaderContainer,
     FooterSection,
-},
-  setup() {
-     const { locale } = useI18n();
-
-    // Watch for changes in the language and update the HTML lang attribute
-    watch(() => locale.value, (newLocale) => {
-      document.documentElement.lang = newLocale.toLocaleLowerCase();
-    });
   },
 };
 </script>
+
+<style scoped>
+</style>

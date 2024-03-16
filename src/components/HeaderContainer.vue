@@ -56,7 +56,6 @@ const menuOptions = reactive([
   { name: "Navbar.Schedule", id: "/#schedule", isActive: false },
   { name: "Navbar.Photos", id: "/#gallery", isActive: false },
   { name: "Navbar.Entourage", id: "/#entourage", isActive: false },
-  { name: "Navbar.YourWishes", id: "/#wished", isActive: false },
   { name: "Navbar.Gifts", id: "/#gifts", isActive: false },
 ]);
 

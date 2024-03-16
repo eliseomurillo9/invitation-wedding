@@ -1,6 +1,6 @@
 <template class>
     <footer
-        class="flex items-center justify-center gap-2 py-3 font-nanum text-blue-main md:text-2xl dark:bg-dark-main dark:text-dark-blue">
+        class="flex items-center justify-center gap-2 py-3 font-nanum text-blue-main md:text-2xl dark:bg-dark-alt dark:text-dark-blue">
         <h1>{{ title }} </h1>
         <span class="material-symbols-outlined text-xl align-middle">
             favorite

@@ -1,26 +1,36 @@
 <template>
-  <section class="flex flex-col items-center gap-5 py-7 dark:bg-dark-alt font-nanum bg-pink-3">
-    <h1 class="text-red text-center text-4xl text-red-main dark:text-white px-10">
+  <section
+    class="flex flex-col items-center gap-5 py-7 dark:bg-dark-alt font-nanum bg-pink-3"
+  >
+    <h1
+      class="text-red text-center text-4xl text-red-main dark:text-pink-clear px-10"
+    >
       {{ title }}
     </h1>
-    <div class="flex flex-col justify-center items-center font-klee">
-      <p>{{ $t('GiftSection.paragraph1') }}</p>
-      <p>{{ $t('GiftSection.paragraph2') }}</p>
+    <div
+      class="flex flex-col justify-center items-center font-klee dark:text-white"
+    >
+      <p>{{ $t("GiftSection.paragraph1") }}</p>
+      <p>{{ $t("GiftSection.paragraph2") }}</p>
     </div>
-    <div v-for="(contain, i) in pageContain" :key="i" class="text-container ">
-      <header class="flex gap-1 items-center justify-center">
-        <h2 class="text-blue-main dark:text-pink-main">{{ $t(contain.subtitle) }}</h2>
-
+    <div class="flex gap-8 font-klee">
+      <div
+        class="flex gap-1 items-center justify-center text-blue-main dark:text-dark-blue"
+        v-for="(contain, i) in pageContain"
+        :key="i"
+      >
+        <h2 class="align-middle">
+          {{ $t(contain.subtitle) }}
+        </h2>
         <figure>
-          <span class="material-symbols-outlined text-blue-main dark:text-pink-main">
+          <span class="material-symbols-outlined align-middle">
             {{ contain.icon }}
           </span>
         </figure>
-      </header>
-
+      </div>
     </div>
     <RouterLink to="/giftDetails">
-    <buttonMain label="See account details" />
+      <buttonMain :label="$t('Buttons.AccountButton')" />
     </RouterLink>
   </section>
 </template>

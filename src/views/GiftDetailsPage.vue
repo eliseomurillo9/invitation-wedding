@@ -1,24 +1,40 @@
 <template>
-  <section class="flex flex-col justify-center items-center gap-9 bg-pink-white w-full">
+  <section
+    class="flex flex-col justify-center items-center gap-9 bg-pink-white dark:bg-dark-main w-full pt-24 pb-10"
+  >
     <InformationCard :title="$t('GiftSection.title')">
       <div class="px-7">
         <div class="text-center mb-10">
-          <span class="material-symbols-outlined text-blue-main dark:text-pink-main text-4xl">
+          <span
+            class="material-symbols-outlined text-blue-main  text-4xl"
+          >
             mail
           </span>
-          <p class="font-klee">{{ $t('GiftSection.paragraph3') }}</p>
+          <p class="font-klee">{{ $t("GiftSection.paragraph3") }}</p>
         </div>
         <div class="text-center">
-          <span class="material-symbols-outlined text-blue-main dark:text-pink-main text-4xl">
+          <span
+            class="material-symbols-outlined text-blue-main  text-4xl"
+          >
             ios_share
           </span>
-          <p class="font-klee mb-3">{{ $t('GiftSection.paragraph4') }}</p>
-          <div class="flex justify-center gap-10 mt-6">
-            <ul v-for="(account, i) in AccountInfo" :key="i">
+          <p class="font-klee mb-3">{{ $t("GiftSection.paragraph4") }}</p>
+          <div class="flex justify-center gap-10 mt-16">
+            <ul
+              v-for="(account, i) in AccountInfo"
+              :key="i"
+              class="border p-5 rounded-xl border-pink-main"
+            >
               <li class="text-blue-main font-bold">Name</li>
-              <li>{{ account.name }}</li>
+              <li>{{ account.name }}
+                <span class="material-symbols-outlined cursor-pointer align-middle text-black/60 text-xl ml-2 hover:text-pink-main ease-in-out" @click="copy(account.name)"> content_copy </span>
+              </li>
               <li class="text-blue-main font-bold pt-6">Cuenta</li>
-              <li>{{ account.account }}</li>
+              <li class="align-middle">
+                {{ account.account }} 
+               <span class="material-symbols-outlined cursor-pointer align-middle text-black/60 text-xl ml-2 hover:text-pink-main ease-in-out" @click="copy(account.account)"> content_copy </span>
+              </li>
+
               <li class="text-blue-main font-bold pt-6">Pais</li>
               <li>{{ $t(account.country) }}</li>
             </ul>
@@ -30,20 +46,29 @@
 </template>
 
 <script setup>
-import InformationCard from '@/components/shared/InformationCard.vue';
+import InformationCard from "@/components/shared/InformationCard.vue";
 import { ref } from "vue";
 
 const AccountInfo = ref([
   {
-    name: 'Josue Eliseo Murillo Cordova',
-    account: 'FR76 3002 7170 1100 0215 9840 110',
-    country: 'GiftSection.france'
+    name: "Josue Eliseo Murillo Cordova",
+    account: "FR76 3002 7170 1100 0215 9840 110",
+    country: "GiftSection.france",
   },
   {
+    name: "Georgina Lisseth Cierra Moran",
+    account: "FR76 3002 7170 1100 0215 9840 110",
+    country: "El Salvador",
+  },
+]);
 
-    name: 'Georgina Lisseth Cierra Moran',
-    account: 'FR76 3002 7170 1100 0215 9840 110',
-    country: 'El Salvador'
+const copy = async (account) => {
+  try {
+    await navigator.clipboard.writeText(account);
+    console.log("Copied to clipboard!");
+  } catch (err) {
+    console.error("Failed to copy:", err);
+    // Handle fallback if needed (explained below)
   }
-])
+};
 </script>

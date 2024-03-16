@@ -2,7 +2,7 @@
   <section class="bg-pink-3 p-7 dark:bg-dark-main">
     <h1 class="font-nanum text-4xl text-center dark:text-pink-clear text-red-main">{{ title }}</h1>
     <div class="flex flex-col gap-12 pt-12 md:flex-row md:justify-center">
-      <InformationCard :title="$t('ScheduleSection.subtitlePresential')">
+      <InformationCard :title="$t('ScheduleSection.subtitlePresential')" class="w-80">
         <table>
           <tr>
             <td class="flex gap-1 pr-5 pb-4 text-left">
@@ -31,7 +31,7 @@
           <ButtonMain :label="$t('Buttons.CalendarButton')" />
         </div>
       </InformationCard>
-      <InformationCard :title="$t('ScheduleSection.subtitleOnline')" class="flex flex-col items-center">
+      <InformationCard :title="$t('ScheduleSection.subtitleOnline')" class="flex flex-col items-center w-80">
         <p class="pb-9">
          {{ $t('ScheduleSection.Text') }}
         </p>

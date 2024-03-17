@@ -9,6 +9,7 @@
       <figure
         v-for="(photo, i) in images"
         :key="i"
+        data-aos="zoom-in"
       >
         <img
           :src="require(`../assets/${photo.img}`)"

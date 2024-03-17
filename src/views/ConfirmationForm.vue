@@ -1,7 +1,7 @@
 <!-- Parent Component -->
 <template>
   <div class="pt-24">
-    <section class="flex-grow flex justify-center px-10 md:px-96">
+    <section class="flex-grow flex justify-center px-4 pb-7 md:px-96">
       <ConfirmationFormContainer @submit.prevent="onSubmit" :title="$t('FormSection.title')" :messages="isOnline ? messagesOnline : messagesPresential" :isLoading="isLoading">
         <template #form>
           <div class="flex flex-col" v-if="isOnline">

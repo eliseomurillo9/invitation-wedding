@@ -1,19 +1,20 @@
 <template>
   <main class="relative">
     <WeddingInformation
-    id="wedding-info"
+      id="wedding-info"
       titleMsg="Georgi & Eli"
       :weddingDate="$t('WelcomeSection.weddingDate')"
       :weddingPlace="$t('WelcomeSection.weddingLocation')"
       :description="$t('WelcomeSection.WelcomeMessage')"
     />
     <HistoryContainer
-    id="our-history"
+      id="our-history"
       :title="$t('historySection.title')"
       :subTitle="$t('historySection.subtitleHowWeMet')"
       :historyText="howWeMet"
       image="foto-elipse-1.svg"
       :altImg="$t('imagesAlt.PhotoOurStory')"
+      data-aos="fade-up"
     />
     <HistoryContainer
       :subTitle="$t('historySection.subtitleTheProposal')"
@@ -21,16 +22,31 @@
       image="foto-elipse-2.svg"
       :altImg="$t('imagesAlt.PhotoTheProposal')"
       :reverseDiv="true"
+      data-aos="fade-up"
     />
-    <ScheduleSection id="schedule" :title="$t('ScheduleSection.title')" />
+    <ScheduleSection
+      id="schedule"
+      :title="$t('ScheduleSection.title')"
+      data-aos="fade-up"
+    />
     <ImagesContainer
-    id="gallery"
+      id="gallery"
       :title="$t('PhotosSection.title')"
       :images="photos"
+      data-aos="fade-up"
     />
-    <EntourageSection id="entourage" :title="$t('EntourageSection.title')" :entouragePeople="bridesGrooms" />
+    <EntourageSection
+      id="entourage"
+      :title="$t('EntourageSection.title')"
+      :entouragePeople="bridesGrooms"
+      data-aos="fade-up"
+    />
     <!-- <WishesSection id="wished" title="Your Wishes" /> -->
-    <GiftSection id="gifts" :title="$t('GiftSection.title')" />
+    <GiftSection
+      id="gifts"
+      :title="$t('GiftSection.title')"
+      data-aos="fade-up"
+    />
     <RouterView></RouterView>
   </main>
 </template>
@@ -111,7 +127,8 @@ const bridesGrooms = [
       },
       {
         name: "William",
-        image: "https://storage.cloud.google.com/wedding-inv-bucket/william.svg",
+        image:
+          "https://storage.cloud.google.com/wedding-inv-bucket/william.svg",
         alt: "imagesAlt.PhotoGroomsmen4",
       },
     ],
@@ -119,12 +136,12 @@ const bridesGrooms = [
 ];
 
 const howWeMet = ref([
-  'historySection.paragraph1', 'historySection.paragraph2',  'historySection.paragraph3'
-])
+  "historySection.paragraph1",
+  "historySection.paragraph2",
+  "historySection.paragraph3",
+]);
 
-const proposal = ref([
-  'historySection.paragraph4'
-])
+const proposal = ref(["historySection.paragraph4"]);
 onMounted(() => {
   updatePageTitle();
 });

@@ -1,21 +1,21 @@
 <template>
   <section
-    class="flex flex-col items-center gap-5 py-7 dark:bg-dark-alt font-nanum bg-pink-3"
+    class="flex flex-col items-center gap-5 py-7 dark:bg-dark-alt font-nanum bg-pink-3 px-10"
   >
     <h1
-      class="text-red text-center text-4xl text-red-main dark:text-pink-clear px-10"
+      class="text-red text-center text-2xl md:text-4xl text-red-main dark:text-pink-clear"
     >
       {{ title }}
     </h1>
     <div
-      class="flex flex-col justify-center items-center font-klee dark:text-white"
+      class="flex flex-col gap-4 justify-center items-center font-klee dark:text-white"
     >
       <p>{{ $t("GiftSection.paragraph1") }}</p>
       <p>{{ $t("GiftSection.paragraph2") }}</p>
     </div>
     <div class="flex gap-8 font-klee">
       <div
-        class="flex gap-1 items-center justify-center text-blue-main dark:text-dark-blue"
+        class="flex gap-1 items-center justify-center text-blue-main dark:text-dark-blue font-klee"
         v-for="(contain, i) in pageContain"
         :key="i"
       >

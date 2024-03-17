@@ -1,9 +1,9 @@
 <template>
-  <div
-    class="flex justify-between items-center gap-3 w-full py-2 px-5 text-sm md:text-2xl bg-pink-clear fixed top-0 z-50 font-nanum dark:bg-dark-alt dark:text-white">
+  <nav
+    class="flex justify-between items-center gap-3 right-0 left-0 py-2 px-7 text-sm md:text-2xl bg-pink-clear fixed top-0 z-50 font-nanum dark:bg-dark-alt dark:text-white">
     <router-link to="/"><img src="https://storage.cloud.google.com/wedding-inv-bucket/logo-wedding.svg"
         :alt="$t('imagesAlt.logo')" class="h-11 w-auto md:w-11" /></router-link>
-    <nav class="hidden md:block">
+    <div class="hidden md:block">
       <ul class="flex justify-center items-center gap-6 md:gap-8 text-xl">
         <li v-for="option in menuOptions" :key="option.id" :class="[
           {
@@ -15,7 +15,7 @@
           <a :href="option.id">{{ $t(option.name) }}</a>
         </li>
       </ul>
-    </nav>
+    </div>
     <template class="md:flex items-center gap-1 hidden cursor-pointer">
       <span class="material-symbols-outlined">
         language
@@ -32,7 +32,7 @@
     </span>
     <SideMenu :menuOptions="menuOptions" :toggleMenu="menuToggle" :appThemes="themes" class="md:hidden"
       data-aos="fade-down" @close-menu="() => toggleSideMenu()" />
-  </div>
+  </nav>
 </template>
 
 <script setup>

@@ -1,7 +1,10 @@
 <template>
- <section class="text-white font-nanum text-4xl px-96">
-  <p class="py-24 text-center">{{ $t('Common.ConfirmationMessage') }}</p>
- </section>
+  <section class="text-white font-nanum text-4xl px-60 flex flex-col justify-center items-center">
+    <p class=" text-center">{{ $t("Common.ConfirmationMessage") }}</p>
+    <span class="material-symbols-outlined text-6xl align-middle">
+      favorite
+    </span>
+  </section>
 </template>
 
 <script>
@@ -14,7 +17,7 @@ export default {
     const { t: $t } = useI18n();
     const updatePageTitle = () => {
       const pageTitle =
-        `${$t("Common.pageTitle.landing")} - G&C`  || "Default Page Title";
+        `${$t("Common.pageTitle.landing")} - G&C` || "Default Page Title";
       document.title = pageTitle;
     };
 

@@ -1,38 +1,47 @@
 <template>
   <section
-    class="flex flex-col justify-center items-center gap-9 bg-pink-white dark:bg-dark-main w-full pt-24 pb-10"
+    class="flex flex-col justify-center items-center gap-9 bg-pink-white dark:bg-dark-main w-full pt-24 pb-10 px-4 md:px12"
   >
     <InformationCard :title="$t('GiftSection.title')">
-      <div class="px-7">
+      <div class="md:px-7">
         <div class="text-center mb-10">
-          <span
-            class="material-symbols-outlined text-blue-main  text-4xl"
-          >
+          <span class="material-symbols-outlined text-blue-main text-4xl">
             mail
           </span>
           <p class="font-klee">{{ $t("GiftSection.paragraph3") }}</p>
         </div>
         <div class="text-center">
-          <span
-            class="material-symbols-outlined text-blue-main  text-4xl"
-          >
+          <span class="material-symbols-outlined text-blue-main text-4xl">
             ios_share
           </span>
           <p class="font-klee mb-3">{{ $t("GiftSection.paragraph4") }}</p>
-          <div class="flex justify-center gap-10 mt-16">
+          <div
+            class="flex flex-col md:flex-row justify-center flex-wrap gap-10 mt-16"
+          >
             <ul
               v-for="(account, i) in AccountInfo"
               :key="i"
               class="border p-5 rounded-xl border-pink-main"
             >
               <li class="text-blue-main font-bold">Name</li>
-              <li>{{ account.name }}
-                <span class="material-symbols-outlined cursor-pointer align-middle text-black/60 text-xl ml-2 hover:text-pink-main ease-in-out" @click="copy(account.name)"> content_copy </span>
+              <li>
+                {{ account.name }}
+                <span
+                  class="material-symbols-outlined cursor-pointer align-middle text-black/60 text-xl ml-2 hover:text-pink-main ease-in-out"
+                  @click="copy(account.name)"
+                >
+                  content_copy
+                </span>
               </li>
               <li class="text-blue-main font-bold pt-6">Cuenta</li>
               <li class="align-middle">
-                {{ account.account }} 
-               <span class="material-symbols-outlined cursor-pointer align-middle text-black/60 text-xl ml-2 hover:text-pink-main ease-in-out" @click="copy(account.account)"> content_copy </span>
+                {{ account.account }}
+                <span
+                  class="material-symbols-outlined cursor-pointer align-middle text-black/60 text-xl ml-2 hover:text-pink-main ease-in-out"
+                  @click="copy(account.account)"
+                >
+                  content_copy
+                </span>
               </li>
 
               <li class="text-blue-main font-bold pt-6">Pais</li>
@@ -71,4 +80,14 @@ const copy = async (account) => {
     // Handle fallback if needed (explained below)
   }
 };
+
+const updatePageTitle = () => {
+  const pageTitle =
+    `${$t("Common.pageTitle.landing")} - G&C` || "Default Page Title";
+  document.title = pageTitle;
+};
+
+onMounted(() => {
+  updatePageTitle();
+});
 </script>

@@ -1,12 +1,12 @@
 <template>
-  <div class="h-screen flex flex-col">
+  <div class="flex flex-col min-h-screen">
     <header>
       <HeaderContainer />
     </header>
-    <main class="flex-grow flex justify-center bg-white dark:bg-dark-main">
+    <main class="flex-grow flex justify-center items-center bg-white dark:bg-dark-main">
       <router-view />
     </main>
-    <footer class="bottom-0 w-full">
+    <footer>
       <FooterSection :title="$t('Common.Footer')" icon="heart.svg" />
     </footer>
   </div>

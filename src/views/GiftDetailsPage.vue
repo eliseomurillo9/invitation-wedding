@@ -56,8 +56,10 @@
 
 <script setup>
 import InformationCard from "@/components/shared/InformationCard.vue";
-import { ref } from "vue";
+import { onMounted, ref } from "vue";
+import { useI18n } from "vue-i18n";
 
+const { t: $t } = useI18n();
 const AccountInfo = ref([
   {
     name: "Josue Eliseo Murillo Cordova",

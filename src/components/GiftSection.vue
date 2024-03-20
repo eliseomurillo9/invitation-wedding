@@ -15,11 +15,11 @@
     </div>
     <div class="flex gap-8 font-klee">
       <div
-        class="flex gap-1 items-center justify-center text-blue-main dark:text-dark-blue font-klee"
+        class="flex gap-1 items-center justify-center text-blue-main dark:text-dark-blue font-klee pt-6"
         v-for="(contain, i) in pageContain"
         :key="i"
       >
-        <h2 class="align-middle">
+        <h2 class="align-middle text-center">
           {{ $t(contain.subtitle) }}
         </h2>
         <figure>
@@ -29,7 +29,7 @@
         </figure>
       </div>
     </div>
-    <RouterLink to="/giftDetails">
+    <RouterLink to="/giftDetails" class="pt-3">
       <buttonMain :label="$t('Buttons.AccountButton')" />
     </RouterLink>
   </section>

@@ -1,25 +1,39 @@
 <template>
-  <div class="flex flex-col justify-center items-center gap-4">
-    <h3 class="font-klee text-2xl dark:text-dark-blue text-red-main  ">{{ title }}</h3>
-    <div class="flex gap-3">
-      <router-link  to="/confirmation/presential">
-        <buttonMain :label="$t('Buttons.PresentialButton')" type="button"/>
-      </router-link>
-      <router-link  to="/confirmation/online">
-        <ButtonOutlined :label="$t('Buttons.OnlineButton')" type="button"/>
-      </router-link>
-    </div>
-  </div>
+  <section class="flex flex-col gap-9">
+    <h1
+      class="text-red text-2xl font-nanum text-center md:text-4xl dark:text-dark-blue"
+    >
+      {{ title }}
+    </h1>
+    <p v-for="(message, i) in messages" :key="i" class="dark:text-pink-white">
+      {{ $t(message) }}
+    </p>
+    <form class="md:pt-5">
+      <slot name="form"></slot>
+      <div class="flex justify-center">
+        <buttonMain
+          type="submit"
+          :label="$t('Buttons.ConfirmButton')"
+          :isLoading="isLoading"
+        />
+      </div>
+    </form>
+  </section>
 </template>
 
 <script setup>
-import buttonMain from "./shared/buttons/buttonMain.vue";
-import ButtonOutlined from "./shared/buttons/buttonOutlined.vue";
 import { defineProps } from "vue";
+import buttonMain from "./shared/buttons/buttonMain.vue";
 
 defineProps({
   title: {
-    Type: String,
+    type: String,
+  },
+  messages: {
+    type: Array,
+  },
+  isLoading: {
+    type: Boolean,
   },
 });
 </script>

@@ -1,7 +1,7 @@
 <!-- Parent Component -->
 <template>
   <div class="pt-24">
-    <section class="flex-grow flex justify-center px-4 pb-7 md:px-96">
+    <section class="flex justify-center px-8 pb-7 sm:mx-24 md:mx-40">
       <ConfirmationFormContainer
         @submit.prevent="onSubmit"
         :title="$t('FormSection.title')"
@@ -9,7 +9,7 @@
         :isLoading="isLoading"
       >
         <template #form>
-          <div class="flex flex-col" v-if="isOnline">
+          <div class="flex flex-col pb-12" v-if="isOnline">
             <label class="text-blue-main font-nanum text-xl dark:text-dark-blue"
               >E-mail</label
             >
@@ -17,13 +17,13 @@
               type="email"
               name="email"
               id="email"
-              class="bg-pink-white w-80 h-12 p-2 rounded-lg"
+              class="bg-pink-white p-2 rounded-lg"
               v-model="attendeeInfo.online.email"
               :placeholder="$t('Common.Form.Placeholderemail')"
             />
           </div>
           <template v-else>
-            <div class="flex flex-col">
+            <div class="flex flex-col pb-12">
               <label
                 class="text-blue-main font-nanum text-xl dark:text-dark-blue"
                 >{{ $t("Common.Form.Name") }}</label
@@ -32,12 +32,12 @@
                 type="text"
                 name="firstname"
                 id="firstname"
-                class="bg-pink-white w-96 h-12 p-2 rounded-lg"
+                class="bg-pink-white p-2 rounded-lg"
                 v-model="attendeeInfo.presential.firstname"
                 :placeholder="$t('Common.Form.PlaceholderName')"
               />
             </div>
-            <div class="flex flex-col">
+            <div class="flex flex-col pb-12">
               <label
                 class="text-blue-main font-nanum text-xl dark:text-dark-blue"
                 >{{ $t("Common.Form.LastName") }}</label
@@ -46,7 +46,8 @@
                 type="text"
                 name="lastname"
                 id="lastname"
-                class="bg-pink-white w-96 h-12 p-2 rounded-lg"
+                class="bg-pink-white p-2 rounded-lg"
+                :class="{ 'border bg-red-500': errorMessage }"
                 v-model="attendeeInfo.presential.lastname"
                 :placeholder="$t('Common.Form.PlaceholderLastname')"
               />
@@ -55,23 +56,23 @@
         </template>
       </ConfirmationFormContainer>
       <div
-      class="fixed left-2/4 -translate-x-2/4 bottom-20 z-50"
-      v-if="errorMessage"
-    >
-      <span
-        class="p-3 text-xs text-red-800 rounded-lg bg-red-50 dark:bg-gray-800/80 dark:text-red-400"
-        role="alert"
+        class="fixed left-2/4 -translate-x-2/4 bottom-20 z-50"
+        v-if="errorMessage"
       >
-        {{ $t(errorMessage) }}
-      </span>
-    </div>
+        <span
+          class="p-3 text-xs text-red-800 rounded-lg bg-red-50 dark:bg-gray-800/80 dark:text-red-400"
+          role="alert"
+        >
+          {{ $t(errorMessage) }}
+        </span>
+      </div>
     </section>
   </div>
 </template>
 
 <script setup>
 import ConfirmationFormContainer from "@/components/ConfirmationFormContainer.vue";
-import { computed, reactive, ref, onMounted } from "vue";
+import { computed, reactive, ref, onMounted, watch } from "vue";
 import attendeeConfirmation from "@/services/confirmationService.js";
 import { useRouter } from "vue-router";
 import { useI18n } from "vue-i18n";
@@ -95,7 +96,7 @@ const messagesOnline = ref(["FormSection.Message2.paragraph3"]);
 
 const router = useRouter();
 const modality = router.currentRoute.value.params.modality;
-let errorMessage = ref(null)
+let errorMessage = ref(null);
 const isOnline = computed(() => {
   return modality === "online";
 });
@@ -120,7 +121,10 @@ const onSubmit = () => {
         isLoading.value = false;
         router.push({ path: "/confirmated" });
       } else {
-        errorMessage.value = response?.statusText === 'Conflict' ? 'Common.Form.registredEmail' : response?.statusText;
+        errorMessage.value =
+          response?.statusText === "Conflict"
+            ? "Common.Form.registredEmail"
+            : response?.statusText;
         isLoading.value = false;
       }
     });
@@ -129,6 +133,13 @@ const onSubmit = () => {
   }
 };
 
+watch(errorMessage, (newValue) => {
+  if (newValue) {
+    setTimeout(() => {
+      errorMessage.value = null;
+    }, 4000);
+  }
+});
 const { t: $t } = useI18n();
 const updatePageTitle = () => {
   const pageTitle =

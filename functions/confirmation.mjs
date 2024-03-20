@@ -20,12 +20,11 @@ const getAttendeesList = async (method) => {
 
     return attendees
   } catch (e) {
-    console.log('EEEEROOOOR------', e)
     throw new Error(e)
   }
 }
 
-export async function handler(event, context) {
+export async function handler(event) {
   const decodeBody = parse(event.body)
   const attendanceMethod = decodeBody.modality
   const attendeeInformation =
@@ -39,7 +38,7 @@ export async function handler(event, context) {
     data.append('name', attendeeInformation)
   }
   const attendeesList = await getAttendeesList(attendanceMethod)
-  const isTheMailInList = attendeesList.find(
+  const isTheMailInList = attendeesList?.find(
     (emailFromList) => emailFromList.email === attendeeInformation,
   )
 
@@ -65,18 +64,9 @@ export async function handler(event, context) {
       statusCode: addToList.status,
       body: JSON.stringify(response),
     }
-
-    //   }
-    // }
   } else {
     return {
-      statusCode: 500,
-      body: JSON.stringify('base.error.emailRegisted'),
+      statusCode: 409
     }
   }
-  // return 'The email is alredy registed'
-  // return {
-  //   statusCode: 200,
-  //   body: JSON.stringify({ getInvitationList }),
-  // }
 }

@@ -8,7 +8,7 @@ export default async function attendeeConfirmation({
 }) {
   const url = process.env.VUE_APP_FUNCTION_URL
   const data = new URLSearchParams()
-  
+
   data.append('modality', modality)
   if (modality === 'online') {
     data.append('email', email)
@@ -27,7 +27,7 @@ export default async function attendeeConfirmation({
     
       return addAttendeeToList
     } catch (error) {
-      console.log(error);
+      return error
     }
   
 }

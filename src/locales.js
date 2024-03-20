@@ -13,6 +13,7 @@ const messages = {
         PlaceholderName: "Ingresa tu nombre",
         LastName: "Correo",
         PlaceholderLastname: "Ingresa tu apellido",
+        registredEmail: 'Tu email ya esta registrado'
       },
       ConfirmationMessage:
         "Estamos felices que te nos uniras, nos vemos el 20 de julio 2024. Gracias por tu confirmación",
@@ -21,6 +22,8 @@ const messages = {
         details: "Detalles de cuenta | Boda Georgi & Eli",
         presential: "Confirmation presencial | Boda Georgi & Eli",
         online: "Confirmation en linea | Boda Georgi & Eli",
+        confirmation: "Confirmacion | Wedding Georgi & Eli",
+
       },
     },
     Navbar: {
@@ -171,6 +174,8 @@ const messages = {
         PlaceholderName: "Enter your name",
         LastName: "Last Name",
         PlaceholderLastname: "Enter your last name",
+        registredEmail: 'Your email is already registred'
+
       },
       ConfirmationMessage:
         "We are happy that you will join us, see you on July 20, 2024. Thank you for your confirmation",
@@ -179,6 +184,7 @@ const messages = {
         details: "Banck details | Wedding Georgi & Eli",
         presential: "Presential confirmation | Wedding Georgi & Eli",
         online: "Online corfirmation | Wedding Georgi & Eli",
+        confirmation: "Confirmation | Wedding Georgi & Eli",
       },
     },
     Navbar: {
@@ -328,6 +334,7 @@ const messages = {
         PlaceholderName: "Entrez votre prénom",
         LastName: "Nom de famille",
         PlaceholderLastname: "Entrez votre nom de famille",
+        registredEmail: 'Votre email est déjà enregistré'
       },
       ConfirmationMessage:
         "Nous sommes heureux que vous vous joigniez à nous, rendez-vous le 20 juillet 2024. Merci pour votre confirmation",
@@ -336,6 +343,7 @@ const messages = {
         details: "Details de compte bancaire| Mariage Georgi & Eli",
         presential: "Confirmation présentiel | Mariage Georgi & Eli",
         online: "Confirmation à distanciel | Mariage Georgi & Eli",
+        confirmation: "Confirmation | Wedding Georgi & Eli",
       },
     },
     Navbar: {

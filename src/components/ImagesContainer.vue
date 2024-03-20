@@ -12,8 +12,8 @@
         data-aos="zoom-in"
       >
         <img
-          :src="require(`../assets/${photo.img}`)"
-          alt="Image 1"
+          :src="photo.img"
+          :alt="photo.alt"
           class="rounded-xl w-full h-full pt-4"
         />
       </figure>

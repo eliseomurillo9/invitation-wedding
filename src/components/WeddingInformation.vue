@@ -12,7 +12,7 @@
       </template>
     </i18n-t>
     <Counter data-aos="fade-up" class="z-20" />
-    <img src="../assets/foto-5.png" alt="Foto Elise y Georgina abrazados" class="w-60" data-aos="zoom-in" />
+    <img src="../assets/foto-5.png" alt="Foto Elise y Georgina abrazados" class="w-60 h-auto" data-aos="zoom-in" />
     <div class="flex gap-2 font-klee text-blue-main  dark:text-pink-main" data-aos="fade-down">
       <span class="material-symbols-outlined">
         location_on

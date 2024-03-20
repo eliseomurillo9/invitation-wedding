@@ -28,14 +28,14 @@
         </table>
         <div class="flex gap-6 justify-center items-center">
           <ButtonOutlined :label="$t('Buttons.MapButton')" buttonhref="https://maps.app.goo.gl/X5az7FwnsPVxs45VA" />
-          <ButtonMain :label="$t('Buttons.CalendarButton')" />
+          <ButtonMain :label="$t('Buttons.CalendarButton')" buttonhref="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=MDhzN29zc21tYXIxNWFzZGVnYjBqNGVzMTEgZWxpc2VvbXVyaWxsbzlAbQ&tmsrc=eliseomurillo9%40gmail.com"/>
         </div>
       </InformationCard>
       <InformationCard :title="$t('ScheduleSection.subtitleOnline')" class="flex flex-col items-center w-80 md:min-w-96">
         <p class="pb-9">
          {{ $t('ScheduleSection.Text') }}
         </p>
-        <ButtonMain :label="$t('Buttons.CalendarButton')" :isLink="true" class="mt-auto" />
+        <ButtonMain :label="$t('Buttons.CalendarButton')" :isLink="true" class="mt-auto" buttonhref="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=MDhzN29zc21tYXIxNWFzZGVnYjBqNGVzMTEgZWxpc2VvbXVyaWxsbzlAbQ&tmsrc=eliseomurillo9%40gmail.com"/>
       </InformationCard>
     </div>
   </section>

@@ -63,13 +63,13 @@ const { t: $t } = useI18n();
 const AccountInfo = ref([
   {
     name: "Josue Eliseo Murillo Cordova",
-    account: "FR76 3002 7170 1100 0215 9840 110",
-    country: "GiftSection.france",
+    account: "3007489060",
+    country: "El Salvador",
   },
   {
     name: "Georgina Lisseth Cierra Moran",
-    account: "FR76 3002 7170 1100 0215 9840 110",
-    country: "El Salvador",
+    account: "FR76 3002 7170 1100 0215 9770 173",
+    country: "GiftSection.france",
   },
 ]);
 

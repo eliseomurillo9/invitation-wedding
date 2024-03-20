@@ -12,14 +12,14 @@
       :title="$t('historySection.title')"
       :subTitle="$t('historySection.subtitleHowWeMet')"
       :historyText="howWeMet"
-      image="foto-elipse-1.svg"
+      image="foto-elipse-2.png"
       :altImg="$t('imagesAlt.PhotoOurStory')"
       data-aos="fade-up"
     />
     <HistoryContainer
       :subTitle="$t('historySection.subtitleTheProposal')"
       :historyText="proposal"
-      image="foto-elipse-2.svg"
+      image="foto-elipse-1.png"
       :altImg="$t('imagesAlt.PhotoTheProposal')"
       :reverseDiv="true"
       data-aos="fade-up"
@@ -71,14 +71,38 @@ const updatePageTitle = () => {
 };
 
 const photos = ref([
-  { img: "dunkerke.svg", alt: "img2" },
-  { img: "bruges.svg", alt: "img1" },
-  { img: "paris.svg", alt: "img2" },
-  { img: "noel-maison.svg", alt: "img2" },
-  { img: "valence.svg", alt: "img2" },
-  { img: "madrid.svg", alt: "img3" },
-  { img: "tolede.svg", alt: "img2" },
-  { img: "noel.svg", alt: "img2" },
+  {
+    img: "https://storage.googleapis.com/wedding-inv-bucket/dunkerke.svg",
+    alt: "imagesAlt.PhotosNotreVie8",
+  },
+  {
+    img: "https://storage.googleapis.com/wedding-inv-bucket/bruges.svg",
+    alt: "imagesAlt.PhotosNotreVie4",
+  },
+  {
+    img: "https://storage.googleapis.com/wedding-inv-bucket/paris.svg",
+    alt: "imagesAlt.PhotosNotreVie3",
+  },
+  {
+    img: "https://storage.googleapis.com/wedding-inv-bucket/noel-maison.svg",
+    alt: "imagesAlt.PhotosNotreVie5",
+  },
+  {
+    img: "https://storage.googleapis.com/wedding-inv-bucket/valence.svg",
+    alt: "imagesAlt.PhotosNotreVie7",
+  },
+  {
+    img: "https://storage.googleapis.com/wedding-inv-bucket/madrid.svg",
+    alt: "imagesAlt.PhotosNotreVie2",
+  },
+  {
+    img: "https://storage.googleapis.com/wedding-inv-bucket/tolede.svg",
+    alt: "imagesAlt.PhotosNotreVie1",
+  },
+  {
+    img: "https://storage.googleapis.com/wedding-inv-bucket/noel.svg",
+    alt: "imagesAlt.PhotosNotreVie6",
+  },
 ]);
 
 const bridesGrooms = [

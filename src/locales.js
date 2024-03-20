@@ -18,7 +18,7 @@ const messages = {
       ConfirmationMessage:
         "Estamos felices que te nos uniras, nos vemos el 20 de julio 2024. Gracias por tu confirmación",
       pageTitle: {
-        landing: "Invitacion | Boda Georgi & Eli",
+        landing: "InvitaciÓn | Boda Georgi & Eli",
         details: "Detalles de cuenta | Boda Georgi & Eli",
         presential: "Confirmation presencial | Boda Georgi & Eli",
         online: "Confirmation en linea | Boda Georgi & Eli",
@@ -77,10 +77,10 @@ const messages = {
     PhotosSection: {
       title: "Algunas fotos de nuestra historia",
       Text: "Fotos de la boda estarán disponibles",
-      Here: "aqui",
+      Here: "aquÍ",
     },
     EntourageSection: {
-      title: "Séquito",
+      title: "Acompañantes",
       subtitle1: "Damas",
       subtitle2: "Padrinos",
     },
@@ -119,7 +119,7 @@ const messages = {
       },
     },
     imagesAlt: {
-      logo: "Logo con un circulo y las letras G y C en el medio",
+      logo: "Logo con un círculo y las letras G y C en el medio",
       PhotoLandingPage: "Fotografía de Eliseo y Georgina",
       PhotoOurStory: "Fotografía nuestra historia",
       PhotoTheProposal: "Fotografía propuesta Eliseo y Georgina",
@@ -142,7 +142,7 @@ const messages = {
     },
     IconsAlt: {
       iconBurguer: "Icono de menu",
-      iconLocation: "Icono de localizacion",
+      iconLocation: "Icono de localización",
       iconCalendar: "Icono de calendario",
       iconHeart: "Icono de corazón",
       iconClock: "Icono de reloj",

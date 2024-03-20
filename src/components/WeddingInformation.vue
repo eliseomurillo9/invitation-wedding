@@ -1,6 +1,7 @@
 <template>
   <section
-    class="flex flex-col justify-center items-center gap-4 pt-24  py-9 dark:bg-dark-main dark:text-pink-alt">
+    class="flex flex-col justify-center items-center gap-4 pt-24 py-9 dark:bg-dark-main dark:text-pink-alt"
+  >
     <i18n-t
       keypath="WelcomeSection.pageTitle"
       tag="h1"
@@ -8,19 +9,25 @@
       data-aos="zoom-out"
     >
       <template #wedding>
-        <span class="block md:inline-block md:my-4"> {{ $t("WelcomeSection.weddingTitle") }} </span>
+        <span class="block md:inline-block md:my-4">
+          {{ $t("WelcomeSection.weddingTitle") }}
+        </span>
       </template>
     </i18n-t>
     <Counter data-aos="fade-up" class="z-20" />
-    <img src="../assets/foto-5.png" alt="Foto Elise y Georgina abrazados" class="w-60" data-aos="zoom-in" />
-    <div class="flex gap-2 font-klee text-blue-main  dark:text-pink-main" data-aos="fade-down">
-      <span class="material-symbols-outlined">
-        location_on
-      </span>
+    <img
+      src="../assets/foto-5.png"
+      alt="Foto Elise y Georgina abrazados"
+      class="w-60 h-auto"
+      data-aos="zoom-in"
+    />
+    <div
+      class="flex gap-2 font-klee text-blue-main dark:text-pink-main"
+      data-aos="fade-down"
+    >
+      <span class="material-symbols-outlined"> location_on </span>
       <h2>{{ weddingPlace }}</h2>
-      <span class="material-symbols-outlined">
-        event
-      </span>
+      <span class="material-symbols-outlined"> event </span>
       <h2>{{ weddingDate }}</h2>
     </div>
     <p class="w-2/4 text-center font-klee dark:text-white">{{ description }}</p>
@@ -44,10 +51,7 @@ defineProps({
     Type: String,
   },
   description: {
-    Type: String
-  }
+    Type: String,
+  },
 });
-
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->

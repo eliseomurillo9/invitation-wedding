@@ -9,16 +9,18 @@
         v-for="(section, index) in entouragePeople"
         :key="index"
       >
+      <div class="h-16 flex justify-center md:justify-start md:items-center">
         <h2
-          class="text-blue-main font-nanum text-xl text-center md:text-start pb-2 md:text-2xl dark:text-dark-blue"
+          class="text-blue-main font-nanum text-xl text-center md:text-start md:text-2xl dark:text-dark-blue my-auto"
         >
           {{ $t(`${section.title}`) }}
         </h2>
+      </div>
         <div
-          class="flex flex-col md:flex-row md:justify-center gap-12 md:gap-24 "
+          class="flex flex-col items-center md:flex-row md:justify-center gap-12 md:gap-24 "
         >
-          <figure v-for="(person, i) in section.people" :key="i" class="mb-2.5">
-            <img :src="person.image" :alt="person.alt" class="md:h-36"/>
+          <figure v-for="(person, i) in section.people" :key="i" class="mb-2.5 w-24 h-fit">
+            <img :src="person.image" :alt="person.alt"/>
             <figcaption class="text-center font-klee mt-1 dark:text-white">
               {{ person.name }}
             </figcaption>

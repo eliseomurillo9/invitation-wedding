@@ -1,30 +1,42 @@
-import ConfirmationPage from "../views/ConfirmationPage.vue";
-import TheHome from "../views/TheHome.vue";
+// import ConfirmationPage from "../views/ConfirmationPage.vue";
+import LandingPage from "../views/LandingPage.vue";
 import { createRouter, createWebHistory } from "vue-router";
-
+import ConfirmationForm from "@/views/ConfirmationForm.vue";
+import ConfirmationPage from "@/views/ConfirmationPage.vue";
+import GiftDetailsPage from "@/views/GiftDetailsPage.vue";
+GiftDetailsPage
 
 
 const routes = [
   {
     path: "/",
     name: "home",
-    component: TheHome,
+    component: LandingPage,
     meta: {
-      title: "base.pageTitles.saveTheDate",
+      title: "Common.pageTitle.landing",
     },
   },
   {
-    path: "/confirmation",
-    name: "ConfirmationPage",
+    path: "/confirmation/:modality",
+    name: "ConfirmationForm",
+    component: ConfirmationForm,
+  },
+  {
+    path: "/confirmated",
+    name: "ConfirmationPAge",
     component: ConfirmationPage,
+  },
+  {
+    path: "/giftDetails",
+    name: "GiftDetailsPage",
+    component: GiftDetailsPage,
   },
 ];
 
 const router = createRouter({
-  history: createWebHistory('/'),
-  routes, 
-})
-
+  history: createWebHistory("/"),
+  routes,
+});
 
 router.beforeEach((to, from, next) => {
   document.title = `${to.meta.title} - G&E` || "Default Page Title";

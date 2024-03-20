@@ -1,5 +1,5 @@
 <template>
-  <main class="relative py-5 md:py-8">
+  <main class="relative pt-5 md:py-8">
     <WeddingInformation
       titleMsg="base.pageTitle"
       :weddingDate="$t('base.weddingDate')"
@@ -71,13 +71,13 @@
     />
     <div
       class="fixed left-2/4 -translate-x-2/4 bottom-3"
-      v-if="errorMessage"
+      v-if="true"
     >
       <span
         class="p-3 text-xs text-red-800 rounded-lg bg-red-50 dark:bg-gray-800/80 dark:text-red-400"
         role="alert"
       >
-        {{ $t(errorMessage) }} 
+        HOLA
       </span>
     </div>
   </main>
@@ -124,7 +124,7 @@ export default {
     });
 
     const updatePageTitle =  () => {
-      const pageTitle = `${$t('base.pageTitles.saveTheDate')} - G&C`  || "Default Page Title";
+      const pageTitle = `${$t('Common.pageTitle.landing')} - G&C`  || "Default Page Title";
       document.title = pageTitle;
     };
     onMounted(() => {

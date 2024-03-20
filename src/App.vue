@@ -1,31 +1,42 @@
-<template class="bg-white min-h-screen">
+<template>
+  <div class="flex flex-col min-h-screen">
     <header>
       <HeaderContainer />
     </header>
-    <router-view />
+    <main
+      class="flex-grow flex justify-center items-center bg-white dark:bg-dark-main"
+    >
+      <router-view />
+    </main>
+    <footer>
+      <FooterSection :title="$t('Common.Footer')" icon="heart.svg" />
+    </footer>
+  </div>
 </template>
-<script>
+
+<script setup>
 import HeaderContainer from "./components/HeaderContainer.vue";
-import { onMounted, watch } from "vue";
+import FooterSection from "@/components/shared/FooterSection.vue";
+import { onMounted } from "vue";
 import { useI18n } from "vue-i18n";
-import AOS from "aos";
+import { UseLocales } from "./composable/UseLocales";
+const { getLanguage } = UseLocales();
+const i18n = useI18n();
 
-export default {
-  name: "App",
-  components: {
-    HeaderContainer,
-  },
-  setup() {
-     const { locale } = useI18n();
+onMounted(() => {
+  const storedLang = getLanguage();
 
-    // Watch for changes in the language and update the HTML lang attribute
-    watch(() => locale.value, (newLocale) => {
-      document.documentElement.lang = newLocale.toLocaleLowerCase();
-    });
-    onMounted(() => {
-      AOS.init();
-      console.log('document', document.documentElement.header);
-    });
-  },
-};
+  if (storedLang) {
+    if (i18n.availableLocales.includes(storedLang)) {
+      i18n.locale.value = storedLang;
+    } else {
+      console.warn(
+        `Invalid locale found in localStorage: ${storedLang}. Using default locale.`
+      );
+      i18n.locale.value = i18n.fallbackLocale[0]; // Use the first fallback locale
+    }
+  } else {
+    i18n.locale.value = i18n.fallbackLocale[0];
+  }
+});
 </script>

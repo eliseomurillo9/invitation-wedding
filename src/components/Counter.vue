@@ -1,25 +1,11 @@
 <template>
   <div
-    class="bg-pink-main rounded-full pt-1 pb-0 px-8 flex text-white text-center text-2xl text-shadow-xl justify-center gap-2 md:gap-3 md:px-11 md:py-4 w-fit mx-auto"
+    class="bg-pink-clear rounded-full py-2.5 px-5 flex text-red text-center justify-center gap-2 md:gap-3 md:px-11 md:py-4 w-fit mx-auto dark:text-red-alt"
   >
-    <div class="flex flex-col items-center justify-center">
-      <span class="text-[1.48031rem] md:text-4xl">{{ countdownInfo.days }}</span>
-      <span class="text-[0.82756rem] md:text-2xl -mt-2 md:-mt-1">{{ $t('base.counter.days') }}</span>
-    </div>
-    <span class="md:text-5xl">:</span>
     <div class="flex flex-col">
-      <span class="md:text-4xl">{{ countdownInfo.hours }}</span>
-      <span class="text-[0.82756rem] md:text-2xl -mt-2 md:-mt-1">{{ $t('base.counter.hours') }}</span>
-    </div>
-    <span class="md:text-5xl">:</span>
-    <div class="flex flex-col">
-      <span class="md:text-4xl">{{ countdownInfo.minutes }}</span>
-      <span class="text-[0.82756rem] md:text-2xl -mt-2 md:-mt-1">{{ $t('base.counter.minutes') }}</span>
-    </div>
-    <span class="md:text-5xl">:</span>
-    <div class="flex flex-col">
-      <span class="md:text-4xl">{{ countdownInfo.seconds }}</span>
-      <span class="text-[0.82756rem] md:text-2xl -mt-2 md:-mt-1">{{ $t('base.counter.seconds') }}</span>
+      <span class="md:text-2xl font-nanum text-red-main"
+        >{{ countdownInfo.days }} {{ $t("WelcomeSection.counter.days") }} : {{ countdownInfo.hours }}  {{ $t("WelcomeSection.counter.hours") }} : {{ countdownInfo.minutes }}  {{ $t("WelcomeSection.counter.minutes") }} : {{ countdownInfo.seconds }} {{ $t("WelcomeSection.counter.seconds") }}
+        </span>
     </div>
   </div>
 </template>
@@ -66,7 +52,7 @@ export default {
     }
 
     onMounted(() => {
-        countDownFunction();
+      countDownFunction();
     });
     return {
       countdownInfo,

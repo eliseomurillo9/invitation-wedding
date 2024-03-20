@@ -9,7 +9,7 @@
         :isLoading="isLoading"
       >
         <template #form>
-          <div class="flex flex-col pb-12" v-if="isOnline">
+          <div class="flex flex-col pb-3 md:pb-12" v-if="isOnline">
             <label class="text-blue-main font-nanum text-xl dark:text-dark-blue"
               >E-mail</label
             >
@@ -23,7 +23,7 @@
             />
           </div>
           <template v-else>
-            <div class="flex flex-col pb-12">
+            <div class="flex flex-col pb-3 md:pb-12">
               <label
                 class="text-blue-main font-nanum text-xl dark:text-dark-blue"
                 >{{ $t("Common.Form.Name") }}</label
@@ -37,7 +37,7 @@
                 :placeholder="$t('Common.Form.PlaceholderName')"
               />
             </div>
-            <div class="flex flex-col pb-12">
+            <div class="flex flex-col pb-3 md:pb-12">
               <label
                 class="text-blue-main font-nanum text-xl dark:text-dark-blue"
                 >{{ $t("Common.Form.LastName") }}</label

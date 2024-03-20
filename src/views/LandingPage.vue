@@ -12,14 +12,14 @@
       :title="$t('historySection.title')"
       :subTitle="$t('historySection.subtitleHowWeMet')"
       :historyText="howWeMet"
-      image="foto-elipse-1.svg"
+      image="foto-elipse-2.png"
       :altImg="$t('imagesAlt.PhotoOurStory')"
       data-aos="fade-up"
     />
     <HistoryContainer
       :subTitle="$t('historySection.subtitleTheProposal')"
       :historyText="proposal"
-      image="foto-elipse-2.svg"
+      image="foto-elipse-1.png"
       :altImg="$t('imagesAlt.PhotoTheProposal')"
       :reverseDiv="true"
       data-aos="fade-up"

@@ -9,11 +9,11 @@ const messages = {
       Form: {
         Email: "Correo",
         Placeholderemail: "Ingresa tu correo",
-        Name: "Correo",
+        Name: "Nombre",
         PlaceholderName: "Ingresa tu nombre",
-        LastName: "Correo",
+        LastName: "Apellido",
         PlaceholderLastname: "Ingresa tu apellido",
-        registredEmail: 'Tu email ya esta registrado'
+        registredEmail: "Tu email ya esta registrado",
       },
       ConfirmationMessage:
         "Estamos felices que te nos uniras, nos vemos el 20 de julio 2024. Gracias por tu confirmación",
@@ -23,7 +23,6 @@ const messages = {
         presential: "Confirmation presencial | Boda Georgi & Eli",
         online: "Confirmation en linea | Boda Georgi & Eli",
         confirmation: "Confirmacion | Wedding Georgi & Eli",
-
       },
     },
     Navbar: {
@@ -76,7 +75,7 @@ const messages = {
     },
     PhotosSection: {
       title: "Algunas fotos de nuestra historia",
-      Text: "Fotos de la boda estarán disponibles",
+      Text: "Las fotos de la boda estarán disponibles",
       Here: "aquÍ",
     },
     EntourageSection: {
@@ -118,6 +117,9 @@ const messages = {
           "Aún en la distancia, estamos felices de saber que estaras presente.Puedes confirmar tu asistencia y conectarte a la transmisión en línea el día de la boda, te mandaremos el link por medio de tu correo electrónico.",
       },
     },
+    PhotosPage: {
+      notYet: "Estaran disponibles despues de la boda"
+    },
     imagesAlt: {
       logo: "Logo con un círculo y las letras G y C en el medio",
       PhotoLandingPage: "Fotografía de Eliseo y Georgina",
@@ -154,7 +156,7 @@ const messages = {
       PresentialButton: "Presencial",
       OnlineButton: "En línea",
       MapButton: "Mapa",
-      CalendarButton: "Agregar al calendario",
+      CalendarButton: "Agendar",
       MessageButton: "Deja tu mensaje",
       AccountButton: "Ver detalles",
       ConfirmButton: "Confirmar",
@@ -174,8 +176,7 @@ const messages = {
         PlaceholderName: "Enter your name",
         LastName: "Last Name",
         PlaceholderLastname: "Enter your last name",
-        registredEmail: 'Your email is already registred'
-
+        registredEmail: "Your email is already registred",
       },
       ConfirmationMessage:
         "We are happy that you will join us, see you on July 20, 2024. Thank you for your confirmation",
@@ -278,6 +279,9 @@ const messages = {
           "Even from afar, we are happy to know that you will be present. You can confirm your attendance and connect to the online meeting on the wedding day, we will send you the link through your email.",
       },
     },
+    PhotosPage: {
+      notYet: "They'll be available after the wedding..."
+    },
     imagesAlt: {
       logo: "Logo with a circle and the letters G and C in the middle",
       PhotoLandingPage: "Photograph of Eliseo and Georgina",
@@ -334,7 +338,7 @@ const messages = {
         PlaceholderName: "Entrez votre prénom",
         LastName: "Nom de famille",
         PlaceholderLastname: "Entrez votre nom de famille",
-        registredEmail: 'Votre email est déjà enregistré'
+        registredEmail: "Votre email est déjà enregistré",
       },
       ConfirmationMessage:
         "Nous sommes heureux que vous vous joigniez à nous, rendez-vous le 20 juillet 2024. Merci pour votre confirmation",
@@ -438,6 +442,9 @@ const messages = {
           "Même de loin, nous sommes heureux de savoir que vous serez présent. Vous pouvez confirmer votre présence et vous connecter à la diffusion en ligne le jour du mariage, nous vous enverrons le lien par e-mail.",
       },
     },
+    PhotosPage: {
+      notYet: "Elles seront disponibles après le mariage"
+    },
     imagesAlt: {
       logo: "Logo avec un cercle et les lettres G et C au milieu",
       PhotoLandingPage: "Photographie d'Eliseo et Georgina",
@@ -474,7 +481,7 @@ const messages = {
       PresentialButton: "En personne",
       OnlineButton: "En ligne",
       MapButton: "Carte",
-      CalendarButton: "Ajouter au calendrier",
+      CalendarButton: "Planifier",
       MessageButton: "Laissez votre message",
       AccountButton: "Voir les details",
       ConfirmButton: "Confirmer",

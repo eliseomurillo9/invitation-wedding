@@ -4,7 +4,8 @@ import { createRouter, createWebHistory } from "vue-router";
 import ConfirmationForm from "@/views/ConfirmationForm.vue";
 import ConfirmationPage from "@/views/ConfirmationPage.vue";
 import GiftDetailsPage from "@/views/GiftDetailsPage.vue";
-GiftDetailsPage
+import WeddingPhotosView from "@/views/WeddingPhotosView.vue";
+WeddingPhotosView
 
 
 const routes = [
@@ -31,6 +32,11 @@ const routes = [
     name: "GiftDetailsPage",
     component: GiftDetailsPage,
   },
+  {
+    path: "/wedding-photos",
+    name: "WeddingPhotos",
+    component: WeddingPhotosView,
+  },
 ];
 
 const router = createRouter({
@@ -39,7 +45,7 @@ const router = createRouter({
 });
 
 router.beforeEach((to, from, next) => {
-  document.title = `${to.meta.title} - G&E` || "Default Page Title";
+  document.title = `${to.meta.title} - G&E` || "Wedding - G&E";
   next();
 });
 export default router;

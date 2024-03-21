@@ -57,7 +57,7 @@
       </ConfirmationFormContainer>
       <div
         class="fixed left-2/4 -translate-x-2/4 bottom-20 z-50"
-        v-if="errorMessage"
+        v-if="!!errorMessage"
       >
         <span
           class="p-3 text-xs text-red-800 rounded-lg bg-red-50 dark:bg-gray-800/80 dark:text-red-400"

@@ -13,7 +13,7 @@
       >
         <img
           :src="photo.img"
-          :alt="photo.alt"
+          :alt="$t(photo.alt)"
           class="rounded-xl w-full h-full pt-4"
         />
       </figure>

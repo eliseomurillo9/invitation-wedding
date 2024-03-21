@@ -84,7 +84,7 @@ const photos = ref([
     alt: "imagesAlt.PhotosNotreVie3",
   },
   {
-    img: "https://storage.googleapis.com/wedding-inv-bucket/noel-maison.svg",
+      img: "https://storage.googleapis.com/wedding-inv-bucket/noel-maison.png",
     alt: "imagesAlt.PhotosNotreVie5",
   },
   {
@@ -96,7 +96,7 @@ const photos = ref([
     alt: "imagesAlt.PhotosNotreVie2",
   },
   {
-    img: "https://storage.googleapis.com/wedding-inv-bucket/tolede.svg",
+    img: "https://storage.googleapis.com/wedding-inv-bucket/tolede.png",
     alt: "imagesAlt.PhotosNotreVie1",
   },
   {

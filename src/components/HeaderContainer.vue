@@ -4,7 +4,11 @@
   >
     <router-link to="/"
       ><img
-        :src="isDark ? 'https://storage.googleapis.com/wedding-inv-bucket/logo.svg' :'https://storage.googleapis.com/wedding-inv-bucket/logo-wedding.svg'"
+        :src="
+          isDark
+            ? 'https://storage.googleapis.com/wedding-inv-bucket/logo.svg'
+            : 'https://storage.googleapis.com/wedding-inv-bucket/logo-wedding.svg'
+        "
         :alt="$t('imagesAlt.logo')"
         class="h-11 w-auto md:w-11"
     /></router-link>
@@ -27,7 +31,11 @@
     </div>
     <template class="md:flex items-center gap-1 hidden cursor-pointer">
       <span class="material-symbols-outlined"> language </span>
-      <select v-model="languageSelected" class="bg-inherit text-xl" @change="changeLocale(languageSelected)">
+      <select
+        v-model="languageSelected"
+        class="bg-inherit text-xl"
+        @change="changeLocale(languageSelected)"
+      >
         <option
           class="bg-inherit dark:bg-dark-main"
           v-for="locale in $i18n.availableLocales"
@@ -63,21 +71,21 @@ import { UseDarkMode } from "@/composable/useDarkMode";
 import { useI18n } from "vue-i18n";
 import { UseLocales } from "@/composable/UseLocales";
 import { useDark } from "@vueuse/core";
-const isDark = useDark()
+const isDark = useDark();
 const { themes } = UseDarkMode();
-
+const { setLanguage } = UseLocales();
 const i18n = useI18n();
 const router = useRoute();
 
 let menuToggle = ref(false);
-const languageSelected = i18n.locale
+const languageSelected = i18n.locale;
 const toggleSideMenu = () => {
   menuToggle.value = !menuToggle.value;
 };
 
 const changeLocale = (locale) => {
-  UseLocales(locale)
-}
+  setLanguage(locale);
+};
 const menuOptions = reactive([
   { name: "Navbar.Title", id: "/#", isActive: false },
   { name: "Navbar.OurStory", id: "/#our-history", isActive: false },
@@ -86,5 +94,4 @@ const menuOptions = reactive([
   { name: "Navbar.Entourage", id: "/#entourage", isActive: false },
   { name: "Navbar.Gifts", id: "/#gifts", isActive: false },
 ]);
-
 </script>

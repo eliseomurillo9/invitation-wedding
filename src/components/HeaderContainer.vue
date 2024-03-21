@@ -17,7 +17,7 @@
             {
               'bg-pink-white text-red rounded-xl p-1 dark:text-red-main':
                 `/${router.hash}` === option.id ||
-                (option.id === '#' && router.hash === ''),
+                (option.id === '/#' && router.hash === ''),
             },
           ]"
         >

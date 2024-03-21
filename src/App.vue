@@ -33,10 +33,10 @@ onMounted(() => {
       console.warn(
         `Invalid locale found in localStorage: ${storedLang}. Using default locale.`
       );
-      i18n.locale.value = i18n.fallbackLocale[0]; // Use the first fallback locale
+      i18n.locale.value = "ES"; // Use the first fallback locale
     }
   } else {
-    i18n.locale.value = i18n.fallbackLocale[0];
+    i18n.locale.value = "ES";
   }
 });
 </script>

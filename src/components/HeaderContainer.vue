@@ -21,7 +21,7 @@
             {
               'bg-pink-white text-red rounded-xl p-1 dark:text-red-main':
                 `/${router.hash}` === option.id ||
-                (option.id === '/#' && router.hash === ''),
+                (option.id === '/#' && router.fullPath === '/'),
             },
           ]"
         >
@@ -64,7 +64,7 @@
 </template>
 
 <script setup>
-import { ref, reactive } from "vue";
+import { ref, reactive, onMounted } from "vue";
 import SideMenu from "./shared/SideMenu.vue";
 import { useRoute } from "vue-router";
 import { UseDarkMode } from "@/composable/useDarkMode";
@@ -77,6 +77,9 @@ const { setLanguage } = UseLocales();
 const i18n = useI18n();
 const router = useRoute();
 
+onMounted(() => {
+  console.log(router);
+});
 let menuToggle = ref(false);
 const languageSelected = i18n.locale;
 const toggleSideMenu = () => {

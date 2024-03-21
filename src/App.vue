@@ -4,7 +4,7 @@
       <HeaderContainer />
     </header>
     <main
-      class=" bg-white dark:bg-dark-main scroll-smooth border border-red-900"
+      class="flex-grow flex justify-center items-center bg-white dark:bg-dark-main scroll-smooth"
     >
       <router-view />
     </main>

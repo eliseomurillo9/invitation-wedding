@@ -1,6 +1,7 @@
 <template>
   <main class="relative">
     <WeddingInformation
+    class="border border-blue-800"
       id="wedding-info"
       titleMsg="Georgi & Eli"
       :weddingDate="$t('WelcomeSection.weddingDate')"

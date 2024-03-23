@@ -5,7 +5,7 @@
     <i18n-t
       keypath="WelcomeSection.pageTitle"
       tag="h1"
-      class="text-red text-xl text-center font-nanum md:text-6xl text-red-main dark:text-white"
+      class="text-red text-4xl text-center font-nanum md:text-6xl text-red-main dark:text-white"
       data-aos="zoom-out"
     >
       <template #wedding>

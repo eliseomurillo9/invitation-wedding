@@ -95,7 +95,7 @@ const messages = {
       paragraph1:
         "Tu presencia es ya un regalo para nosotros y estaremos felices de verlos presencialmente o conectados en línea.",
       paragraph2:
-        "Sin embargo, si quieres darnos tus muestras de cariño puedes hacerlo de la siguiente manera:",
+        "Sin embargo, si quieres darnos un regalo puedes hacerlo de la siguiente manera:",
       subtitle1: "Regalo de sobre",
       paragraph3:
         "El día de la boda tendremos un buzón donde puedes dejar tu sobre.",
@@ -258,7 +258,7 @@ const messages = {
       paragraph1:
         "Your presence is already a gift for us and we will be happy to see you either in person or connected online.",
       paragraph2:
-        "However, if you want to show us your affection you can do it in the following ways:",
+        "However, if you want to give us a gift you can do it in the following ways:",
       subtitle1: "Envelope gift",
       paragraph3:
         "On the wedding day, we will have a mailbox where you can leave your envelope.",
@@ -420,7 +420,7 @@ const messages = {
       paragraph1:
         "Votre présence est déjà un cadeau pour nous et nous serons heureux de vous voir soit en personne, soit connecté en ligne.",
       paragraph2:
-        "Cependant, si vous voulez nous montrer votre affection, vous pouvez le faire de la manière suivante :",
+        "Cependant, si vous voulez nous offrir un cadeaux, vous pouvez le faire de la manière suivante :",
       subtitle1: "Cadeau d'enveloppe",
       paragraph3:
         "Le jour du mariage, nous aurons une boîte aux lettres où vous pourrez laisser votre enveloppe.",

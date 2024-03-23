@@ -72,35 +72,35 @@ const updatePageTitle = () => {
 
 const photos = ref([
   {
-    img: "https://storage.googleapis.com/wedding-inv-bucket/dunkerke.svg",
+    img: "https://storage.googleapis.com/wedding-inv-bucket/dunkerke.png",
     alt: "imagesAlt.PhotosNotreVie8",
   },
   {
-    img: "https://storage.googleapis.com/wedding-inv-bucket/bruges.svg",
+    img: "https://storage.googleapis.com/wedding-inv-bucket/bruges.png",
     alt: "imagesAlt.PhotosNotreVie4",
   },
   {
-    img: "https://storage.googleapis.com/wedding-inv-bucket/paris.svg",
+    img: "https://storage.googleapis.com/wedding-inv-bucket/paris.png",
     alt: "imagesAlt.PhotosNotreVie3",
   },
   {
-    img: "https://storage.googleapis.com/wedding-inv-bucket/noel-maison.svg",
+    img: "https://storage.googleapis.com/wedding-inv-bucket/noel-maison.png",
     alt: "imagesAlt.PhotosNotreVie5",
   },
   {
-    img: "https://storage.googleapis.com/wedding-inv-bucket/valence.svg",
+    img: "https://storage.googleapis.com/wedding-inv-bucket/valence.png",
     alt: "imagesAlt.PhotosNotreVie7",
   },
   {
-    img: "https://storage.googleapis.com/wedding-inv-bucket/madrid.svg",
+    img: "https://storage.googleapis.com/wedding-inv-bucket/madrid.png",
     alt: "imagesAlt.PhotosNotreVie2",
   },
   {
-    img: "https://storage.googleapis.com/wedding-inv-bucket/tolede.svg",
+    img: "https://storage.googleapis.com/wedding-inv-bucket/tolede.png",
     alt: "imagesAlt.PhotosNotreVie1",
   },
   {
-    img: "https://storage.googleapis.com/wedding-inv-bucket/noel.svg",
+    img: "https://storage.googleapis.com/wedding-inv-bucket/noel.png",
     alt: "imagesAlt.PhotosNotreVie6",
   },
 ]);
@@ -111,7 +111,7 @@ const bridesGrooms = [
     people: [
       {
         name: "Luci",
-        image: "https://storage.cloud.google.com/wedding-inv-bucket/luci.svg",
+        image: "https://storage.cloud.google.com/wedding-inv-bucket/luci.png",
         alt: "imagesAlt.PhotoBridesmaid1",
       },
       {
@@ -121,11 +121,11 @@ const bridesGrooms = [
       },
       {
         name: "Keren",
-        image: "https://storage.cloud.google.com/wedding-inv-bucket/keren.svg",
+        image: "https://storage.cloud.google.com/wedding-inv-bucket/keren.png",
         alt: "imagesAlt.PhotoBridesmaid3",
       },
       {
-        name: "Gerald",
+        name: "Geral",
         image: "https://storage.cloud.google.com/wedding-inv-bucket/gerald.svg",
         alt: "imagesAlt.PhotoBridesmaid4",
       },
@@ -136,12 +136,12 @@ const bridesGrooms = [
     people: [
       {
         name: "Alex",
-        image: "https://storage.cloud.google.com/wedding-inv-bucket/alex.svg",
+        image: "https://storage.cloud.google.com/wedding-inv-bucket/alex.png",
         alt: "imagesAlt.PhotoGroomsmen1",
       },
       {
         name: "Kevin",
-        image: "https://storage.cloud.google.com/wedding-inv-bucket/kevin.svg",
+        image: "https://storage.cloud.google.com/wedding-inv-bucket/kevin.png",
         alt: "imagesAlt.PhotoGroomsmen2",
       },
       {
@@ -152,7 +152,7 @@ const bridesGrooms = [
       {
         name: "William",
         image:
-          "https://storage.cloud.google.com/wedding-inv-bucket/william.svg",
+          "https://storage.cloud.google.com/wedding-inv-bucket/william.png",
         alt: "imagesAlt.PhotoGroomsmen4",
       },
     ],

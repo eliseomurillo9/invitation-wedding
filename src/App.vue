@@ -20,10 +20,12 @@ import FooterSection from "@/components/shared/FooterSection.vue";
 import { onMounted } from "vue";
 import { useI18n } from "vue-i18n";
 import { UseLocales } from "./composable/UseLocales";
+import { useNavigatorLanguage } from "@vueuse/core";
 const { getLanguage } = UseLocales();
 const i18n = useI18n();
-
+const { language } = useNavigatorLanguage();
 onMounted(() => {
+  const navigatorLanguage = language.value.split("-")[1];
   const storedLang = getLanguage();
 
   if (storedLang) {
@@ -33,10 +35,10 @@ onMounted(() => {
       console.warn(
         `Invalid locale found in localStorage: ${storedLang}. Using default locale.`
       );
-      i18n.locale.value = "ES"; // Use the first fallback locale
+      i18n.locale.value = navigatorLanguage || "ES"; // Use the first fallback locale
     }
   } else {
-    i18n.locale.value = "ES";
+    i18n.locale.value = navigatorLanguage || "ES";
   }
 });
 </script>

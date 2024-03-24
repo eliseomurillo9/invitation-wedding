@@ -20,7 +20,7 @@
           class="flex flex-col items-center md:flex-row md:justify-center gap-12 md:gap-24 "
         >
           <figure v-for="(person, i) in section.people" :key="i" class="mb-2.5 w-24 h-fit">
-            <img :src="person.image" :alt="person.alt"/>
+            <img :src="person.image" :alt="$t(person.alt)"/>
             <figcaption class="text-center font-klee mt-1 dark:text-white">
               {{ person.name }}
             </figcaption>

@@ -111,22 +111,22 @@ const bridesGrooms = [
     people: [
       {
         name: "Luci",
-        image: "https://storage.cloud.google.com/wedding-inv-bucket/luci.png",
+        image: "https://storage.googleapis.com/wedding-inv-bucket/luci.png",
         alt: "imagesAlt.PhotoBridesmaid1",
       },
       {
         name: "Ale",
-        image: "https://storage.cloud.google.com/wedding-inv-bucket/ale.svg",
+        image: "https://storage.googleapis.com/wedding-inv-bucket/ale.svg",
         alt: "imagesAlt.PhotoBridesmaid2",
       },
       {
         name: "Keren",
-        image: "https://storage.cloud.google.com/wedding-inv-bucket/keren.png",
+        image: "https://storage.googleapis.com/wedding-inv-bucket/keren.png",
         alt: "imagesAlt.PhotoBridesmaid3",
       },
       {
         name: "Geral",
-        image: "https://storage.cloud.google.com/wedding-inv-bucket/gerald.svg",
+        image: "https://storage.googleapis.com/wedding-inv-bucket/gerald.svg",
         alt: "imagesAlt.PhotoBridesmaid4",
       },
     ],
@@ -136,23 +136,23 @@ const bridesGrooms = [
     people: [
       {
         name: "Alex",
-        image: "https://storage.cloud.google.com/wedding-inv-bucket/alex.png",
+        image: "https://storage.googleapis.com/wedding-inv-bucket/alex.png",
         alt: "imagesAlt.PhotoGroomsmen1",
       },
       {
         name: "Kevin",
-        image: "https://storage.cloud.google.com/wedding-inv-bucket/kevin.png",
+        image: "https://storage.googleapis.com/wedding-inv-bucket/kevin.png",
         alt: "imagesAlt.PhotoGroomsmen2",
       },
       {
         name: "Chele",
-        image: "https://storage.cloud.google.com/wedding-inv-bucket/chele.svg",
+        image: "https://storage.googleapis.com/wedding-inv-bucket/chele.svg",
         alt: "imagesAlt.PhotoGroomsmen3",
       },
       {
         name: "William",
         image:
-          "https://storage.cloud.google.com/wedding-inv-bucket/william.png",
+          "https://storage.googleapis.com/wedding-inv-bucket/william.png",
         alt: "imagesAlt.PhotoGroomsmen4",
       },
     ],

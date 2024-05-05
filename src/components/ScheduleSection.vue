@@ -34,7 +34,7 @@
             :label="$t('Buttons.MapButton')"
             buttonhref="https://maps.app.goo.gl/X5az7FwnsPVxs45VA"
           />
-          <ButtonMain :label="$t('Buttons.CalendarButton')" />
+          <ButtonMain :label="$t('Buttons.CalendarButton')" buttonhref="https://calendar.app.google/FQLKyqZvjWpXmXXk6" />
         </div>
       </InformationCard>
       <InformationCard
@@ -47,6 +47,7 @@
         <ButtonMain
           :label="$t('Buttons.CalendarButton')"
           :isLink="true"
+          buttonhref="https://calendar.app.google/FQLKyqZvjWpXmXXk6"
           class="mt-auto"
         />
       </InformationCard>

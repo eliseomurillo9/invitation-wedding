@@ -385,7 +385,7 @@ const messages = {
         "En 2022, nous avons continué notre relation à distance mais maintenant sur le même continent et dans les mêmes fuseaux horaires, de petites escapades à Madrid et à Lille pour nous voir faisaient partie de notre routine.",
       subtitleTheProposal: "La proposition",
       paragraph4:
-        "En mars 2023, dans une ville appelée Tolède, un week-end inoubliable, où la question à un million a été posée sur une9terrasse avec une vue spectaculaire, nous avons tous les deux dit oui à un avenir ensemble.",
+        "En mars 2023, dans une ville appelée Tolède, un week-end inoubliable, où la question à un million a été posée sur une terrasse avec une vue spectaculaire, nous avons tous les deux dit oui à un avenir ensemble.",
     },
     ScheduleSection: {
       title: "Programme",

@@ -118,7 +118,7 @@ const messages = {
       },
     },
     PhotosPage: {
-      notYet: "Estaran disponibles despues de la boda"
+      notYet: "Estaran disponibles despues de la boda",
     },
     imagesAlt: {
       logo: "Logo con un círculo y las letras G y C en el medio",
@@ -280,7 +280,7 @@ const messages = {
       },
     },
     PhotosPage: {
-      notYet: "They'll be available after the wedding..."
+      notYet: "They'll be available after the wedding...",
     },
     imagesAlt: {
       logo: "Logo with a circle and the letters G and C in the middle",
@@ -391,7 +391,7 @@ const messages = {
       title: "Programme",
       subtitlePresential: "En personne",
       Time: "Heure",
-      Hours: "18h00 à 22h30",
+      Hours: "2:00 AM(Lille)",
       Direction: "Adresse",
       Adresse:
         '"Casa La Novena" 9na Calle Poniente #4919 Colonia Escalón, San Salvador. El Salvador',
@@ -443,7 +443,7 @@ const messages = {
       },
     },
     PhotosPage: {
-      notYet: "Elles seront disponibles après le mariage"
+      notYet: "Elles seront disponibles après le mariage",
     },
     imagesAlt: {
       logo: "Logo avec un cercle et les lettres G et C au milieu",

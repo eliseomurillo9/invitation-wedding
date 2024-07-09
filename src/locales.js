@@ -391,7 +391,7 @@ const messages = {
       title: "Programme",
       subtitlePresential: "En personne",
       Time: "Heure",
-      Hours: "2:00 AM(Lille)",
+      Hours: "18h00 à 22h30",
       Direction: "Adresse",
       Adresse:
         '"Casa La Novena" 9na Calle Poniente #4919 Colonia Escalón, San Salvador. El Salvador',

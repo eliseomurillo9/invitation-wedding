@@ -5,8 +5,8 @@ import ConfirmationForm from "@/views/ConfirmationForm.vue";
 import ConfirmationPage from "@/views/ConfirmationPage.vue";
 import GiftDetailsPage from "@/views/GiftDetailsPage.vue";
 import WeddingPhotosView from "@/views/WeddingPhotosView.vue";
-WeddingPhotosView
-
+import WishesPage from "@/views/WishesPage.vue";
+import WishesListPage from "@/views/WishesListPage.vue";
 
 const routes = [
   {
@@ -36,6 +36,16 @@ const routes = [
     path: "/wedding-photos",
     name: "WeddingPhotos",
     component: WeddingPhotosView,
+  },
+  {
+    path: "/wishesForm",
+    name: "WishesPageForm",
+    component: WishesPage,
+  },
+  {
+    path: "/wishes",
+    name: "WishesListPage",
+    component: WishesListPage,
   },
 ];
 

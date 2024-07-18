@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-white py-7 px-28 dark:bg-dark-alt">
+  <section class="bg-white py-7 px-4 md:px-28 dark:bg-dark-alt">
     <h1
       class="text-red-main font-nanum text-4xl text-center pb-4 uppercase 4xl dark:text-pink-clear"
     >

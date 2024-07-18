@@ -31,14 +31,14 @@
       <h2>{{ weddingDate }}</h2>
     </div>
     <p class="w-2/4 text-center font-klee dark:text-white">{{ description }}</p>
-    <ConfirmationContainerVue :title="$t('WelcomeSection.Subtitle')" />
+    <!-- <ConfirmationContainerVue :title="$t('WelcomeSection.Subtitle')" /> -->
   </section>
 </template>
 
 <script setup>
 import Counter from "@/components/Counter.vue";
 import { defineProps } from "vue";
-import ConfirmationContainerVue from "./ConfirmationContainer.vue";
+// import ConfirmationContainerVue from "./ConfirmationContainer.vue";
 
 defineProps({
   titleMsg: {

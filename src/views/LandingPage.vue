@@ -41,7 +41,7 @@
       :entouragePeople="bridesGrooms"
       data-aos="fade-up"
     />
-    <!-- <WishesSection id="wished" title="Your Wishes" /> -->
+    <WishesSection id="wished" :title="$t('WhishesSection.title')" />
     <GiftSection
       id="gifts"
       :title="$t('GiftSection.title')"
@@ -59,7 +59,7 @@ import { useI18n } from "vue-i18n";
 import ScheduleSection from "@/components/ScheduleSection.vue";
 import ImagesContainer from "@/components/ImagesContainer.vue";
 import EntourageSection from "@/components/EntourageSection.vue";
-// import WishesSection from "@/components/WishesSection.vue";
+import WishesSection from "@/components/WishesSection.vue";
 import GiftSection from "@/components/GiftSection.vue";
 
 const { t: $t } = useI18n();
@@ -151,8 +151,7 @@ const bridesGrooms = [
       },
       {
         name: "William",
-        image:
-          "https://storage.googleapis.com/wedding-inv-bucket/william.png",
+        image: "https://storage.googleapis.com/wedding-inv-bucket/william.png",
         alt: "imagesAlt.PhotoGroomsmen4",
       },
     ],

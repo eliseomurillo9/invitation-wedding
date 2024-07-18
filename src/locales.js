@@ -1,6 +1,8 @@
 const messages = {
   ES: {
     Common: {
+      NothingToShow: "No hay mensajes para mostrar",
+      errorLimitExceeded: "El usuario ha alcanzado el límite de deseos",
       Languages: "Idiomas",
       Theme: "Tema",
       Mode1: "Modo claro",
@@ -18,11 +20,12 @@ const messages = {
       ConfirmationMessage:
         "Estamos felices que te nos uniras, nos vemos el 20 de julio 2024. Gracias por tu confirmación",
       pageTitle: {
-        landing: "InvitaciÓn | Boda Georgi & Eli",
+        landing: "Invitacion | Boda Georgi & Eli",
         details: "Detalles de cuenta | Boda Georgi & Eli",
-        presential: "Confirmation presencial | Boda Georgi & Eli",
-        online: "Confirmation en linea | Boda Georgi & Eli",
+        presential: "Confirmacion presencial | Boda Georgi & Eli",
+        online: "Confirmatcon en linea | Boda Georgi & Eli",
         confirmation: "Confirmacion | Wedding Georgi & Eli",
+        wishes: "Buenos deseos | Boda Georgi & Eli",
       },
     },
     Navbar: {
@@ -87,8 +90,14 @@ const messages = {
       title: "Tus buenos deseos",
       paragraph:
         "Puedes dejarnos un mensaje aquí. Lo leeremos con mucho amor y apreciaremos tus pensamientos y cariño.",
+      Text1:
+        "Esta sección está reservada para tus deseos de corazón hacia nosotros.",
       Text2: "Puedes ver todos los buenos deseos aquí",
       Text3: "Gracias por tus buenos deseos",
+      Form: {
+        name: "Nombre",
+        message: "Tu mensaje para nosotros",
+      },
     },
     GiftSection: {
       title: "Tu presencia es un regalo",
@@ -160,10 +169,13 @@ const messages = {
       MessageButton: "Deja tu mensaje",
       AccountButton: "Ver detalles",
       ConfirmButton: "Confirmar",
+      PostButton: "Postear",
     },
   },
   EN: {
     Common: {
+      NothingToShow: "No messages to show",
+      errorLimitExceeded: "User has reached the wish limit",
       Languages: "Languages",
       Theme: "Theme",
       Mode1: "Light mode",
@@ -182,10 +194,11 @@ const messages = {
         "We are happy that you will join us, see you on July 20, 2024. Thank you for your confirmation",
       pageTitle: {
         landing: "Invitation | Wedding Georgi & Eli",
-        details: "Banck details | Wedding Georgi & Eli",
+        details: "Bank details | Wedding Georgi & Eli",
         presential: "Presential confirmation | Wedding Georgi & Eli",
         online: "Online corfirmation | Wedding Georgi & Eli",
         confirmation: "Confirmation | Wedding Georgi & Eli",
+        wishes: "Good Wishes | Mariage Georgi & Eli",
       },
     },
     Navbar: {
@@ -250,8 +263,13 @@ const messages = {
       title: "Your good wishes",
       paragraph:
         "You can leave us a message here. We will read it with much love and appreciate your thoughts and affection.",
+      Text1: "This section is reserved for your heartfelt wishes for us.",
       Text2: "You can see all the good wishes here",
       Text3: "Thank you for your good wishes",
+      Form: {
+        name: "Name",
+        message: "Your message for us",
+      },
     },
     GiftSection: {
       title: "Your presence is a gift",
@@ -322,10 +340,13 @@ const messages = {
       MessageButton: "Leave your message",
       AccountButton: "View details",
       ConfirmButton: "Confirm",
+      PostButton: "Post",
     },
   },
   FR: {
     Common: {
+      NothingToShow: "Pas de messages à afficher",
+      errorLimitExceeded: "L'utilisateur a atteint la limite de voeux",
       Languages: "Langues",
       Theme: "Thème",
       Mode1: "Mode clair",
@@ -348,6 +369,7 @@ const messages = {
         presential: "Confirmation présentiel | Mariage Georgi & Eli",
         online: "Confirmation à distanciel | Mariage Georgi & Eli",
         confirmation: "Confirmation | Wedding Georgi & Eli",
+        wishes: "Vos bons vœux | Mariage Georgi & Eli",
       },
     },
     Navbar: {
@@ -412,8 +434,13 @@ const messages = {
       title: "Vos bons vœux",
       paragraph:
         "Vous pouvez nous laisser un message ici. Nous le lirons avec beaucoup d'amour et apprécierons vos pensées et votre affection.",
+      Text1: "Cette section est réservée à vos vœux sincères pour nous.",
       Text2: "Vous pouvez voir tous les bons vœux ici",
       Text3: "Merci pour vos bons vœux",
+      Form: {
+        name: "Nom",
+        message: "Votre message pour nous",
+      },
     },
     GiftSection: {
       title: "Votre présence est un cadeau",
@@ -483,6 +510,7 @@ const messages = {
       MapButton: "Carte",
       CalendarButton: "Planifier",
       MessageButton: "Laissez votre message",
+      PostButton: "Poster",
       AccountButton: "Voir les details",
       ConfirmButton: "Confirmer",
     },

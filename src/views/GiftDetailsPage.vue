@@ -58,6 +58,8 @@
 import InformationCard from "@/components/shared/InformationCard.vue";
 import { onMounted, ref } from "vue";
 import { useI18n } from "vue-i18n";
+import { toast } from "vue3-toastify";
+import "vue3-toastify/dist/index.css";
 
 const { t: $t } = useI18n();
 const AccountInfo = ref([
@@ -76,9 +78,9 @@ const AccountInfo = ref([
 const copy = async (account) => {
   try {
     await navigator.clipboard.writeText(account);
-    console.log("Copied to clipboard!");
+    toast.info("Copied to clipboard!");
   } catch (err) {
-    console.error("Failed to copy:", err);
+    toast.error("Failed to copy:");
     // Handle fallback if needed (explained below)
   }
 };

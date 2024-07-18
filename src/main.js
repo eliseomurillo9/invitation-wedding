@@ -6,12 +6,16 @@ import { createMetaManager } from "vue-meta";
 import "./index.css";
 import "aos/dist/aos.css";
 import Aos from "aos";
-
-// Register the library as a Vue plugin
+import Vue3Toastify from "vue3-toastify";
 
 const app = createApp(App);
+app.use(Vue3Toastify, {
+  autoClose: 3000,
+});
 app.use(router);
 app.use(i18n);
 app.use(Aos.init());
 app.use(createMetaManager);
 app.mount("#app");
+
+// Import the functions you need from the SDKs you need

@@ -1,6 +1,6 @@
 <template>
   <section
-    class="flex flex-col items-center gap-5 py-7 dark:bg-dark-alt font-nanum bg-pink-3 px-10"
+    class="flex flex-col items-center gap-5 py-7 dark:bg-dark-main font-nanum bg-pink-3 px-10"
   >
     <h1
       class="text-red text-center text-2xl md:text-4xl text-red-main dark:text-pink-clear"

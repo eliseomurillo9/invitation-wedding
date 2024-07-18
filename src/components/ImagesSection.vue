@@ -1,4 +1,4 @@
-<template >
+<template>
   <div
     class="flex justify-center overflow-x md:overflow-hidden py-5"
     data-aos="zoom-in"

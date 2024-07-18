@@ -1,6 +1,7 @@
 <template>
   <figure
-    class="p-5 bg-white font-klee shadow rounded-md py-7 dark:bg-pink-clear dark:text-red-alt"
+    class="p-5 font-klee shadow rounded-md py-7 dark:bg-pink-clear dark:text-red-alt"
+    :class="bgColor || 'bg-white'"
   >
     <h2
       v-if="title"
@@ -17,6 +18,9 @@ import { defineProps } from "vue";
 
 defineProps({
   title: {
+    type: String,
+  },
+  bgColor: {
     type: String,
   },
 });

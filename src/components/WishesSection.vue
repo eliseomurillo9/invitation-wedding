@@ -21,6 +21,14 @@
         <span class="text-red mt-2 font-bold"> -{{ message.name }}</span>
       </figure>
     </div>
+    <p class="font-klee px-12 text-center mt-5 dark:text-white">
+      {{ $t("WhishesSection.Text2") }}
+      <router-link to="/wishes">
+        <span class="text-blue-800 dark:text-pink-clear uppercase font-bold">{{
+          $t("WhishesSection.Text4")
+        }}</span></router-link
+      >
+    </p>
   </section>
 </template>
 

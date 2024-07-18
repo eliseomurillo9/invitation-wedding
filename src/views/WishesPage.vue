@@ -1,17 +1,17 @@
 <template>
   <div class="flex flex-col px-10 pt-24 pb-9 min-w-80 max-w-xl">
     <h1
-      class="text-red font-nanum text-4xl text-center pb-9 px-12 dark:text-pink-clear text-red-main"
+      class="text-red font-nanum text-2xl md:text-2xl text-center pb-9 px-12 dark:text-pink-clear text-red-main"
     >
       {{ $t("WhishesSection.title") }}
     </h1>
-    <h1 class="dark:text-white">
+    <p class="dark:text-white text-center md:text-left text-sm">
       {{ $t("WhishesSection.paragraph") }}
-    </h1>
+    </p>
     <form
       action=""
       @submit="postWishNote"
-      class="bg-pink-white flex flex-col gap-3 w-full mx-auto mt-5 p-5 rounded-xl shadow-lg"
+      class="bg-pink-white flex flex-col gap-3 w-full mx-auto mt-5 p-5 rounded-xl shadow-lg text-xl"
     >
       <div class="flex flex-col">
         <label for="" class="pb-1">{{ $t("WhishesSection.Form.name") }}</label>
@@ -37,9 +37,9 @@
       <ButtonMain
         type="submit"
         :label="$t('Buttons.PostButton')"
-        class="w-1/4 m-auto"
+        class="m-auto"
         @click="postWishNote"
-        :disable="isLoading"
+        :isLoading="isLoading"
       />
     </form>
   </div>
@@ -67,20 +67,25 @@ const noteInfo = ref({
 
 const postWishNote = async (e) => {
   e.preventDefault();
-  isLoading.value = true;
   noteInfo.value.uid = (await getCurrentUser()).uid;
-  createWishNote({
-    uid: noteInfo.value.uid,
-    noteContent: noteInfo.value.content,
-    name: noteInfo.value.name,
-    timeStamp: new Date().toISOString(),
-  })
-    .then(() => {
-      toast.success("Your message has been posted!");
-      isLoading.value = false;
-      router.push("/wishes");
+  if (noteInfo.value.name === "" || noteInfo.value.content === "") {
+    toast.error($t("Common.FillAllFields"));
+  } else {
+    isLoading.value = true;
+
+    createWishNote({
+      uid: noteInfo.value.uid,
+      noteContent: noteInfo.value.content,
+      name: noteInfo.value.name,
+      timeStamp: new Date().toISOString(),
     })
-    .catch((error) => toast.error($t(error)));
+      .then(() => {
+        toast.success("Your message has been posted!");
+        isLoading.value = false;
+        router.push("/wishes");
+      })
+      .catch((error) => toast.error($t(error)));
+  }
 };
 
 const updatePageTitle = () => {

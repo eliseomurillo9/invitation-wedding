@@ -1,6 +1,7 @@
 const messages = {
   ES: {
     Common: {
+      FillAllFields: "Por favor llena todos los campos",
       NothingToShow: "No hay mensajes para mostrar",
       errorLimitExceeded: "El usuario ha alcanzado el límite de deseos",
       Languages: "Idiomas",
@@ -92,7 +93,8 @@ const messages = {
         "Puedes dejarnos un mensaje aquí. Lo leeremos con mucho amor y apreciaremos tus pensamientos y cariño.",
       Text1:
         "Esta sección está reservada para tus deseos de corazón hacia nosotros.",
-      Text2: "Puedes ver todos los buenos deseos aquí",
+      Text2: "Puedes ver todos los buenos deseos",
+      Text4: "aquí",
       Text3: "Gracias por tus buenos deseos",
       Form: {
         name: "Nombre",
@@ -174,6 +176,7 @@ const messages = {
   },
   EN: {
     Common: {
+      FillAllFields: "Please fill all fields",
       NothingToShow: "No messages to show",
       errorLimitExceeded: "User has reached the wish limit",
       Languages: "Languages",
@@ -264,7 +267,8 @@ const messages = {
       paragraph:
         "You can leave us a message here. We will read it with much love and appreciate your thoughts and affection.",
       Text1: "This section is reserved for your heartfelt wishes for us.",
-      Text2: "You can see all the good wishes here",
+      Text2: "You can see all the good wishes",
+      Text4: "Here",
       Text3: "Thank you for your good wishes",
       Form: {
         name: "Name",
@@ -345,6 +349,7 @@ const messages = {
   },
   FR: {
     Common: {
+      FillAllFields: "Veuillez remplir tous les champs",
       NothingToShow: "Pas de messages à afficher",
       errorLimitExceeded: "L'utilisateur a atteint la limite de voeux",
       Languages: "Langues",
@@ -435,7 +440,8 @@ const messages = {
       paragraph:
         "Vous pouvez nous laisser un message ici. Nous le lirons avec beaucoup d'amour et apprécierons vos pensées et votre affection.",
       Text1: "Cette section est réservée à vos vœux sincères pour nous.",
-      Text2: "Vous pouvez voir tous les bons vœux ici",
+      Text2: "Vous pouvez voir tous les bons vœux",
+      Text4: "ici",
       Text3: "Merci pour vos bons vœux",
       Form: {
         name: "Nom",

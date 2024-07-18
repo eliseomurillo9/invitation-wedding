@@ -10,7 +10,7 @@
   >
   <button
     v-else
-    :disabled="isLoading"
+    :disabled="isLoading || isDisable"
     :type="type"
     class="font-klee py-2 px-3.5 bg-pink-main rounded-full text-red-main text-center dark:text-red-alt"
   >
@@ -43,6 +43,9 @@ defineProps({
     type: String,
   },
   isLoading: {
+    type: Boolean,
+  },
+  isDisable: {
     type: Boolean,
   },
 });

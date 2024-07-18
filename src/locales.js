@@ -350,6 +350,7 @@ const messages = {
   FR: {
     Common: {
       FillAllFields: "Veuillez remplir tous les champs",
+
       NothingToShow: "Pas de messages à afficher",
       errorLimitExceeded: "L'utilisateur a atteint la limite de voeux",
       Languages: "Langues",

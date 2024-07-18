@@ -1,5 +1,7 @@
 <template>
+
   <div class="pt-24 gap-7 pb-9 px-9 md:pb-0 dark:bg-dark-main self-baseline">
+
     <h1
       class="text-red pb-auto font-nanum text-4xl text-center pb-9 px-12 dark:text-pink-clear text-red-main"
     >

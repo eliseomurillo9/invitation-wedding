@@ -7,7 +7,6 @@ import GiftDetailsPage from "@/views/GiftDetailsPage.vue";
 import WeddingPhotosView from "@/views/WeddingPhotosView.vue";
 import WishesPage from "@/views/WishesPage.vue";
 import WishesListPage from "@/views/WishesListPage.vue";
-
 const routes = [
   {
     path: "/",
@@ -38,14 +37,14 @@ const routes = [
     component: WeddingPhotosView,
   },
   {
-    path: "/wishesForm",
+    path: "/yourWishes",
     name: "WishesPageForm",
-    component: WishesPage,
+    component: WishesListPage,
   },
   {
     path: "/wishes",
     name: "WishesListPage",
-    component: WishesListPage,
+    component: WishesPage,
   },
 ];
 

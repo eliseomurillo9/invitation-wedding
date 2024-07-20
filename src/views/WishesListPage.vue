@@ -1,13 +1,13 @@
 <template>
   <div
-    class="pt-24 gap-7 pb-9 px-9 md:pb-0 bg-pink-3 dark:bg-dark-main self-baseline"
+    class="pt-24 gap-7 py-24 h-screen w-screen px-9 md:pb-0 bg-pink-3 dark:bg-dark-main self-baseline"
   >
     <h1
       class="text-red pb-auto font-nanum text-4xl text-center pb-9 px-12 dark:text-pink-clear text-red-main"
     >
       {{ $t("WhishesSection.title") }}
     </h1>
-    <div v-if="isLoading" class="text-center">
+    <div v-if="isLoading" class="text-center py-40">
       <div
         v-if="isLoading"
         class="inline-block h-12 w-12 animate-spin rounded-full border-4 border-solid border-current border-e-transparent align-[-0.125em] text-surface motion-reduce:animate-[spin_1.5s_linear_infinite] dark:text-red-main"

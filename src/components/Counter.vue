@@ -4,8 +4,11 @@
   >
     <div class="flex flex-col">
       <span class="md:text-2xl font-nanum text-red-main"
-        >{{ countdownInfo.days }} {{ $t("WelcomeSection.counter.days") }} : {{ countdownInfo.hours }}  {{ $t("WelcomeSection.counter.hours") }} : {{ countdownInfo.minutes }}  {{ $t("WelcomeSection.counter.minutes") }} : {{ countdownInfo.seconds }} {{ $t("WelcomeSection.counter.seconds") }}
-        </span>
+        >{{ countdownInfo.days }} {{ $t("WelcomeSection.counter.days") }} :
+        {{ countdownInfo.hours }} {{ $t("WelcomeSection.counter.hours") }} :
+        {{ countdownInfo.minutes }} {{ $t("WelcomeSection.counter.minutes") }} :
+        {{ countdownInfo.seconds }} {{ $t("WelcomeSection.counter.seconds") }}
+      </span>
     </div>
   </div>
 </template>
@@ -25,30 +28,38 @@ export default {
     });
 
     function countDownFunction() {
-      const eventDay = new Date("july 20, 2024 00:00:00").getTime();
+      const eventDay = new Date("july 20, 2024 18:00:00").getTime();
       const actualDate = new Date().getTime();
       const remainingTime = eventDay - actualDate;
-      countdownInfo.days = Math.floor(
-        remainingTime / (1000 * 60 * 60 * 24)
-      ).toLocaleString("en-US", {
-        minimumIntegerDigits: 2,
-      });
-      countdownInfo.hours = Math.floor(
-        (remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-      ).toLocaleString("en-US", {
-        minimumIntegerDigits: 2,
-      });
-      countdownInfo.minutes = Math.floor(
-        (remainingTime % (1000 * 60 * 60)) / (1000 * 60)
-      ).toLocaleString("en-US", {
-        minimumIntegerDigits: 2,
-      });
-      countdownInfo.seconds = Math.floor(
-        (remainingTime % (1000 * 60)) / 1000
-      ).toLocaleString("en-US", {
-        minimumIntegerDigits: 2,
-      });
-      setTimeout(countDownFunction, 1000);
+      if (remainingTime > 0) {
+        countdownInfo.days = Math.floor(
+          remainingTime / (1000 * 60 * 60 * 24)
+        ).toLocaleString("en-US", {
+          minimumIntegerDigits: 2,
+        });
+        countdownInfo.hours = Math.floor(
+          (remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        ).toLocaleString("en-US", {
+          minimumIntegerDigits: 2,
+        });
+        countdownInfo.minutes = Math.floor(
+          (remainingTime % (1000 * 60 * 60)) / (1000 * 60)
+        ).toLocaleString("en-US", {
+          minimumIntegerDigits: 2,
+        });
+        countdownInfo.seconds = Math.floor(
+          (remainingTime % (1000 * 60)) / 1000
+        ).toLocaleString("en-US", {
+          minimumIntegerDigits: 2,
+        });
+
+        setTimeout(countDownFunction, 1000);
+      } else {
+        countdownInfo.days = "00";
+        countdownInfo.hours = "00";
+        countdownInfo.minutes = "00";
+        countdownInfo.seconds = "00";
+      }
     }
 
     onMounted(() => {

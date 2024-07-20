@@ -92,7 +92,8 @@ const messages = {
         "Puedes dejarnos un mensaje aquí. Lo leeremos con mucho amor y apreciaremos tus pensamientos y cariño.",
       Text1:
         "Esta sección está reservada para tus deseos de corazón hacia nosotros.",
-      Text2: "Puedes ver todos los buenos deseos aquí",
+      Text2: "Puedes ver todos los buenos deseos",
+      Text4: "aquí",
       Text3: "Gracias por tus buenos deseos",
       Form: {
         name: "Nombre",
@@ -162,6 +163,7 @@ const messages = {
       iconTransfer: "Icono de transferencia",
     },
     Buttons: {
+      YoutubeLink: "Mirar la transmisión",
       PresentialButton: "Presencial",
       OnlineButton: "En línea",
       MapButton: "Mapa",
@@ -264,7 +266,8 @@ const messages = {
       paragraph:
         "You can leave us a message here. We will read it with much love and appreciate your thoughts and affection.",
       Text1: "This section is reserved for your heartfelt wishes for us.",
-      Text2: "You can see all the good wishes here",
+      Text2: "You can see all the good wishes",
+      Text4: "here",
       Text3: "Thank you for your good wishes",
       Form: {
         name: "Name",
@@ -333,6 +336,7 @@ const messages = {
       iconTransfer: "Transfer icon",
     },
     Buttons: {
+      YoutubeLink: "Watch the stream",
       PresentialButton: "Presential",
       OnlineButton: "Online",
       MapButton: "Map",
@@ -435,7 +439,8 @@ const messages = {
       paragraph:
         "Vous pouvez nous laisser un message ici. Nous le lirons avec beaucoup d'amour et apprécierons vos pensées et votre affection.",
       Text1: "Cette section est réservée à vos vœux sincères pour nous.",
-      Text2: "Vous pouvez voir tous les bons vœux ici",
+      Text2: "Vous pouvez voir tous les bons vœux",
+      Text4: "ici",
       Text3: "Merci pour vos bons vœux",
       Form: {
         name: "Nom",
@@ -505,6 +510,7 @@ const messages = {
       iconTransfer: "Icône de transfert",
     },
     Buttons: {
+      YoutubeLink: "Regarder le stream",
       PresentialButton: "En personne",
       OnlineButton: "En ligne",
       MapButton: "Carte",

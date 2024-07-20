@@ -29,12 +29,15 @@
             </div>
           </div>
         </div>
-        <div class="flex gap-6 justify-center items-center ">
+        <div class="flex gap-6 justify-center items-center">
           <ButtonOutlined
             :label="$t('Buttons.MapButton')"
             buttonhref="https://maps.app.goo.gl/X5az7FwnsPVxs45VA"
           />
-          <ButtonMain :label="$t('Buttons.CalendarButton')" buttonhref="https://calendar.app.google/FQLKyqZvjWpXmXXk6" />
+          <ButtonMain
+            :label="$t('Buttons.CalendarButton')"
+            buttonhref="https://calendar.app.google/FQLKyqZvjWpXmXXk6"
+          />
         </div>
       </InformationCard>
       <InformationCard
@@ -44,12 +47,20 @@
         <p class="pb-9">
           {{ $t("ScheduleSection.Text") }}
         </p>
-        <ButtonMain
-          :label="$t('Buttons.CalendarButton')"
-          :isLink="true"
-          buttonhref="https://calendar.app.google/FQLKyqZvjWpXmXXk6"
-          class="mt-auto"
-        />
+        <div class="flex gap-6 justify-center items-center">
+          <ButtonMain
+            :label="$t('Buttons.CalendarButton')"
+            :isLink="true"
+            buttonhref="https://calendar.app.google/FQLKyqZvjWpXmXXk6"
+            class="mt-auto"
+          />
+          <ButtonOutlined
+            :label="$t('Buttons.YoutubeLink')"
+            :isLink="true"
+            class="text-center"
+            buttonhref="https://youtube.com/live/b9fkySV_jYE?feature=share"
+          />
+        </div>
       </InformationCard>
     </div>
   </section>

@@ -21,6 +21,7 @@
         <span class="text-red mt-2 font-bold"> -{{ message.name }}</span>
       </figure>
     </div>
+    <span class="text-center">{{ $t("WhishesSection.Text2") }}</span>
   </section>
 </template>
 

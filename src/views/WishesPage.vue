@@ -5,13 +5,13 @@
     >
       {{ $t("WhishesSection.title") }}
     </h1>
-    <h1 class="dark:text-white">
+    <h1 class="dark:text-white font-klee">
       {{ $t("WhishesSection.paragraph") }}
     </h1>
     <form
       action=""
       @submit="postWishNote"
-      class="bg-pink-white flex flex-col gap-3 w-full mx-auto mt-5 p-5 rounded-xl shadow-lg"
+      class="bg-pink-white flex flex-col gap-3 w-full mx-auto mt-5 p-5 rounded-xl shadow-lg font-klee"
     >
       <div class="flex flex-col">
         <label for="" class="pb-1">{{ $t("WhishesSection.Form.name") }}</label>

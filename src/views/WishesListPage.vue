@@ -10,7 +10,7 @@
     <div v-if="isLoading" class="text-center py-40">
       <div
         v-if="isLoading"
-        class="inline-block h-12 w-12 animate-spin rounded-full border-4 border-solid border-current border-e-transparent align-[-0.125em] text-surface motion-reduce:animate-[spin_1.5s_linear_infinite] dark:text-red-main"
+        class="inline-block h-12 w-12 animate-spin rounded-full border-4 border-solid border-current border-e-transparent align-[-0.125em] text-surface motion-reduce:animate-[spin_1.5s_linear_infinite] text-pink-main dark:text-red-main"
         role="status"
       >
         <span
@@ -19,10 +19,10 @@
         >
       </div>
     </div>
-    <div v-else>
+    <div v-else class="font-klee">
       <div
         v-if="notes.length === 0"
-        class="text-white pt-20 text-center m-auto"
+        class="text-black dark:text-white pt-20 text-center m-auto"
       >
         {{ $t("Common.NothingToShow") }}
       </div>

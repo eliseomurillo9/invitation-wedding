@@ -14,19 +14,36 @@
         />
       </figure>
     </div>
-    <p class="font-klee px-12 text-center mt-5 dark:text-white">
-      {{ $t("PhotosSection.Text") }}
-      <router-link to="/wedding-photos">
-        <span class="text-blue-800 dark:text-pink-clear uppercase font-bold">{{
-          $t("PhotosSection.Here")
-        }}</span></router-link
-      >
-    </p>
+    <div class="text-center font-klee">
+      <p class="font-klee px-12 text-center mt-5 dark:text-white">
+        {{ $t("PhotosSection.Text") }}
+        <a
+          href="http://www.wedshoots.com/fr/download?albumId=FR76bdbca7"
+          target="_blank"
+        >
+          <span
+            class="text-blue-800 dark:text-pink-clear uppercase font-bold"
+            >{{ $t("PhotosSection.Here") }}</span
+          >
+        </a>
+      </p>
+      <p class="mt-5 dark:text-white">
+        {{ $t("Common.AccessCode") }}: <span class="font-bold">FR76bdbca7</span>
+
+        <span
+          class="material-symbols-outlined cursor-pointer align-middle text-black/60 text-xl ml-2 hover:text-pink-main ease-in-out"
+          @click="copy('FR76bdbca7')"
+        >
+          content_copy
+        </span>
+      </p>
+    </div>
   </section>
 </template>
 
 <script setup>
 import { defineProps } from "vue";
+import { toast } from "vue3-toastify";
 defineProps({
   title: {
     Type: String,
@@ -35,4 +52,14 @@ defineProps({
     Type: Array,
   },
 });
+
+const copy = async (code) => {
+  try {
+    await navigator.clipboard.writeText(code);
+    toast.info("Copied to clipboard!");
+  } catch (err) {
+    toast.error("Failed to copy:");
+    // Handle fallback if needed (explained below)
+  }
+};
 </script>

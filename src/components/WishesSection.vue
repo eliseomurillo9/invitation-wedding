@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-white py-7 px-4 md:px-28 dark:bg-dark-alt">
+  <section class="bg-white py-7 px-4 md:px-28 dark:bg-dark-alt text-center">
     <h1
       class="text-red-main font-nanum text-4xl text-center pb-4 uppercase 4xl dark:text-pink-clear"
     >
@@ -7,7 +7,7 @@
     </h1>
     <div class="px-7 font-klee text-center">
       <p class="dark:text-white">{{ $t("WhishesSection.Text1") }}</p>
-      <router-link to="/wishesForm">
+      <router-link to="/wishes">
         <ButtonMain label="Leave a message" class="mt-4" />
       </router-link>
     </div>
@@ -21,7 +21,14 @@
         <span class="text-red mt-2 font-bold"> -{{ message.name }}</span>
       </figure>
     </div>
-    <span class="text-center">{{ $t("WhishesSection.Text2") }}</span>
+    <span class="font-klee dark:text-white"
+      >{{ $t("WhishesSection.Text2") }}
+      <router-link to="yourWishes">
+        <span class="text-blue-800 dark:text-pink-clear uppercase font-bold">{{
+          $t("WhishesSection.Text4")
+        }}</span></router-link
+      ></span
+    >
   </section>
 </template>
 

@@ -1,6 +1,7 @@
 const messages = {
   ES: {
     Common: {
+      AccessCode: "Código de acceso",
       NothingToShow: "No hay mensajes para mostrar",
       errorLimitExceeded: "El usuario ha alcanzado el límite de deseos",
       Languages: "Idiomas",
@@ -176,6 +177,7 @@ const messages = {
   },
   EN: {
     Common: {
+      AccessCode: "Access code",
       NothingToShow: "No messages to show",
       errorLimitExceeded: "User has reached the wish limit",
       Languages: "Languages",
@@ -349,6 +351,7 @@ const messages = {
   },
   FR: {
     Common: {
+      AccessCode: "Code d'accès",
       NothingToShow: "Pas de messages à afficher",
       errorLimitExceeded: "L'utilisateur a atteint la limite de voeux",
       Languages: "Langues",
